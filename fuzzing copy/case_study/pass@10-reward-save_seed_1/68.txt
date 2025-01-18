@@ -1,0 +1,835 @@
+------------------------------
+68
+------------------------------
+original prompt
+------------------------------
+
+def pluck(arr):
+    """
+    "Given an array representing a branch of a tree that has non-negative integer nodes
+    your task is to pluck one of the nodes and return it.
+    The plucked node should be the node with the smallest even value.
+    If multiple nodes with the same smallest even value are found return the node that has smallest index.
+
+    The plucked node should be returned in a list, [ smalest_value, its index ],
+    If there are no even values or the given array is empty, return [].
+
+    Example 1:
+        Input: [4,2,3]
+        Output: [2, 1]
+        Explanation: 2 has the smallest even value, and 2 has the smallest index.
+
+    Example 2:
+        Input: [1,2,3]
+        Output: [2, 1]
+        Explanation: 2 has the smallest even value, and 2 has the smallest index. 
+
+    Example 3:
+        Input: []
+        Output: []
+    
+    Example 4:
+        Input: [5, 0, 3, 0, 4, 2]
+        Output: [0, 1]
+        Explanation: 0 is the smallest value, but  there are two zeros,
+                     so we will choose the first zero, which has the smallest index.
+
+    Constraints:
+        * 1 <= nodes.length <= 10000
+        * 0 <= node.value
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+
+    Given an array of non-negative integers, return the smallest even node and its index. If multiple nodes have the same smallest even value, return the one with the smallest index. Return [smallest_value, index] or [] if no even values exist or the array is empty. Ensure your solution is efficient and can handle the upper limits of the constraints.
+
+    Example 1:
+        Input: [4,2,3]
+        Output: [2, 1]
+
+    Example 2:
+        Input: [1,2,3]
+        Output: [2, 1]
+
+    Example 3:
+        Input: []
+        Output: []
+    
+    Example 4:
+        Input: [5, 0, 3, 0, 4, 2]
+        Output: [0, 1]
+
+    Constraints:
+        * 1 <= nodes.length <= 10000
+        * 0 <= node.value
+------------------------------
+canonical solution
+------------------------------
+    if(len(arr) == 0): return []
+    evens = list(filter(lambda x: x%2 == 0, arr))
+    if(evens == []): return []
+    return [min(evens), arr.index(min(evens))]
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    if not arr:
+        return []
+    
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    if not arr:
+        return []
+    
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    if not arr:
+        return []
+    
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Identify even values": "Loop through the array to identify all even values.",
+    "2. Find the smallest even value": "Find the smallest even value among the identified even values.",
+    "3. Find the smallest index of the smallest even value": "Find the index of the smallest even value.",
+    "4. Return the result": "Return the smallest even value and its index in a list."
+  }
+}
+------------------------------
+def pluck(arr):
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all even values in the array",
+      "Find the smallest even value",
+      "If there are multiple nodes with the smallest even value, find the one with the smallest index"
+    ],
+    "high-level-steps": [
+      "Create a function pluck(arr) that takes an array as input",
+      "Initialize variables to store the smallest even value and its index",
+      "Iterate through the array to identify all even values",
+      "Find the smallest even value and its index",
+      "Return the smallest even value and its index in a list"
+    ]
+  }
+}
+------------------------------
+def pluck(arr):
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Identify even values": "Loop through the array to identify all even values.",
+    "2. Find the smallest even value": "Find the smallest even value among the identified even values.",
+    "3. Find the smallest index of the smallest even value": "Find the index of the smallest even value.",
+    "4. Return the result": "Return the smallest even value and its index in a list."
+  }
+}
+------------------------------
+def pluck(arr):
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    if not arr:
+        return []
+    
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function pluck(arr) that takes an array as input.": {
+      "subproblems": [
+        "Identify all even values in the array.",
+        "Find the smallest even value.",
+        "Find the index of the smallest even value."
+      ]
+    },
+    "2. Implement logic to handle edge cases such as empty array or no even values.": {
+      "subproblems": [
+        "Check if the array is empty.",
+        "Check if there are any even values in the array."
+      ]
+    },
+    "3. Return the plucked node in the required format [smallest_value, index].": {
+      "subproblems": [
+        "Return the smallest even value.",
+        "Return the index of the smallest even value."
+      ]
+    }
+  }
+}
+------------------------------
+def pluck(arr):
+    if not arr:
+        return []
+    
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Identify even values": "Loop through the array to identify all even values.",
+    "2. Find the smallest even value": "Find the smallest even value among the identified even values.",
+    "3. Find the smallest index of the smallest even value": "Find the index of the smallest even value in the array.",
+    "4. Return the plucked node": "Return the smallest even value and its index in a list.",
+    "5. Handle edge cases": "Check for empty array or no even values and return an empty list."
+  }
+}
+------------------------------
+def pluck(arr):
+    even_values = [num for num in arr if num % 2 == 0]
+    
+    if not even_values:
+        return []
+    
+    smallest_even = min(even_values)
+    smallest_even_index = arr.index(smallest_even)
+    
+    return [smallest_even, smallest_even_index]
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Identify the smallest even value in the array",
+    "Find the index of the smallest even value",
+    "Handle cases where no even values exist or the array is empty"
+  ],
+  "high_level_plan": {
+    "step_1": "Iterate through the array to find all even values",
+    "step_2": "Identify the smallest even value",
+    "step_3": "Find the index of the smallest even value",
+    "step_4": "Handle cases where no even values exist or the array is empty",
+    "step_5": "Return the smallest even value and its index"
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))  # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))  # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the smallest even value in the array",
+      "Find the index of the smallest even value",
+      "Handle cases where no even values exist or the array is empty"
+    ],
+    "steps": [
+      "Iterate through the array to find all even values",
+      "Identify the smallest even value and its index",
+      "Return the smallest even value and its index, or an empty array if no even values exist or the array is empty"
+    ]
+  }
+}
+------------------------------
+def smallest_even_node(arr):
+    if not arr:
+        return []
+    
+    smallest_even = float('inf')
+    smallest_even_index = -1
+    
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0 and arr[i] < smallest_even:
+            smallest_even = arr[i]
+            smallest_even_index = i
+    
+    if smallest_even_index == -1:
+        return []
+    
+    return [smallest_even, smallest_even_index]
+
+# Test cases
+print(smallest_even_node([4, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([1, 2, 3]))  # Output: [2, 1]
+print(smallest_even_node([]))         # Output: []
+print(smallest_even_node([5, 0, 3, 0, 4, 2]))  # Output: [0, 1]
+
+------------------------------
+scores
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

@@ -1,0 +1,734 @@
+------------------------------
+109
+------------------------------
+original prompt
+------------------------------
+
+def move_one_ball(arr):
+    """We have an array 'arr' of N integers arr[1], arr[2], ..., arr[N].The
+    numbers in the array will be randomly ordered. Your task is to determine if
+    it is possible to get an array sorted in non-decreasing order by performing 
+    the following operation on the given array:
+        You are allowed to perform right shift operation any number of times.
+    
+    One right shift operation means shifting all elements of the array by one
+    position in the right direction. The last element of the array will be moved to
+    the starting position in the array i.e. 0th index. 
+
+    If it is possible to obtain the sorted array by performing the above operation
+    then return True else return False.
+    If the given array is empty then return True.
+
+    Note: The given list is guaranteed to have unique elements.
+
+    For Example:
+    
+    move_one_ball([3, 4, 5, 1, 2])==>True
+    Explanation: By performin 2 right shift operations, non-decreasing order can
+                 be achieved for the given array.
+    move_one_ball([3, 5, 4, 1, 2])==>False
+    Explanation:It is not possible to get non-decreasing order for the given
+                array by performing any number of right shift operations.
+                
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def move_one_ball(arr):
+    """We have an array 'arr' of N integers arr[1], arr[2], ..., arr[N].
+    Your task is to determine if it is possible to get an array sorted in non-decreasing order by performing right shift operations.
+
+    One right shift operation means shifting all elements of the array by one position to the right. The last element moves to the 0th index.
+
+    If it is possible to obtain the sorted array by performing the above operation, return True; else return False.
+    If the given array is empty, return True.
+
+    Note: The given list has unique elements.
+
+    For Example:
+    
+    move_one_ball([3, 4, 5, 1, 2])==>True
+    Explanation: By performing 2 right shift operations, non-decreasing order can be achieved.
+    move_one_ball([3, 5, 4, 1, 2])==>False
+    Explanation: It is not possible to get non-decreasing order by performing any number of right shift operations.
+                
+    """
+------------------------------
+canonical solution
+------------------------------
+    if len(arr)==0:
+      return True
+    sorted_array=sorted(arr)
+    my_arr=[]
+    
+    min_value=min(arr)
+    min_index=arr.index(min_value)
+    my_arr=arr[min_index:]+arr[0:min_index]
+    for i in range(len(arr)):
+      if my_arr[i]!=sorted_array[i]:
+        return False
+    return True
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible, return True; otherwise, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible to obtain the sorted array, return True; otherwise, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible, return True; otherwise, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Loop through the array and check if it is already sorted in non-decreasing order, if so, return True",
+      "If the array is not sorted, calculate the number of right shift operations needed to sort the array",
+      "Check if the number of right shift operations needed is less than or equal to the length of the array, if so, return True",
+      "If the number of right shift operations needed is greater than the length of the array, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    sorted_arr = sorted(arr)
+    n = len(arr)
+    
+    for i in range(n):
+        if arr == sorted_arr:
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible to obtain the sorted array, return True, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible to obtain the sorted array, return True; otherwise, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "high-level steps": [
+      "Check if the given array is empty",
+      "If the array is not empty, iterate through all possible right shift operations",
+      "Check if the array is sorted in non-decreasing order after each right shift operation",
+      "Return True if the array can be sorted, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    sorted_arr = sorted(arr)
+    
+    for i in range(n):
+        if arr == sorted_arr:
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible to obtain the sorted array, return True, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "high-level steps": [
+      "Check if the given array is empty",
+      "If the array is not empty, iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "Return True if it is possible to sort the array, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Determine if the array can be sorted in non-decreasing order by performing right shift operations"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Iterate through the array and check if it can be sorted in non-decreasing order by performing right shift operations",
+      "If it is possible, return True; otherwise, return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    for i in range(n):
+        if arr == sorted(arr):
+            return True
+        arr = [arr[-1]] + arr[:-1]
+    
+    return False
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(arr)
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(arr)
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(arr)
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Find the minimum element in the array and its index",
+      "Calculate the number of right shift operations needed to move the minimum element to the 0th index",
+      "Perform the right shift operations and check if the array is sorted in non-decreasing order, return True if so, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_val = min(arr)
+    min_idx = arr.index(min_val)
+    
+    shift_count = len(arr) - min_idx
+    
+    shifted_arr = arr[-min_idx:] + arr[:-min_idx]
+    
+    return shifted_arr == sorted(shifted_arr)
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the given array is empty",
+      "Check if the array is already sorted in non-decreasing order",
+      "Determine the number of right shift operations needed to sort the array"
+    ],
+    "steps": [
+      "Check if the given array is empty, if so, return True",
+      "Check if the array is already sorted in non-decreasing order, if so, return True",
+      "Iterate through the array and find the index of the smallest element",
+      "Calculate the number of right shift operations needed to move the smallest element to the 0th index",
+      "Check if the array is sorted after performing the calculated number of right shift operations, return True if sorted, else return False"
+    ]
+  }
+}
+------------------------------
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    if arr == sorted(arr):
+        return True
+    
+    min_index = arr.index(min(arr))
+    shifts = len(arr) - min_index
+    
+    sorted_arr = arr[-min_index:] + arr[:-min_index]
+    
+    return sorted_arr == sorted(arr)
+
+------------------------------
+scores
+[0.8774, 0.8774, 0.8774, 0.8774, 0.8774, 0.8774, 0.8774, 0.8774, 0.8774, 0.8774]
+[93, 93, 93, 93, 93, 93, 93, 93, 93, 93]

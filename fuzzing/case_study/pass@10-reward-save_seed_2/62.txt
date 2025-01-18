@@ -1,0 +1,580 @@
+------------------------------
+62
+------------------------------
+original prompt
+------------------------------
+
+
+def derivative(xs: list):
+    """ xs represent coefficients of a polynomial.
+    xs[0] + xs[1] * x + xs[2] * x^2 + ....
+     Return derivative of this polynomial in the same form.
+    >>> derivative([3, 1, 2, 4, 5])
+    [1, 4, 12, 20]
+    >>> derivative([1, 2, 3])
+    [2, 6]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def derivative(xs: list):
+    """ xs represent coefficients of a polynomial.
+    xs[0] + xs[1] * x + xs[2] * x^2 + ....
+     Return derivative of this polynomial in the same form.
+    The input list will have at least one element.
+    The derivative of a constant term is zero and should be omitted from the result.
+    >>> derivative([3, 1, 2, 4, 5])
+    [1, 4, 12, 20]
+    >>> derivative([1, 2, 3])
+    [2, 6]
+    """
+------------------------------
+canonical solution
+------------------------------
+    return [(i * x) for i, x in enumerate(xs)][1:]
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Return the derivative coefficients in the same form as a list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Parse the input list to extract the coefficients",
+      "Calculate the derivative of the polynomial using the power rule",
+      "Format the derivative coefficients into a list",
+      "Return the list of derivative coefficients"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Return the derivative coefficients in the same form as a list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Generate the output list of coefficients"
+    ],
+    "steps": [
+      "Define a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Generate a new list of coefficients for the derivative polynomial",
+      "Return the new list of coefficients as the output"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Generate the output list of coefficients"
+    ],
+    "steps": [
+      "Define a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Generate a new list of coefficients for the derivative polynomial",
+      "Return the new list of coefficients as the output"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Parse the input list of coefficients to extract the polynomial terms",
+      "Calculate the derivative of the polynomial by multiplying each coefficient by its corresponding power of x and reducing the power by 1",
+      "Format the derivative coefficients into a list",
+      "Return the list of derivative coefficients"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Parse the input list of coefficients to extract the polynomial terms",
+      "Calculate the derivative of the polynomial by multiplying each coefficient by its corresponding power of x and reducing the power by 1",
+      "Format the derivative coefficients into a list",
+      "Return the list of derivative coefficients"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Return the derivative coefficients in the same form as a list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Format the derivative coefficients into a list"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Return the derivative coefficients in the same form as a list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    """ xs represent coefficients of a polynomial.
+    xs[0] + xs[1] * x + xs[2] * x^2 + ....
+     Return derivative of this polynomial in the same form.
+    >>> derivative([3, 1, 2, 4, 5])
+    [1, 4, 12, 20]
+    >>> derivative([1, 2, 3])
+    [2, 6]
+    """
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Generate the output list of coefficients"
+    ],
+    "steps": [
+      "Define a function derivative(xs: list) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative of the polynomial",
+      "Generate a new list of coefficients for the derivative polynomial",
+      "Return the new list of coefficients as the output"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_coeffs = []
+    for i in range(1, len(xs)):
+        derivative_coeffs.append(xs[i] * i)
+    return derivative_coeffs
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the coefficients of the polynomial from the input list.",
+    "2. Calculate derivative": "Calculate the derivative of the polynomial based on the extracted coefficients.",
+    "3. Remove zero coefficients": "Remove any zero coefficients from the result.",
+    "4. Return result": "Return the derivative of the polynomial in the same form as a list."
+  }
+}
+------------------------------
+def derivative(xs: list):
+    # Parse input
+    coefficients = xs
+    
+    # Calculate derivative
+    derivative_result = []
+    for i in range(1, len(coefficients)):
+        derivative_result.append(coefficients[i] * i)
+    
+    # Remove zero coefficients
+    derivative_result = [coef for coef in derivative_result if coef != 0]
+    
+    # Return result
+    return derivative_result
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract coefficients from the input list",
+    "2. Calculate derivative": "Calculate the derivative of the polynomial based on the extracted coefficients",
+    "3. Remove zero coefficients": "Remove any zero coefficients from the result",
+    "4. Return result": "Return the derivative of the polynomial in the same form as a list"
+  }
+}
+------------------------------
+def derivative(xs: list):
+    # Step 1: Parse input
+    coefficients = xs
+    
+    # Step 2: Calculate derivative
+    derivative_result = []
+    for i in range(1, len(coefficients)):
+        derivative_result.append(coefficients[i] * i)
+    
+    # Step 3: Remove zero coefficients
+    derivative_result = [coef for coef in derivative_result if coef != 0]
+    
+    # Step 4: Return result
+    return derivative_result
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the coefficients of the polynomial from the input list.",
+    "2. Calculate derivative": "Calculate the derivative of the polynomial based on the extracted coefficients.",
+    "3. Remove zero coefficients": "Remove any zero coefficients from the result.",
+    "4. Return result": "Return the derivative of the polynomial in the same form as a list."
+  }
+}
+------------------------------
+def derivative(xs: list):
+    # Parse input
+    coefficients = xs
+    
+    # Calculate derivative
+    derivative_result = []
+    for i in range(1, len(coefficients)):
+        derivative_result.append(coefficients[i] * i)
+    
+    # Remove zero coefficients
+    derivative_result = [coef for coef in derivative_result if coef != 0]
+    
+    # Return result
+    return derivative_result
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the coefficients of the polynomial from the input list.",
+    "2. Calculate derivative": "Calculate the derivative of the polynomial based on the extracted coefficients.",
+    "3. Remove zero coefficients": "Remove any zero coefficients from the result.",
+    "4. Return result": "Return the derivative of the polynomial in the same form as a list."
+  }
+}
+------------------------------
+def derivative(xs: list):
+    # Parse input
+    coefficients = xs
+    
+    # Calculate derivative
+    derivative_result = []
+    for i in range(1, len(coefficients)):
+        derivative_result.append(coefficients[i] * i)
+    
+    # Remove zero coefficients
+    derivative_result = [coef for coef in derivative_result if coef != 0]
+    
+    # Return result
+    return derivative_result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Remove the constant term (if derivative is zero)"
+    ],
+    "steps": [
+      "Create a function derivative(xs) that takes a list of coefficients as input",
+      "Parse the input list to extract coefficients",
+      "Calculate the derivative of the polynomial using the coefficients",
+      "Remove the constant term from the result (if derivative is zero)",
+      "Return the derivative in the same form as the input list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    if len(xs) == 1:
+        return [0]
+    
+    result = []
+    for i in range(1, len(xs)):
+        result.append(xs[i] * i)
+    
+    return result
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Remove the derivative of constant terms (if any)"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Parse the input list to extract coefficients",
+      "Calculate the derivative of the polynomial using the power rule",
+      "Remove the derivative of constant terms (if any)",
+      "Return the derivative in the same form as the input list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    if len(xs) == 1:
+        return [0]
+    
+    result = []
+    for i in range(1, len(xs)):
+        result.append(xs[i] * i)
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Remove any zero coefficients from the result"
+    ],
+    "steps": [
+      "Create a function derivative(xs) that takes a list of coefficients as input",
+      "Iterate through the list of coefficients to calculate the derivative",
+      "Remove any zero coefficients from the result list",
+      "Return the derivative list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    derivative_list = []
+    for i in range(1, len(xs)):
+        derivative_list.append(xs[i] * i)
+    return [coef for coef in derivative_list if coef != 0]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract coefficients from the input list",
+    "2. Calculate derivative": "Calculate the derivative of the polynomial based on the extracted coefficients",
+    "3. Remove zero coefficients": "Remove any zero coefficients from the result",
+    "4. Return result": "Return the derivative of the polynomial in the same form as a list"
+  }
+}
+------------------------------
+def derivative(xs: list):
+    # Step 1: Parse input
+    coefficients = xs
+    
+    # Step 2: Calculate derivative
+    derivative_result = []
+    for i in range(1, len(coefficients)):
+        derivative_result.append(coefficients[i] * i)
+    
+    # Step 3: Remove zero coefficients
+    derivative_result = [coef for coef in derivative_result if coef != 0]
+    
+    # Step 4: Return result
+    return derivative_result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Remove the derivative of constant terms (if any)"
+    ],
+    "steps": [
+      "Create a function derivative(xs: list) that takes a list of coefficients as input",
+      "Parse the input list to extract coefficients",
+      "Calculate the derivative of the polynomial using the power rule of differentiation",
+      "Remove the derivative of constant terms (if any) by omitting them from the result",
+      "Return the derivative in the same form as the input list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    if len(xs) == 1:
+        return [0]
+    
+    result = []
+    for i in range(1, len(xs)):
+        result.append(xs[i] * i)
+    
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input list of coefficients",
+      "Calculate the derivative of the polynomial",
+      "Remove any zero coefficients from the result"
+    ],
+    "steps": [
+      "Create a function derivative(xs) that takes a list of coefficients as input",
+      "Parse the input list to extract the coefficients",
+      "Calculate the derivative of the polynomial using the coefficients",
+      "Remove any zero coefficients from the result",
+      "Return the derivative in the same form as the input list"
+    ]
+  }
+}
+------------------------------
+def derivative(xs: list):
+    if len(xs) == 1:
+        return [0]
+    
+    result = []
+    for i in range(1, len(xs)):
+        result.append(xs[i] * i)
+    
+    return result
+
+------------------------------
+scores
+[0.9899, 0.9899, 0.9899, 0.9899, 0.9899, 0.9899, 0.9899, 0.9899, 0.9899, 0.9899]
+[98, 98, 98, 98, 98, 98, 98, 98, 98, 98]

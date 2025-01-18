@@ -1,0 +1,652 @@
+------------------------------
+18
+------------------------------
+original prompt
+------------------------------
+
+
+def how_many_times(string: str, substring: str) -> int:
+    """ Find how many times a given substring can be found in the original string. Count overlaping cases.
+    >>> how_many_times('', 'a')
+    0
+    >>> how_many_times('aaa', 'a')
+    3
+    >>> how_many_times('aaaa', 'aa')
+    3
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    """ Find how many times a given substring can be found in the original string. Count overlaping cases.
+    >>> how_many_times('', 'a')
+    0
+    >>> how_many_times('aaa', 'a')
+    3
+    >>> how_many_times('aaaa', 'aa')
+    3
+    """
+    Ensure that the function handles edge cases such as empty strings correctly.
+------------------------------
+canonical solution
+------------------------------
+    times = 0
+
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i+len(substring)] == substring:
+            times += 1
+
+    return times
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the length of the original string",
+      "Identify the length of the substring",
+      "Iterate through the original string to find all occurrences of the substring"
+    ],
+    "steps": [
+      "Define a function how_many_times that takes in a string and a substring as input parameters",
+      "Initialize a count variable to keep track of the number of occurrences of the substring",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if it does",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    count = 0
+    len_str = len(string)
+    len_sub = len(substring)
+    
+    for i in range(len_str - len_sub + 1):
+        if string[i:i + len_sub] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function how_many_times with parameters string and substring",
+      "Implement a loop to iterate through the original string",
+      "Check if the substring can be found in the current position of the original string",
+      "Count the number of occurrences of the substring"
+    ],
+    "high-level steps": [
+      "Define the function how_many_times with parameters string and substring",
+      "Initialize a variable to store the count of occurrences",
+      "Iterate through the original string using a loop",
+      "Check if the substring can be found in the current position of the original string",
+      "If found, increment the count of occurrences",
+      "Return the final count of occurrences"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    return count
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle the case when the original string is empty",
+      "Count the number of occurrences of the substring in the original string, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the original string is empty, return 0 if true",
+      "Initialize a count variable to 0",
+      "Iterate through the original string using a sliding window approach with the length of the substring",
+      "Check if the current substring matches the given substring, increment the count if true",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function how_many_times with parameters string and substring",
+      "Implement a loop to iterate through the original string",
+      "Check if the substring can be found in the current position of the original string",
+      "Count the number of occurrences of the substring"
+    ],
+    "high-level steps": [
+      "Define the function how_many_times with parameters string and substring",
+      "Initialize a variable to store the count of occurrences",
+      "Iterate through the original string using a loop",
+      "Check if the substring can be found in the current position of the original string",
+      "If found, increment the count of occurrences",
+      "Return the final count of occurrences"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    return count
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function how_many_times with parameters string and substring",
+      "Implement a loop to iterate through the original string",
+      "Check if the substring can be found in the current position of the original string",
+      "Count the number of occurrences of the substring"
+    ],
+    "high-level steps": [
+      "Define the function how_many_times with parameters string and substring",
+      "Initialize a variable to store the count of occurrences",
+      "Iterate through the original string using a loop",
+      "Check if the substring can be found in the current position of the original string",
+      "If found, increment the count of occurrences",
+      "Return the final count of occurrences"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    return count
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Count the number of occurrences of the substring in the original string",
+      "Consider overlapping cases"
+    ],
+    "steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for the substring at each position",
+      "Increment the counter if the substring is found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty strings as input",
+      "Count the number of occurrences of the substring in the original string",
+      "Consider overlapping cases when counting occurrences"
+    ],
+    "high-level steps": [
+      "Check if either the original string or the substring is empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "high-level steps": [
+      "Check if either the original string or the substring is empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Handle empty strings as input",
+    "Count the number of occurrences of the substring in the original string",
+    "Consider overlapping cases when counting occurrences"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if either the original string or the substring is empty, return 0 if true",
+    "step_2": "Initialize a count variable to 0",
+    "step_3": "Iterate through the original string using a sliding window approach with the length of the substring",
+    "step_4": "Check if the current window matches the substring, increment the count if true",
+    "step_5": "Move the window by one character and repeat steps 4-5 until the end of the original string",
+    "step_6": "Return the final count"
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Handle empty strings as input",
+    "Count the number of occurrences of the substring in the original string, including overlapping cases"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if either the original string or the substring is empty, return 0 if true",
+    "step_2": "Initialize a count variable to 0",
+    "step_3": "Iterate through the original string using a sliding window of length equal to the substring",
+    "step_4": "Check if the current window matches the substring, increment the count if true",
+    "step_5": "Return the final count"
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty string cases",
+      "Find all occurrences of the substring in the original string",
+      "Count the number of occurrences, including overlapping cases"
+    ],
+    "high-level steps": [
+      "Check if the input strings are empty, return 0 if true",
+      "Initialize a counter variable to keep track of the number of occurrences",
+      "Iterate through the original string and check for occurrences of the substring",
+      "Increment the counter for each occurrence found",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def how_many_times(string: str, substring: str) -> int:
+    if not string or not substring:
+        return 0
+    
+    count = 0
+    for i in range(len(string) - len(substring) + 1):
+        if string[i:i + len(substring)] == substring:
+            count += 1
+    
+    return count
+
+------------------------------
+scores
+[0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697]
+[128, 128, 128, 128, 128, 128, 128, 128, 128, 128]

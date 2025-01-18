@@ -1,0 +1,986 @@
+------------------------------
+19
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def sort_numbers(numbers: str) -> str:
+    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+    Return the string with numbers sorted from smallest to largest
+    >>> sort_numbers('three one five')
+    'one three five'
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+
+def sort_numbers(numbers: str) -> str:
+    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+    Return the string with numbers sorted from smallest to largest.
+    Ensure that the input string is correctly formatted with valid number words.
+    >>> sort_numbers('three one five')
+    'one three five'
+    """
+------------------------------
+canonical solution
+------------------------------
+    value_map = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    return ' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: value_map[x]))
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Map the numerals to their numerical values using a dictionary",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Create a mapping of numerals to numerical values",
+      "Convert the numerals in the input string to numerical values using the mapping",
+      "Sort the list of numerical values",
+      "Convert the sorted numerical values back to numerals using the mapping",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_numerical_values = sorted(numerical_values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_numerical_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Map the numerals to their numerical values using a dictionary",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Map the numerals to their numerical values using a dictionary",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Map the numerals to their numerical values using a dictionary",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Split the input string into a list of numerals",
+      "Create a dictionary mapping numerals to numerical values",
+      "Map the numerals in the list to their numerical values",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual numerals",
+      "Create a mapping of numerals to numerical values",
+      "Convert the input string into a list of numerical values using the mapping",
+      "Sort the list of numerical values",
+      "Convert the sorted list of numerical values back into a string of numerals"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numeral_to_number = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+
+    numbers_list = numbers.split()
+    numerical_values = [numeral_to_number[num] for num in numbers_list]
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_numerals = [key for value, key in sorted(zip(sorted_numerical_values, numbers_list))]
+
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual numerals",
+      "Create a mapping of numerals to numerical values",
+      "Convert the numerals in the input string to numerical values using the mapping",
+      "Sort the list of numerical values",
+      "Convert the sorted list of numerical values back into a string of numerals"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_numerical_values = sorted(numerical_values)
+    
+    sorted_numerals = [key for value, key in sorted(zip(sorted_numerical_values, numerals))]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Split the input string into individual numerals",
+      "Map each numeral to its numerical value using a dictionary",
+      "Sort the list of numerical values",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string of numerals into a list of numbers",
+      "Map the numerals to their corresponding numerical values",
+      "Sort the list of numbers in ascending order",
+      "Convert the sorted list of numbers back into a string of numerals"
+    ],
+    "steps": [
+      "Parse the input string to extract individual numerals",
+      "Map the numerals to their numerical values using a dictionary",
+      "Sort the list of numerical values using a built-in sorting function",
+      "Map the sorted numerical values back to their corresponding numerals",
+      "Join the sorted numerals into a string and return the result"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    numerals = numbers.split()
+    
+    numeral_to_value = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    values = [numeral_to_value[numeral] for numeral in numerals]
+    sorted_values = sorted(values)
+    
+    value_to_numeral = {value: numeral for numeral, value in numeral_to_value.items()}
+    sorted_numerals = [value_to_numeral[value] for value in sorted_values]
+    
+    return ' '.join(sorted_numerals)
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Convert number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Convert sorted numerical values back to number words",
+      "Join the sorted number words into a single string"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual number words",
+      "Map number words to numerical values using a dictionary",
+      "Sort the numerical values in ascending order",
+      "Map sorted numerical values back to number words using a dictionary",
+      "Join the sorted number words into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    number_dict = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [number_dict[word] for word in number_words]
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_dict.items()])]
+    
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Validate input": {
+      "Description": "Check if the input string is correctly formatted with valid number words",
+      "Steps": [
+        "Split the input string into individual words",
+        "Check if each word is a valid number word ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')"
+      ]
+    },
+    "2. Convert number words to numbers": {
+      "Description": "Convert the number words to their corresponding numerical values",
+      "Steps": [
+        "Create a dictionary mapping number words to numerical values",
+        "Iterate through the input words and replace them with their numerical values"
+      ]
+    },
+    "3. Sort numbers": {
+      "Description": "Sort the numerical values in ascending order",
+      "Steps": [
+        "Convert the numerical values back to number words",
+        "Sort the number words in ascending order",
+        "Join the sorted number words into a single string"
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    # Validate input
+    valid_number_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    input_words = numbers.split()
+    for word in input_words:
+        if word not in valid_number_words:
+            raise ValueError("Invalid input. Please provide valid number words.")
+
+    # Convert number words to numbers
+    number_mapping = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    numerical_values = [number_mapping[word] for word in input_words]
+
+    # Sort numbers
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted(zip(sorted_numerical_values, input_words))]
+    sorted_numbers_str = ' '.join(sorted_number_words)
+
+    return sorted_numbers_str
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Convert number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Convert sorted numerical values back to number words",
+      "Join the sorted number words into a single string"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual number words",
+      "Map number words to numerical values using a dictionary",
+      "Sort the numerical values in ascending order",
+      "Map sorted numerical values back to number words using a dictionary",
+      "Join the sorted number words into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    number_dict = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [number_dict[word] for word in number_words]
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_dict.items()])]
+    
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Convert number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Convert sorted numerical values back to number words",
+      "Join the sorted number words into a single string"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual number words",
+      "Map number words to numerical values using a dictionary",
+      "Sort the numerical values in ascending order",
+      "Map sorted numerical values back to number words using a dictionary",
+      "Join the sorted number words into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    
+    number_mapping = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [number_mapping[word] for word in number_words]
+    sorted_numerical_values = sorted(numerical_values)
+    
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_mapping.items()])]
+    
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Convert number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Convert sorted numerical values back to number words",
+      "Join the sorted number words into a single string"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual number words",
+      "Map number words to numerical values using a dictionary",
+      "Sort the numerical values in ascending order",
+      "Map sorted numerical values back to number words using a dictionary",
+      "Join the sorted number words into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    
+    number_mapping = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [number_mapping[word] for word in number_words]
+    sorted_numerical_values = sorted(numerical_values)
+    
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_mapping.items()])]
+    
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Map the number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Map the sorted numerical values back to their corresponding number words",
+      "Join the sorted number words into a space-delimited string"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract individual number words",
+      "Map the number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Map the sorted numerical values back to their corresponding number words",
+      "Join the sorted number words into a space-delimited string",
+      "Return the final sorted string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    number_map = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    sorted_numbers = sorted([number_map[word] for word in number_words])
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_map.items() if key in number_words])]
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Validate input": {
+      "Description": "Check if the input string is correctly formatted with valid number words",
+      "Steps": [
+        "Split the input string into individual words",
+        "Check if each word is a valid number word ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')"
+      ]
+    },
+    "2. Convert number words to numbers": {
+      "Description": "Convert the number words to their corresponding numerical values",
+      "Steps": [
+        "Create a dictionary mapping number words to numerical values",
+        "Iterate through the input words and replace them with their numerical values"
+      ]
+    },
+    "3. Sort numbers": {
+      "Description": "Sort the numerical values in ascending order",
+      "Steps": [
+        "Convert the numerical values back to number words",
+        "Sort the number words in ascending order",
+        "Join the sorted number words into a single string"
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    # Validate input
+    valid_number_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    input_words = numbers.split()
+    for word in input_words:
+        if word not in valid_number_words:
+            raise ValueError("Invalid input. Please provide valid number words.")
+
+    # Convert number words to numbers
+    number_mapping = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    numerical_values = [number_mapping[word] for word in input_words]
+
+    # Sort numbers
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_mapping.items() if key in input_words])]
+    sorted_numbers_str = ' '.join(sorted_number_words)
+
+    return sorted_numbers_str
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Validate input": {
+      "Description": "Check if the input string is correctly formatted with valid number words",
+      "Steps": [
+        "Split the input string into individual words",
+        "Check if each word is a valid number word ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')"
+      ]
+    },
+    "2. Convert number words to numbers": {
+      "Description": "Convert the number words to their corresponding numerical values",
+      "Steps": [
+        "Create a dictionary mapping number words to numerical values",
+        "Iterate through the input words and replace them with their numerical values"
+      ]
+    },
+    "3. Sort numbers": {
+      "Description": "Sort the numerical values in ascending order",
+      "Steps": [
+        "Convert the numerical values back to number words",
+        "Sort the number words in ascending order",
+        "Join the sorted number words into a single string"
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    # Validate input
+    valid_number_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    input_words = numbers.split()
+    for word in input_words:
+        if word not in valid_number_words:
+            raise ValueError("Invalid input. Please provide valid number words.")
+
+    # Convert number words to numbers
+    number_mapping = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    numerical_values = [number_mapping[word] for word in input_words]
+
+    # Sort numbers
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted(zip(sorted_numerical_values, input_words))]
+    sorted_numbers_str = ' '.join(sorted_number_words)
+
+    return sorted_numbers_str
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Parse the input string to extract individual number words",
+      "Convert number words to their corresponding numerical values",
+      "Sort the numerical values in ascending order",
+      "Convert sorted numerical values back to number words",
+      "Join the sorted number words into a single string"
+    ],
+    "major_steps": [
+      "Parse the input string to extract individual number words",
+      "Map number words to numerical values using a dictionary",
+      "Sort the numerical values in ascending order",
+      "Map sorted numerical values back to number words using a dictionary",
+      "Join the sorted number words into a single string"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    number_words = numbers.split()
+    
+    number_mapping = {
+        'zero': 0,
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9
+    }
+    
+    numerical_values = [number_mapping[word] for word in number_words]
+    sorted_numerical_values = sorted(numerical_values)
+    
+    sorted_number_words = [key for value, key in sorted([(value, key) for key, value in number_mapping.items() if key in numerical_values])]
+    
+    return ' '.join(sorted_number_words)
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Validate input": {
+      "Description": "Check if the input string is correctly formatted with valid number words.",
+      "Steps": [
+        "Split the input string into individual words.",
+        "Check if each word is a valid number word ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')."
+      ]
+    },
+    "2. Convert number words to numbers": {
+      "Description": "Convert the number words to their corresponding numerical values.",
+      "Steps": [
+        "Create a dictionary mapping number words to their numerical values.",
+        "Iterate through the input words and replace them with their numerical values."
+      ]
+    },
+    "3. Sort numbers": {
+      "Description": "Sort the numerical values in ascending order.",
+      "Steps": [
+        "Convert the numerical values back to number words.",
+        "Sort the number words in ascending order.",
+        "Join the sorted number words into a single string."
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    # Validate input
+    valid_number_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    input_words = numbers.split()
+    for word in input_words:
+        if word not in valid_number_words:
+            raise ValueError("Invalid input. Please provide valid number words.")
+
+    # Convert number words to numbers
+    number_mapping = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    numerical_values = [number_mapping[word] for word in input_words]
+
+    # Sort numbers
+    sorted_numerical_values = sorted(numerical_values)
+    sorted_number_words = [key for value, key in sorted(zip(sorted_numerical_values, valid_number_words))]
+    sorted_numbers_str = ' '.join(sorted_number_words)
+
+    return sorted_numbers_str
+
+------------------------------
+scores
+[0.0, 0.124, 0.0, 0.0, 0.0, 0.3802, 0.3802, 0.124, 0.0083, 0.0248]
+[0, 15, 0, 0, 0, 46, 46, 15, 1, 3]

@@ -1,0 +1,698 @@
+------------------------------
+33
+------------------------------
+original prompt
+------------------------------
+
+
+def sort_third(l: list):
+    """This function takes a list l and returns a list l' such that
+    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal
+    to the values of the corresponding indicies of l, but sorted.
+    >>> sort_third([1, 2, 3])
+    [1, 2, 3]
+    >>> sort_third([5, 6, 3, 4, 8, 9, 2])
+    [2, 6, 3, 4, 8, 9, 5]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def sort_third(l: list):
+    """This function accepts a list l and produces a new list l' where
+    l' remains the same as l at positions not divisible by three, while the elements at positions divisible by three are sorted, maintaining their original positions.
+    >>> sort_third([1, 2, 3])
+    [1, 2, 3]
+    >>> sort_third([5, 6, 3, 4, 8, 9, 2])
+    [2, 6, 3, 4, 8, 9, 5]
+    """
+------------------------------
+canonical solution
+------------------------------
+    l = list(l)
+    l[::3] = sorted(l[::3])
+    return l
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible by three indices with the sorted values"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible by three indices with the sorted values"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible by three indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible by three indices with the sorted values and keeping the original values at the non-divisible by three indices"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible by three indices with the sorted values"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Merge the sorted values back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function that takes a list as input",
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Merge the sorted values back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    def merge_sorted_indices(original, sorted_indices):
+        result = original.copy()
+        for i, idx in enumerate(sorted_indices):
+            result[idx] = sorted_indices[i]
+        return result
+
+    divisible_by_three = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three]
+    sorted_values.sort()
+
+    return merge_sorted_indices(l, sorted_values)
+
+# Test cases
+print(sort_third([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # Output: [2, 6, 3, 4, 8, 9, 5]
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Merge the sorted values back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function that takes a list as input",
+      "Identify the indices that are divisible by three",
+      "Sort the values at the identified indices",
+      "Merge the sorted values back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    def merge_sorted_indices(original, sorted_indices):
+        result = original.copy()
+        for i, idx in enumerate(sorted_indices):
+            result[idx] = sorted_indices[i]
+        return result
+
+    divisible_by_three = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three]
+    sorted_values.sort()
+
+    return merge_sorted_indices(l, sorted_values)
+
+# Test cases
+print(sort_third([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # Output: [2, 6, 3, 4, 8, 9, 5]
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible by three indices"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list l as input",
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible by three indices",
+      "Return the new list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = []
+    for i in range(len(l)):
+        if i in divisible_by_three_indices:
+            result.append(sorted_values.pop(0))
+        else:
+            result.append(l[i])
+    
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible-by-three indices and the original values at the non-divisible-by-three indices"
+    ],
+    "high-level-steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible-by-three indices with the sorted values"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible by three indices and the original values at the non-divisible indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible by three indices with the sorted values"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the indices that are divisible by three in the input list",
+      "Sort the values at the identified indices",
+      "Create a new list with the sorted values at the divisible-by-three indices and the original values at the non-divisible-by-three indices"
+    ],
+    "high-level steps": [
+      "Iterate through the input list to identify the indices divisible by three",
+      "Sort the values at the identified indices",
+      "Create a new list by replacing the values at the divisible-by-three indices with the sorted values and keeping the original values at the non-divisible-by-three indices"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three_indices = [i for i in range(len(l)) if i % 3 == 0]
+    sorted_values = [l[i] for i in divisible_by_three_indices]
+    sorted_values.sort()
+    
+    result = l.copy()
+    for i in divisible_by_three_indices:
+        result[i] = sorted_values.pop(0)
+    
+    return result
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    def is_divisible_by_three(num):
+        return num % 3 == 0
+
+    divisible_by_three = [num for num in l if is_divisible_by_three(l.index(num))]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+
+    result = []
+    for num in l:
+        if is_divisible_by_three(l.index(num)):
+            result.append(sorted_divisible_by_three.pop(0))
+        else:
+            result.append(num)
+
+    return result
+
+# Test cases
+print(sort_third([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # Output: [2, 6, 3, 4, 8, 9, 5]
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Extract the elements at those positions and sort them",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    for i in range(len(l)):
+        if i % 3 == 0:
+            l[i] = sorted_divisible_by_three.pop(0)
+    
+    return l
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Sort the elements at those positions while maintaining their original positions",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = []
+    for num in l:
+        if l.index(num) % 3 == 0:
+            result.append(sorted_divisible_by_three.pop(0))
+        else:
+            result.append(num)
+    
+    return result
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Extract the elements at those positions and sort them",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [l[i] for i in range(len(l)) if (i+1) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = l.copy()
+    for i in range(len(l)):
+        if (i+1) % 3 == 0:
+            result[i] = sorted_divisible_by_three.pop(0)
+    
+    return result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    def is_divisible_by_three(num):
+        return num % 3 == 0
+
+    divisible_by_three = [num for num in l if is_divisible_by_three(num)]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+
+    result = []
+    div_index = 0
+    for i in range(len(l)):
+        if is_divisible_by_three(l[i]):
+            result.append(sorted_divisible_by_three[div_index])
+            div_index += 1
+        else:
+            result.append(l[i])
+
+    return result
+
+# Test cases
+print(sort_third([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # Output: [2, 6, 3, 4, 8, 9, 5]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Extract the elements at those positions and sort them",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = []
+    index = 0
+    for num in l:
+        if l.index(num) % 3 == 0:
+            result.append(sorted_divisible_by_three[index])
+            index += 1
+        else:
+            result.append(num)
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Iterate through the input list and identify positions divisible by three",
+      "Extract the elements at these positions and sort them",
+      "Merge the sorted elements back into the original list at their respective positions"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = l.copy()
+    for i, num in enumerate(l):
+        if i % 3 == 0:
+            result[i] = sorted_divisible_by_three.pop(0)
+    
+    return result
+
+# Test cases
+print(sort_third([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # Output: [2, 6, 3, 4, 8, 9, 5]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Sort the elements at those positions while maintaining their original positions",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = []
+    for num in l:
+        if l.index(num) % 3 == 0:
+            result.append(sorted_divisible_by_three.pop(0))
+        else:
+            result.append(num)
+    
+    return result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Sort the elements at those positions while maintaining their original positions",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [num for num in l if l.index(num) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = []
+    for num in l:
+        if l.index(num) % 3 == 0:
+            result.append(sorted_divisible_by_three.pop(0))
+        else:
+            result.append(num)
+    
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify positions divisible by three in the input list",
+      "Sort the elements at positions divisible by three",
+      "Merge the sorted elements back into the original list"
+    ],
+    "high-level steps": [
+      "Create a function sort_third that takes a list as input",
+      "Iterate through the list and identify positions divisible by three",
+      "Extract the elements at those positions and sort them",
+      "Merge the sorted elements back into the original list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+def sort_third(l: list):
+    divisible_by_three = [l[i] for i in range(len(l)) if (i+1) % 3 == 0]
+    sorted_divisible_by_three = sorted(divisible_by_three)
+    
+    result = []
+    index = 0
+    for i in range(len(l)):
+        if (i+1) % 3 == 0:
+            result.append(sorted_divisible_by_three[index])
+            index += 1
+        else:
+            result.append(l[i])
+    
+    return result
+
+------------------------------
+scores
+[0.6591, 0.5152, 0.6591, 0.2273, 0.2348, 0.6591, 0.5152, 0.6591, 0.6591, 0.2273]
+[87, 68, 87, 30, 31, 87, 68, 87, 87, 30]

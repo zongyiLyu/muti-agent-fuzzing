@@ -1,0 +1,689 @@
+------------------------------
+150
+------------------------------
+original prompt
+------------------------------
+
+def x_or_y(n, x, y):
+    """A simple program which should return the value of x if n is 
+    a prime number and should return the value of y otherwise.
+
+    Examples:
+    for x_or_y(7, 34, 12) == 34
+    for x_or_y(15, 8, 5) == 5
+    
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def x_or_y(n, x, y):
+    """A simple program which should return the value of x if n is 
+    a prime number and should return the value of y otherwise. 
+    Ensure that the function handles edge cases such as n being less than 2.
+
+    Examples:
+    for x_or_y(7, 34, 12) == 34
+    for x_or_y(15, 8, 5) == 5
+    
+    """
+------------------------------
+canonical solution
+------------------------------
+    if n == 1:
+        return y
+    for i in range(2, n):
+        if n % i == 0:
+            return y
+            break
+    else:
+        return x
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, else return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, and y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, y",
+      "Implement a function to check if n is a prime number",
+      "If n is prime, return x; otherwise, return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, else return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, and y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, and y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x. Otherwise, return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, else return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, and y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x. Otherwise, return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number",
+      "Return y if n is not a prime number"
+    ],
+    "steps": [
+      "Create a function to check if a number is prime",
+      "Implement the logic to return x or y based on the prime number check"
+    ]
+  }
+}
+------------------------------
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def x_or_y(n, x, y):
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input number n is a prime number",
+      "Return x if n is a prime number, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes three parameters: n, x, and y",
+      "Implement a function to check if n is a prime number",
+      "If n is a prime number, return x, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is less than 2",
+      "Check if n is a prime number",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input",
+      "Check if n is less than 2, if true return an error message",
+      "Check if n is a prime number using a helper function",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "Error: n should be greater than or equal to 2"
+    
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+    
+    if is_prime(n):
+        return x
+    else:
+        return y
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    if n % 2 == 0:
+        return y
+    
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input parameters",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    if all(n % i != 0 for i in range(2, int(n**0.5) + 1)):
+        return x
+    else:
+        return y
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input parameters",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    if n % 2 == 0:
+        return y
+    
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    if n % 2 == 0:
+        return y
+    
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "major_steps": [
+      "Create a function x_or_y that takes n, x, and y as input parameters",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Implement logic to return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "high-level steps": [
+      "Create a function x_or_y that takes n, x, and y as input parameters",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    if all(n % i != 0 for i in range(2, int(n**0.5) + 1)):
+        return x
+    else:
+        return y
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if n is a prime number",
+      "Handle edge cases such as n being less than 2",
+      "Return x if n is prime, otherwise return y"
+    ],
+    "major_steps": [
+      "Create a function x_or_y that takes n, x, and y as input parameters",
+      "Implement a function to check if n is a prime number",
+      "Implement logic to handle edge cases where n is less than 2",
+      "Implement logic to return x if n is prime, otherwise return y"
+    ]
+  }
+}
+------------------------------
+def x_or_y(n, x, y):
+    if n < 2:
+        return "n should be greater than or equal to 2"
+    
+    if n == 2:
+        return x
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return y
+    
+    return x
+
+------------------------------
+scores
+[0.9562, 0.9562, 0.9562, 0.9562, 0.9562, 0.9562, 0.9562, 0.9562, 0.9562, 0.9562]
+[131, 131, 131, 131, 131, 131, 131, 131, 131, 131]

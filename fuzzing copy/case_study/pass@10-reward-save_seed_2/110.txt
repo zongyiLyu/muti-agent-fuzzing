@@ -1,0 +1,757 @@
+------------------------------
+110
+------------------------------
+original prompt
+------------------------------
+
+def exchange(lst1, lst2):
+    """In this problem, you will implement a function that takes two lists of numbers,
+    and determines whether it is possible to perform an exchange of elements
+    between them to make lst1 a list of only even numbers.
+    There is no limit on the number of exchanged elements between lst1 and lst2.
+    If it is possible to exchange elements between the lst1 and lst2 to make
+    all the elements of lst1 to be even, return "YES".
+    Otherwise, return "NO".
+    For example:
+    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => "YES"
+    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => "NO"
+    It is assumed that the input lists will be non-empty.
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def exchange(lst1, lst2):
+    """In this task, you need to create a function that accepts two lists of numbers
+    and checks if it's feasible to swap elements between them to transform lst1 into a list containing only even numbers.
+    There is no restriction on the number of elements that can be exchanged between lst1 and lst2.
+    If it's possible to swap elements between lst1 and lst2 to ensure all elements in lst1 are even, return "YES".
+    If not, return "NO".
+    For example:
+    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => "YES"
+    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => "NO"
+    You can assume that the input lists will not be empty.
+    """
+------------------------------
+canonical solution
+------------------------------
+    odd = 0
+    even = 0
+    for i in lst1:
+        if i%2 == 1:
+            odd += 1
+    for i in lst2:
+        if i%2 == 0:
+            even += 1
+    if even >= odd:
+        return "YES"
+    return "NO"
+            
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with the odd elements in lst1",
+      "Perform the exchange of elements between lst1 and lst2"
+    ],
+    "major_steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "If all elements in lst1 are already even, return 'YES'",
+      "Count the number of odd elements in lst1 and lst2",
+      "If there are not enough odd elements in lst2 to exchange with the odd elements in lst1, return 'NO'",
+      "Perform the exchange of odd elements between lst1 and lst2",
+      "Iterate through lst1 to check if all elements are even after the exchange",
+      "If all elements in lst1 are even after the exchange, return 'YES'",
+      "Otherwise, return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Count the number of odd elements in lst1 and lst2
+    odd_lst1 = sum(1 for num in lst1 if num % 2 != 0)
+    odd_lst2 = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Check if there are enough odd elements in lst2 to exchange with the odd elements in lst1
+    if odd_lst2 < odd_lst1:
+        return "NO"
+    
+    # Perform the exchange of odd elements between lst1 and lst2
+    for i in range(len(lst1)):
+        if lst1[i] % 2 != 0:
+            for j in range(len(lst2)):
+                if lst2[j] % 2 != 0:
+                    lst1[i], lst2[j] = lst2[j], lst1[i]
+                    break
+    
+    # Check if all elements in lst1 are even after the exchange
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with lst1",
+      "Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even"
+    ],
+    "major_steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "Iterate through lst2 to count the number of odd elements",
+      "Compare the count of odd elements in lst2 with the number of even elements needed in lst1",
+      "If there are enough odd elements in lst2, perform the exchange and make lst1 all even",
+      "Return 'YES' if exchange is possible, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Check if there are enough odd elements in lst2 to exchange with lst1
+    odd_count = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even
+    if odd_count >= len(lst1) - sum(1 for num in lst1 if num % 2 == 0):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with lst1",
+      "Determine if it is possible to exchange elements between lst1 and lst2 to make all elements of lst1 even"
+    ],
+    "major_steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "Iterate through lst2 to count the number of odd elements",
+      "Compare the number of odd elements in lst2 with the number of even elements needed in lst1",
+      "If there are enough odd elements in lst2, perform the exchange and return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Check if there are enough odd elements in lst2 to exchange with lst1
+    odd_count = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Determine if it is possible to exchange elements between lst1 and lst2 to make all elements of lst1 even
+    if odd_count >= len(lst1) - sum(1 for num in lst1 if num % 2 == 0):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with lst1",
+      "Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even"
+    ],
+    "major_steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "Iterate through lst2 to count the number of odd elements",
+      "Compare the number of odd elements in lst2 with the number of even elements needed in lst1",
+      "If there are enough odd elements in lst2, perform the exchange and return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Check if there are enough odd elements in lst2 to exchange with lst1
+    odd_count = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even
+    if odd_count >= len(lst1) - sum(1 for num in lst1 if num % 2 == 0):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with lst1",
+      "Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even"
+    ],
+    "major_steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "Iterate through lst2 to count the number of odd elements",
+      "Compare the count of odd elements in lst2 with the length of lst1 to determine if exchange is possible",
+      "If exchange is possible, return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Check if there are enough odd elements in lst2 to exchange with lst1
+    odd_count = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Determine if it is possible to exchange elements between lst1 and lst2 to make lst1 all even
+    if odd_count >= len(lst1):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if both lists have the same length",
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd numbers in lst2 to exchange with odd numbers in lst1"
+    ],
+    "major_steps": [
+      "Check if the lengths of lst1 and lst2 are equal",
+      "Check if all elements in lst1 are even",
+      "Count the number of odd numbers in lst1 and lst2",
+      "Check if there are enough odd numbers in lst2 to exchange with odd numbers in lst1",
+      "Return 'YES' if exchange is possible, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    if len(lst1) != len(lst2):
+        return "NO"
+    
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    odd_count_lst1 = sum(1 for num in lst1 if num % 2 != 0)
+    odd_count_lst2 = sum(1 for num in lst2 if num % 2 != 0)
+    
+    if odd_count_lst2 >= odd_count_lst1:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with the odd elements in lst1"
+    ],
+    "steps": [
+      "Iterate through lst1 to check if all elements are even",
+      "If all elements in lst1 are already even, return 'YES'",
+      "Count the number of odd elements in lst1 and lst2",
+      "If there are enough odd elements in lst2 to exchange with the odd elements in lst1, return 'YES'",
+      "Otherwise, return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    # Check if all elements in lst1 are already even
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    # Count the number of odd elements in lst1 and lst2
+    odd_lst1 = sum(1 for num in lst1 if num % 2 != 0)
+    odd_lst2 = sum(1 for num in lst2 if num % 2 != 0)
+    
+    # Check if there are enough odd elements in lst2 to exchange with the odd elements in lst1
+    if odd_lst2 >= odd_lst1:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Identify the odd elements in lst1",
+      "Identify the even elements in lst2",
+      "Determine if there are enough even elements in lst2 to replace the odd elements in lst1"
+    ],
+    "major_steps": [
+      "Check if all elements in lst1 are even, if so, return 'YES'",
+      "Identify the odd elements in lst1",
+      "Identify the even elements in lst2",
+      "If there are enough even elements in lst2 to replace the odd elements in lst1, return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    odd_elements = [num for num in lst1 if num % 2 != 0]
+    even_elements = [num for num in lst2 if num % 2 == 0]
+    
+    if len(odd_elements) <= len(even_elements):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if both lists have the same length",
+      "Check if all elements in lst1 are already even",
+      "Check if there are enough odd elements in lst2 to exchange with lst1"
+    ],
+    "high-level steps": [
+      "Create a function exchange(lst1, lst2) that takes two lists as input",
+      "Check if the lengths of lst1 and lst2 are equal",
+      "Check if all elements in lst1 are even",
+      "Count the number of odd elements in lst2",
+      "If there are enough odd elements in lst2 to exchange with lst1, return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    if len(lst1) != len(lst2):
+        return "NO"
+    
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    odd_count = sum(1 for num in lst2 if num % 2 != 0)
+    
+    if odd_count >= len(lst1) - sum(1 for num in lst1 if num % 2 != 0):
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if all elements in lst1 are already even",
+      "Identify the odd elements in lst1",
+      "Identify the even elements in lst2",
+      "Determine if there are enough even elements in lst2 to replace the odd elements in lst1"
+    ],
+    "major_steps": [
+      "Check if all elements in lst1 are even, if so, return 'YES'",
+      "Identify the odd elements in lst1",
+      "Identify the even elements in lst2",
+      "If there are enough even elements in lst2 to replace the odd elements in lst1, return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    odd_elements = [num for num in lst1 if num % 2 != 0]
+    even_elements = [num for num in lst2 if num % 2 == 0]
+    
+    if len(even_elements) >= len(odd_elements):
+        return "YES"
+    else:
+        return "NO"
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even",
+      "Return 'YES' if both conditions are met, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum(lst1) % 2 == 0:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is less than or equal to the sum of all elements in lst2"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Calculate the sum of all elements in lst1 and lst2",
+      "Compare the counts and sums to determine if it's feasible to swap elements"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    def calculate_sum(lst):
+        return sum(lst)
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+    
+    sum_lst1 = calculate_sum(lst1)
+    sum_lst2 = calculate_sum(lst2)
+    
+    if odd_count_lst1 <= even_count_lst2 and sum_lst1 <= sum_lst2:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is less than or equal to the sum of all elements in lst2"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Calculate the sum of all elements in lst1 and lst2",
+      "Compare the counts and sums to determine if it's feasible to swap elements"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    def calculate_sum(lst):
+        return sum(lst)
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+    
+    sum_lst1 = calculate_sum(lst1)
+    sum_lst2 = calculate_sum(lst2)
+    
+    if odd_count_lst1 <= even_count_lst2 and sum_lst1 <= sum_lst2:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even",
+      "Return 'YES' if both conditions are met, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum(lst1) % 2 == 0:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is less than or equal to the sum of all elements in lst2"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Calculate the sum of all elements in lst1 and lst2",
+      "Compare the counts and sums to determine if it's feasible to swap elements",
+      "Return 'YES' if feasible, 'NO' if not"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    def calculate_sum(lst):
+        return sum(lst)
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    sum_lst1 = calculate_sum(lst1)
+    sum_lst2 = calculate_sum(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum_lst1 <= sum_lst2:
+        return "YES"
+    else:
+        return "NO"
+
+# Test cases
+print(exchange([1, 2, 3, 4], [1, 2, 3, 4]))  # Output: "YES"
+print(exchange([1, 2, 3, 4], [1, 5, 3, 4]))  # Output: "NO"
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even",
+      "Return 'YES' if both conditions are met, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum(lst1) % 2 == 0:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is even",
+      "Return 'YES' if both conditions are met, otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum(lst1) % 2 == 0:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of all elements in lst1 is less than or equal to the sum of all elements in lst2"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Calculate the sum of all elements in lst1 and lst2",
+      "Compare the counts and sums to determine if it's feasible to swap elements"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    def calculate_sum(lst):
+        return sum(lst)
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+    
+    sum_lst1 = calculate_sum(lst1)
+    sum_lst2 = calculate_sum(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and sum_lst1 <= sum_lst2:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of odd elements in lst1 is less than or equal to the number of even elements in lst2",
+      "Check if the sum of odd elements in lst1 is less than or equal to the sum of even elements in lst2"
+    ],
+    "steps": [
+      "Count the number of odd and even elements in lst1 and lst2",
+      "Calculate the sum of odd and even elements in lst1 and lst2",
+      "Compare the counts and sums to determine if it's feasible to swap elements"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    def count_odd_even(lst):
+        odd_count = sum(1 for num in lst if num % 2 != 0)
+        even_count = len(lst) - odd_count
+        return odd_count, even_count
+
+    def sum_odd_even(lst):
+        odd_sum = sum(num for num in lst if num % 2 != 0)
+        even_sum = sum(num for num in lst if num % 2 == 0)
+        return odd_sum, even_sum
+
+    odd_count_lst1, even_count_lst1 = count_odd_even(lst1)
+    odd_count_lst2, even_count_lst2 = count_odd_even(lst2)
+
+    odd_sum_lst1, even_sum_lst1 = sum_odd_even(lst1)
+    odd_sum_lst2, even_sum_lst2 = sum_odd_even(lst2)
+
+    if odd_count_lst1 <= even_count_lst2 and odd_sum_lst1 <= even_sum_lst2:
+        return "YES"
+    else:
+        return "NO"
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if both lists have the same length",
+      "Check if all elements in lst1 are already even",
+      "Check if it's possible to swap elements between lst1 and lst2 to make all elements in lst1 even"
+    ],
+    "high-level steps": [
+      "Check if both lists have the same length",
+      "Check if all elements in lst1 are already even",
+      "If not, iterate through lst1 and lst2 to find elements that can be swapped to make lst1 all even",
+      "If it's possible to swap elements, return 'YES', otherwise return 'NO'"
+    ]
+  }
+}
+------------------------------
+def exchange(lst1, lst2):
+    if len(lst1) != len(lst2):
+        return "NO"
+    
+    if all(num % 2 == 0 for num in lst1):
+        return "YES"
+    
+    diff = sum(1 for num1, num2 in zip(lst1, lst2) if num1 % 2 != 0 and num2 % 2 == 0)
+    
+    return "YES" if diff >= sum(1 for num in lst1 if num % 2 != 0) else "NO"
+
+------------------------------
+scores
+[0.7068, 0.6917, 0.6917, 0.7068, 0.6917, 0.7068, 0.7068, 0.6917, 0.8722, 0.7519]
+[94, 92, 92, 94, 92, 94, 94, 92, 116, 100]

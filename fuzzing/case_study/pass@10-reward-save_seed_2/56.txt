@@ -1,0 +1,875 @@
+------------------------------
+56
+------------------------------
+original prompt
+------------------------------
+
+
+def correct_bracketing(brackets: str):
+    """ brackets is a string of "<" and ">".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    >>> correct_bracketing("<")
+    False
+    >>> correct_bracketing("<>")
+    True
+    >>> correct_bracketing("<<><>>")
+    True
+    >>> correct_bracketing("><<>")
+    False
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def correct_bracketing(brackets: str):
+    """ brackets is a string of "<" and ">".
+    Return True if every opening bracket has a closing bracket.
+    
+    The function should handle strings of any length, including an empty string.
+
+    >>> correct_bracketing("<")
+    False
+    >>> correct_bracketing("<>")
+    True
+    >>> correct_bracketing("<<><>>")
+    True
+    >>> correct_bracketing("><<>")
+    False
+    """
+------------------------------
+canonical solution
+------------------------------
+    depth = 0
+    for b in brackets:
+        if b == "<":
+            depth += 1
+        else:
+            depth -= 1
+        if depth < 0:
+            return False
+    return depth == 0
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Initialize a counter for opening brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the counter",
+      "If the character is '>', decrement the counter",
+      "Check if the counter is equal to 0 at the end of iteration",
+      "Check if the counter is always greater than or equal to 0 during iteration"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    for char in brackets:
+        if char == '<':
+            opening_brackets += 1
+        elif char == '>':
+            opening_brackets -= 1
+        if opening_brackets < 0:
+            return False
+    return opening_brackets == 0
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Iterate through each character in the input string",
+      "Count the number of opening and closing brackets",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+
+    for bracket in brackets:
+        if bracket == "<":
+            opening_brackets += 1
+        elif bracket == ">":
+            closing_brackets += 1
+
+    if opening_brackets == closing_brackets:
+        stack = []
+        for bracket in brackets:
+            if bracket == "<":
+                stack.append(bracket)
+            elif bracket == ">":
+                if not stack:
+                    return False
+                stack.pop()
+
+        return len(stack) == 0
+
+    return False
+
+# Test cases
+print(correct_bracketing("<"))  # False
+print(correct_bracketing("<>"))  # True
+print(correct_bracketing("<<><>>"))  # True
+print(correct_bracketing("><<>"))  # False
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', check if there are any opening brackets to match with, if not return False",
+      "If the character is '>', decrement the opening bracket counter",
+      "At the end, check if the opening bracket counter is 0, return True if it is, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+    
+    for char in brackets:
+        if char == '<':
+            opening_brackets += 1
+        elif char == '>':
+            if opening_brackets == 0:
+                return False
+            opening_brackets -= 1
+    
+    return opening_brackets == 0
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', check if there are any opening brackets to match with, if not return False",
+      "If all characters are processed and the opening bracket counter is equal to the closing bracket counter, return True, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+    
+    for char in brackets:
+        if char == '<':
+            opening_brackets += 1
+        elif char == '>':
+            if opening_brackets == 0:
+                return False
+            closing_brackets += 1
+    
+    return opening_brackets == closing_brackets
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "Check if the closing bracket counter is greater than the opening bracket counter at any point",
+      "If so, return False",
+      "Check if the closing bracket counter is equal to the opening bracket counter at the end",
+      "If so, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+
+    for char in brackets:
+        if char == '<':
+            opening_brackets += 1
+        elif char == '>':
+            closing_brackets += 1
+
+        if closing_brackets > opening_brackets:
+            return False
+
+    return opening_brackets == closing_brackets
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Iterate through each character in the input string",
+      "Count the number of opening and closing brackets",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets",
+      "Return True if both conditions are satisfied, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+
+    for bracket in brackets:
+        if bracket == "<":
+            opening_brackets += 1
+        elif bracket == ">":
+            closing_brackets += 1
+
+    if opening_brackets == closing_brackets:
+        stack = []
+        for bracket in brackets:
+            if bracket == "<":
+                stack.append(bracket)
+            elif bracket == ">":
+                if not stack or stack[-1] != "<":
+                    return False
+                stack.pop()
+
+        return len(stack) == 0
+
+    return False
+
+# Test cases
+print(correct_bracketing("<"))  # False
+print(correct_bracketing("<>"))  # True
+print(correct_bracketing("<<><>>"))  # True
+print(correct_bracketing("><<>"))  # False
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of opening and closing brackets is equal",
+      "Check if the brackets are correctly nested"
+    ],
+    "steps": [
+      "Create a function that takes a string of brackets as input",
+      "Count the number of opening and closing brackets",
+      "Check if the number of opening and closing brackets is equal",
+      "Iterate through the string of brackets and check if they are correctly nested",
+      "Return True if all conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+    
+    for bracket in brackets:
+        if bracket == "<":
+            opening_brackets += 1
+        elif bracket == ">":
+            closing_brackets += 1
+    
+    if opening_brackets != closing_brackets:
+        return False
+    
+    stack = []
+    for bracket in brackets:
+        if bracket == "<":
+            stack.append(bracket)
+        elif bracket == ">":
+            if not stack:
+                return False
+            stack.pop()
+    
+    return len(stack) == 0
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of opening and closing brackets is equal",
+      "Check if the brackets are correctly nested"
+    ],
+    "steps": [
+      "Count the number of opening and closing brackets",
+      "If the counts are not equal, return False",
+      "Iterate through the brackets and check if they are correctly nested",
+      "Return True if all brackets are correctly nested, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_bracket = "<"
+    closing_bracket = ">"
+    
+    if brackets.count(opening_bracket) != brackets.count(closing_bracket):
+        return False
+    
+    stack = []
+    for bracket in brackets:
+        if bracket == opening_bracket:
+            stack.append(bracket)
+        elif bracket == closing_bracket:
+            if not stack:
+                return False
+            stack.pop()
+    
+    return len(stack) == 0
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the number of opening and closing brackets is equal",
+      "Check if the brackets are correctly nested"
+    ],
+    "steps": [
+      "Create a function correct_bracketing that takes a string of brackets as input",
+      "Initialize a counter variable to keep track of the number of opening brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the counter",
+      "If the character is '>', decrement the counter",
+      "If the counter becomes negative at any point, return False",
+      "If the counter is not zero at the end, return False",
+      "Return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_count = 0
+    for bracket in brackets:
+        if bracket == '<':
+            opening_count += 1
+        elif bracket == '>':
+            opening_count -= 1
+            if opening_count < 0:
+                return False
+    return opening_count == 0
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are in the correct order with corresponding closing brackets"
+    ],
+    "major_steps": [
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', check if there are any opening brackets to match with, if not return False",
+      "If the character is '>', decrement the opening bracket counter",
+      "At the end, check if the opening bracket counter is 0, return True if it is, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    opening_brackets = 0
+    closing_brackets = 0
+    
+    for char in brackets:
+        if char == '<':
+            opening_brackets += 1
+        elif char == '>':
+            if opening_brackets == 0:
+                return False
+            opening_brackets -= 1
+    
+    return opening_brackets == 0
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Define a function correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If the closing bracket counter is equal to the opening bracket counter, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If all conditions are met, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If the closing bracket counter is equal to the opening bracket counter, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str) -> bool:
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If the closing bracket counter is equal to the opening bracket counter, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str) -> bool:
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if every opening bracket has a corresponding closing bracket"
+    ],
+    "major_steps": [
+      "Define the function correct_bracketing with brackets as input parameter",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "Increment the counter for opening brackets if the character is '<'",
+      "Increment the counter for closing brackets if the character is '>'",
+      "Check if the number of opening brackets is equal to the number of closing brackets, return False if they are not equal",
+      "Check if every opening bracket has a corresponding closing bracket, return False if any opening bracket does not have a closing bracket",
+      "Return True if all conditions are satisfied"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+    
+    if open_count != close_count:
+        return False
+    
+    stack = []
+    for char in brackets:
+        if char == '<':
+            stack.append(char)
+        elif char == '>':
+            if not stack:
+                return False
+            stack.pop()
+    
+    return len(stack) == 0
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If all conditions are met, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str) -> bool:
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If the closing bracket counter is equal to the opening bracket counter, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If all conditions are met, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if the opening brackets are always followed by closing brackets"
+    ],
+    "high-level steps": [
+      "Create a function named correct_bracketing that takes a string input brackets",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "If the character is '<', increment the opening bracket counter",
+      "If the character is '>', increment the closing bracket counter",
+      "If the closing bracket counter is greater than the opening bracket counter, return False",
+      "If the closing bracket counter is less than the opening bracket counter, return False",
+      "If the closing bracket counter is equal to the opening bracket counter, return True"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+        
+        if close_count > open_count:
+            return False
+    
+    return open_count == close_count
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the number of opening brackets is equal to the number of closing brackets",
+      "Check if every opening bracket has a corresponding closing bracket"
+    ],
+    "major_steps": [
+      "Define the function correct_bracketing with brackets as input parameter",
+      "Check if the input string is empty, return False if it is",
+      "Initialize a counter for opening brackets and closing brackets",
+      "Iterate through each character in the input string",
+      "Increment the counter for opening brackets if the character is '<'",
+      "Increment the counter for closing brackets if the character is '>'",
+      "Check if the number of opening brackets is equal to the number of closing brackets, return False if they are not equal",
+      "Check if every opening bracket has a corresponding closing bracket, return False if not",
+      "Return True if all conditions are met"
+    ]
+  }
+}
+------------------------------
+def correct_bracketing(brackets: str):
+    if not brackets:
+        return False
+    
+    open_count = 0
+    close_count = 0
+    
+    for char in brackets:
+        if char == '<':
+            open_count += 1
+        elif char == '>':
+            close_count += 1
+    
+    if open_count != close_count:
+        return False
+    
+    stack = []
+    for char in brackets:
+        if char == '<':
+            stack.append(char)
+        elif char == '>':
+            if not stack:
+                return False
+            stack.pop()
+    
+    return len(stack) == 0
+
+------------------------------
+scores
+[0.9877, 0.9877, 0.9877, 0.9877, 0.9877, 0.9877, 0.9877, 0.9877, 0.9877, 0.9877]
+[80, 80, 80, 80, 80, 80, 80, 80, 80, 80]

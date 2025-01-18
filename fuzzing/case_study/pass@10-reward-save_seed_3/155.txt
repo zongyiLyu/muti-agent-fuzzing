@@ -1,0 +1,707 @@
+------------------------------
+155
+------------------------------
+original prompt
+------------------------------
+
+def even_odd_count(num):
+    """Given an integer. return a tuple that has the number of even and odd digits respectively.
+
+     Example:
+        even_odd_count(-12) ==> (1, 1)
+        even_odd_count(123) ==> (1, 2)
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def even_odd_count(num):
+    """Given an integer. return a tuple that has the number of even and odd digits respectively.
+
+     Example:
+        even_odd_count(-12) ==> (1, 1)
+        even_odd_count(123) ==> (1, 2)
+        
+     Ensure that the function handles both positive and negative integers correctly.
+    """
+------------------------------
+canonical solution
+------------------------------
+    even_count = 0
+    odd_count = 0
+    for i in str(abs(num)):
+        if int(i)%2==0:
+            even_count +=1
+        else:
+            odd_count +=1
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract individual digits from the input number",
+      "Determine if each digit is even or odd",
+      "Count the number of even and odd digits"
+    ],
+    "major_steps": [
+      "Create a function that takes an integer as input",
+      "Convert the integer to a string to easily extract individual digits",
+      "Iterate through each digit and determine if it is even or odd",
+      "Count the number of even and odd digits",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    for digit in str(abs(num)):
+        if int(digit) % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract individual digits from the input number",
+      "Determine if each digit is even or odd",
+      "Count the number of even and odd digits"
+    ],
+    "major_steps": [
+      "Create a function that takes an integer as input",
+      "Convert the integer to a string to easily extract individual digits",
+      "Iterate through each digit and determine if it is even or odd",
+      "Count the number of even and odd digits",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    for digit in str(abs(num)):
+        if int(digit) % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract individual digits from the input number",
+      "Determine if each digit is even or odd",
+      "Count the number of even and odd digits"
+    ],
+    "major_steps": [
+      "Create a function that takes an integer as input",
+      "Convert the integer to a string to easily extract individual digits",
+      "Iterate through each digit and determine if it is even or odd",
+      "Count the number of even and odd digits",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    for digit in str(abs(num)):
+        if int(digit) % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract individual digits from the input number",
+      "Determine if each digit is even or odd",
+      "Count the number of even and odd digits"
+    ],
+    "major_steps": [
+      "Create a function that takes an integer as input",
+      "Convert the integer to a string to easily extract individual digits",
+      "Iterate through each digit and determine if it is even or odd",
+      "Count the number of even and odd digits",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    for digit in str(abs(num)):
+        if int(digit) % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Input Validation": "Check if the input is a valid integer",
+    "2. Count Even and Odd Digits": "Iterate through each digit of the input number and count the number of even and odd digits",
+    "3. Return Result": "Return a tuple containing the count of even and odd digits"
+  }
+}
+------------------------------
+def even_odd_count(num):
+    if not isinstance(num, int):
+        raise ValueError("Input must be a valid integer")
+    
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num //= 10
+    
+    return (even_count, odd_count)
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high_level_steps": [
+      "Convert the input integer to a string",
+      "Iterate through each character in the string",
+      "Check if the character is a digit and if it is even or odd",
+      "Increment the count of even or odd digits accordingly",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    num_str = str(abs(num))
+    even_count = 0
+    odd_count = 0
+    
+    for digit in num_str:
+        if digit.isdigit():
+            if int(digit) % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+    
+    if num < 0:
+        return (odd_count, even_count)
+    else:
+        return (even_count, odd_count)
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high_level_steps": [
+      "Convert the input integer to a string",
+      "Iterate through each character in the string",
+      "Check if the character is a digit and if it is even or odd",
+      "Increment the count of even or odd digits accordingly",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    num_str = str(abs(num))
+    even_count = 0
+    odd_count = 0
+    
+    for digit in num_str:
+        if digit.isdigit():
+            if int(digit) % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+    
+    if num < 0:
+        return (odd_count, even_count)
+    else:
+        return (even_count, odd_count)
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high_level_steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to count the number of even and odd digits",
+      "Iterate through each digit in the input integer",
+      "Check if the digit is even or odd",
+      "Increment the respective count variable",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "major_steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to store the count of even and odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is even or odd and update the respective count",
+      "Return a tuple containing the count of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high_level_steps": [
+      "Convert the input integer to a string",
+      "Iterate through each character in the string",
+      "Check if the character is a digit and if it is even or odd",
+      "Increment the count of even or odd digits accordingly",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    num_str = str(abs(num))
+    even_count = 0
+    odd_count = 0
+    
+    for digit in num_str:
+        if digit.isdigit():
+            if int(digit) % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+    
+    if num < 0:
+        return (odd_count, even_count)
+    else:
+        return (even_count, odd_count)
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high_level_steps": [
+      "Convert the input integer to a string",
+      "Iterate through each character in the string",
+      "Check if the character is a digit and if it is even or odd",
+      "Increment the count of even or odd digits accordingly",
+      "Return a tuple with the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    num_str = str(abs(num))
+    even_count = 0
+    odd_count = 0
+    
+    for digit in num_str:
+        if digit.isdigit():
+            if int(digit) % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+    
+    if num < 0:
+        return (odd_count, even_count)
+    else:
+        return (even_count, odd_count)
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "major_steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to count the number of even and odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is even or odd",
+      "Increment the respective count variable",
+      "Return a tuple containing the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "major_steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to store the count of even and odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is even or odd and update the respective count",
+      "Return a tuple containing the count of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "high-level steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to count the number of even and odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is even or odd and increment the respective count variable",
+      "Return a tuple containing the counts of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the number of even digits in the input integer",
+      "Identify the number of odd digits in the input integer"
+    ],
+    "major_steps": [
+      "Create a function even_odd_count that takes an integer as input",
+      "Initialize variables to store the count of even and odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is even or odd and update the respective count",
+      "Return a tuple containing the count of even and odd digits"
+    ]
+  }
+}
+------------------------------
+def even_odd_count(num):
+    even_count = 0
+    odd_count = 0
+    
+    num = abs(num)  # Convert negative number to positive for easier processing
+    
+    while num > 0:
+        digit = num % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num = num // 10
+    
+    return (even_count, odd_count)
+
+------------------------------
+scores
+[0.6582, 0.6582, 0.9747, 0.9747, 0.6582, 0.6582, 0.9747, 0.9747, 0.9747, 0.9747]
+[52, 52, 77, 77, 52, 52, 77, 77, 77, 77]

@@ -1,0 +1,616 @@
+------------------------------
+41
+------------------------------
+original prompt
+------------------------------
+
+
+def car_race_collision(n: int):
+    """
+    Imagine a road that's a perfectly straight infinitely long line.
+    n cars are driving left to right;  simultaneously, a different set of n cars
+    are driving right to left.   The two sets of cars start out being very far from
+    each other.  All cars move in the same speed.  Two cars are said to collide
+    when a car that's moving left to right hits a car that's moving right to left.
+    However, the cars are infinitely sturdy and strong; as a result, they continue moving
+    in their trajectory as if they did not collide.
+
+    This function outputs the number of such collisions.
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+```python
+def car_race_collision(n: int):
+    """
+    Consider a road that is a perfectly straight line extending infinitely.
+    There are n cars traveling from left to right; at the same time, another set of n cars
+    is traveling from right to left. These two groups of cars start off being very distant
+    from each other. All cars travel at the same speed. A collision occurs when a car moving
+    from left to right meets a car moving from right to left.
+    Nonetheless, the cars are infinitely durable and robust; therefore, they keep moving
+    along their path as if no collision occurred.
+
+    This function returns the number of such collisions.
+    """
+```
+------------------------------
+canonical solution
+------------------------------
+    return n**2
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store car positions and directions",
+      "Loop through all pairs of cars to calculate collision time",
+      "Count the number of collisions based on collision time"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    def calculate_collision_time(pos1, pos2):
+        if pos1[0] < pos2[0] and pos1[1] > pos2[1]:
+            return (pos2[0] - pos1[0]) / (pos1[1] - pos2[1])
+        return float('inf')
+
+    positions = [(0, 1) for _ in range(n)] + [(0, -1) for _ in range(n)]
+    collisions = 0
+
+    for i in range(2 * n):
+        for j in range(i + 1, 2 * n):
+            collision_time = calculate_collision_time(positions[i], positions[j])
+            if collision_time < float('inf'):
+                collisions += 1
+
+    return collisions
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store the positions and directions of cars",
+      "Loop through all pairs of cars and calculate the time to collision",
+      "Count the number of collisions that occur and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    def calculate_collision_time(pos1, pos2):
+        if pos1[0] < pos2[0] and pos1[1] > pos2[1]:
+            return (pos2[0] - pos1[0]) / (pos1[1] - pos2[1])
+        return float('inf')
+
+    positions = [(i, 0) for i in range(n)] + [(i, 1) for i in range(n)]
+    collisions = 0
+
+    for i in range(len(positions)):
+        for j in range(i + 1, len(positions)):
+            time = calculate_collision_time(positions[i], positions[j])
+            if time < float('inf'):
+                collisions += 1
+
+    return collisions
+
+# Test the function with n = 3
+print(car_race_collision(3))  # Output: 3
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store the positions and directions of cars",
+      "Iterate through each pair of cars and calculate the time to collision",
+      "Count the number of collisions that occur and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    def calculate_collision_time(pos1, pos2):
+        if pos1[0] < pos2[0] and pos1[1] > pos2[1]:
+            return (pos2[0] - pos1[0]) / (pos1[1] - pos2[1])
+        return float('inf')
+
+    positions = [(i, 0) for i in range(n)] + [(i, 1) for i in range(n)]
+    collisions = 0
+
+    for i in range(len(positions)):
+        for j in range(i + 1, len(positions)):
+            time = calculate_collision_time(positions[i], positions[j])
+            if time < float('inf'):
+                collisions += 1
+
+    return collisions
+
+# Test the function with n = 3
+print(car_race_collision(3))  # Output: 3
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Initialize variables to store car positions and directions",
+      "Loop through all pairs of cars to calculate collision time",
+      "Count the number of collisions that occur"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    def calculate_collision_time(pos1, pos2):
+        if pos1 <= pos2:
+            return float('inf')
+        return (pos1 - pos2) / 2
+    
+    positions = [0] * (2 * n)
+    directions = [1] * n + [-1] * n
+    collisions = 0
+    
+    for i in range(2 * n):
+        for j in range(i + 1, 2 * n):
+            collision_time = calculate_collision_time(positions[i], positions[j])
+            if collision_time < float('inf'):
+                collisions += 1
+        
+    return collisions
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Initialize variables to store car positions and directions",
+      "Iterate through each pair of cars and calculate collision time",
+      "Count the number of collisions and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    left_cars = [i for i in range(n)]  # Initialize left cars positions
+    right_cars = [i for i in range(n, 2*n)]  # Initialize right cars positions
+    collisions = 0
+
+    for left_car in left_cars:
+        for right_car in right_cars:
+            if left_car < right_car:  # Calculate collision time
+                collisions += 1
+
+    return collisions
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Initialize variables to store car positions and directions",
+      "Loop through all pairs of cars and calculate collision time",
+      "Count the number of collisions and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    collisions = 0
+    for i in range(1, n+1):
+        collisions += i - 1
+    return collisions
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Initialize variables to store car positions and directions",
+      "Loop through all pairs of cars and calculate collision time",
+      "Count the number of collisions and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    collisions = 0
+    for i in range(1, n+1):
+        collisions += i - 1
+    return collisions
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions of the cars moving left to right and right to left",
+      "Calculate the time it takes for the cars to collide",
+      "Determine the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store the positions of the cars moving left to right and right to left",
+      "Calculate the time it takes for the cars to collide based on their initial positions and speeds",
+      "Determine the number of collisions that occur by counting the number of times the cars meet at the same position"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    left_cars = [i for i in range(n)]
+    right_cars = [i for i in range(n, 2*n)]
+    
+    collisions = 0
+    for i in range(n):
+        if left_cars[i] == right_cars[i]:
+            collisions += 1
+    
+    return collisions
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions of the cars moving left to right and right to left",
+      "Calculate the time it takes for the cars to collide",
+      "Determine the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store the positions of the cars moving left to right and right to left",
+      "Calculate the time it takes for the cars to collide based on their initial positions and speeds",
+      "Determine the number of collisions that occur by counting the number of times the cars meet at the same position"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    left_cars = [i for i in range(n)]
+    right_cars = [i for i in range(n, 2*n)]
+    
+    collisions = 0
+    for i in range(n):
+        if left_cars[i] == right_cars[i]:
+            collisions += 1
+    
+    return collisions
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the initial positions and directions of all cars",
+      "Calculate the time it takes for each pair of cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "major_steps": [
+      "Initialize variables to store the positions and directions of cars",
+      "Iterate through each pair of cars and calculate the time to collision",
+      "Count the number of collisions that occur and return the result"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    def calculate_collision_time(pos1, pos2):
+        if pos1[0] < pos2[0] and pos1[1] > pos2[1]:
+            return (pos2[0] - pos1[0]) / (pos1[1] - pos2[1])
+        return float('inf')
+
+    positions = [(i, n + i) for i in range(n)] + [(2 * n + i, n - i) for i in range(n)]
+    collisions = 0
+
+    for i in range(2 * n):
+        for j in range(i + 1, 2 * n):
+            collision_time = calculate_collision_time(positions[i], positions[j])
+            if collision_time < float('inf'):
+                collisions += 1
+
+    return collisions
+
+# Test the function with n = 3
+print(car_race_collision(3))  # Output should be 6
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars in each direction",
+      "Determine the time it takes for the cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Get the input value of n",
+      "Calculate the distance between the cars in each direction based on n",
+      "Calculate the time it takes for the cars to collide",
+      "Count the number of collisions that occur",
+      "Return the total number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    # Calculate the number of collisions based on the number of cars
+    return n * (n - 1) // 2
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the positions of the cars traveling from left to right",
+      "Identify the positions of the cars traveling from right to left",
+      "Determine if any collisions occur between the cars"
+    ],
+    "major_steps": [
+      "Initialize two lists to store the positions of cars traveling from left to right and right to left",
+      "Iterate through both lists simultaneously to check for collisions",
+      "Count and return the number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    collisions = min(n, n-1)  # Calculate the number of collisions
+    return collisions
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Determine when a collision occurs",
+      "Count the number of collisions"
+    ],
+    "high-level steps": [
+      "Define a function car_race_collision(n: int)",
+      "Calculate the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Check for collisions and count them",
+      "Return the total number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    left_cars = n
+    right_cars = n
+    distance_between_cars = abs(left_cars - right_cars)
+    collisions = min(left_cars, right_cars)
+    return collisions
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Determine when a collision occurs",
+      "Count the number of collisions"
+    ],
+    "high-level steps": [
+      "Define the function car_race_collision with parameter n",
+      "Calculate the total number of cars as 2n",
+      "Calculate the distance between the cars as n-1",
+      "Calculate the number of collisions as n-1"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    return n - 1
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars in each direction",
+      "Determine the time it takes for the cars to collide",
+      "Count the number of collisions that occur"
+    ],
+    "high-level steps": [
+      "Get the input parameter n",
+      "Calculate the distance between the cars in each direction based on n",
+      "Calculate the time it takes for the cars to collide",
+      "Count the number of collisions that occur",
+      "Return the total number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    return n
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Determine the time it takes for the cars to collide",
+      "Count the number of collisions"
+    ],
+    "high-level steps": [
+      "Define a function car_race_collision(n: int) that takes the number of cars as input",
+      "Calculate the distance between the cars based on their speed and direction",
+      "Determine the time it takes for the cars to collide using the distance and speed",
+      "Count the number of collisions that occur"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    return n
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the positions of the cars traveling from left to right",
+      "Identify the positions of the cars traveling from right to left",
+      "Determine if any collisions occur between the cars"
+    ],
+    "high-level steps": [
+      "Initialize two lists to store the positions of cars traveling from left to right and right to left",
+      "Iterate through both lists to check for collisions",
+      "Return the number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    collisions = min(n, n)
+    return collisions
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Determine when a collision occurs",
+      "Count the number of collisions"
+    ],
+    "high-level steps": [
+      "Define the function car_race_collision(n: int)",
+      "Calculate the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Check for collisions and count them",
+      "Return the total number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    return n
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of cars traveling in each direction",
+      "Calculate the distance between the cars",
+      "Determine the time it takes for the cars to collide",
+      "Count the number of collisions"
+    ],
+    "high-level steps": [
+      "Define a function car_race_collision(n: int) that takes the number of cars as input",
+      "Calculate the distance between the cars based on the number of cars",
+      "Determine the time it takes for the cars to collide using the distance and speed of the cars",
+      "Count the number of collisions that occur"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    return n * (n - 1) // 2
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the positions of the cars traveling from left to right",
+      "Identify the positions of the cars traveling from right to left",
+      "Determine the distance between each pair of cars",
+      "Check for collisions between cars moving in opposite directions"
+    ],
+    "high-level steps": [
+      "Initialize two lists to store the positions of cars traveling from left to right and right to left",
+      "Calculate the distance between each pair of cars",
+      "Check for collisions by comparing the positions of cars moving in opposite directions",
+      "Return the number of collisions"
+    ]
+  }
+}
+------------------------------
+def car_race_collision(n: int):
+    left_to_right = list(range(n))
+    right_to_left = list(range(n))
+    
+    collisions = 0
+    for i in range(n):
+        distance = abs(left_to_right[i] - right_to_left[i])
+        if distance == 0:
+            collisions += 1
+    
+    return collisions
+
+------------------------------
+scores
+[0.0109, 0.0, 0.0109, 0.0, 0.0109, 0.0109, 0.0109, 0.0109, 0.0109, 0.0109]
+[1, 0, 1, 0, 1, 1, 1, 1, 1, 1]

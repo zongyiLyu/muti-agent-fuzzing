@@ -1,0 +1,728 @@
+------------------------------
+134
+------------------------------
+original prompt
+------------------------------
+
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Create a function that returns True if the last character
+    of a given string is an alphabetical character and is not
+    a part of a word, and False otherwise.
+    Note: "word" is a group of characters separated by space.
+
+    Examples:
+    check_if_last_char_is_a_letter("apple pie") ➞ False
+    check_if_last_char_is_a_letter("apple pi e") ➞ True
+    check_if_last_char_is_a_letter("apple pi e ") ➞ False
+    check_if_last_char_is_a_letter("") ➞ False 
+    '''
+
+------------------------------
+mutated prompt
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Develop a function that returns True if the final character
+    in a given string is an alphabetical letter and is not
+    part of a word, otherwise return False.
+    Note: A "word" is defined as a sequence of characters separated by spaces.
+    Make sure the function correctly handles cases with empty strings.
+    The function should also handle strings with trailing spaces correctly.
+
+    Examples:
+    check_if_last_char_is_a_letter("apple pie") ➞ False
+    check_if_last_char_is_a_letter("apple pi e") ➞ True
+    check_if_last_char_is_a_letter("apple pi e ") ➞ False
+    check_if_last_char_is_a_letter("") ➞ False 
+    '''
+------------------------------
+canonical solution
+------------------------------
+ 
+    check = txt.split(' ')[-1]
+    return True if len(check) == 1 and (97 <= ord(check.lower()) <= 122) else False
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character, return False if it is not",
+      "Check if the last character is not part of a word, return True if it is not",
+      "Return False if none of the above conditions are met"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    if not txt[-1].isalpha():
+        return False
+    
+    if txt[-1] == ' ':
+        return True
+    
+    return False
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character, return False if it is not",
+      "Check if the last character is not part of a word, return True if it is not",
+      "Return the result"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    if not txt[-1].isalpha():
+        return False
+    
+    if len(txt) == 1 or txt[-2] == ' ':
+        return True
+    
+    return False
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character of the string is an alphabetical character",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Check if the last character of the string is an alphabetical character using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    return False
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input string is empty": {
+      "subproblems": [
+        "Check if the input string is empty"
+      ]
+    },
+    "2. Remove trailing spaces from the input string": {
+      "subproblems": [
+        "Remove trailing spaces from the input string"
+      ]
+    },
+    "3. Split the input string into words": {
+      "subproblems": [
+        "Split the input string into words"
+      ]
+    },
+    "4. Check if the last word contains only alphabetical characters": {
+      "subproblems": [
+        "Check if the last word contains only alphabetical characters"
+      ]
+    },
+    "5. Check if the last character of the input string is an alphabetical letter": {
+      "subproblems": [
+        "Check if the last character of the input string is an alphabetical letter"
+      ]
+    }
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()  # Remove trailing spaces
+    words = txt.split()  # Split the input string into words
+    
+    if not words:
+        return False
+    
+    last_word = words[-1]
+    if not last_word.isalpha():
+        return False
+    
+    last_char = last_word[-1]
+    if last_char.isalpha() and len(last_word) == 1:
+        return True
+    
+    return False
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Get the last character of the input string",
+      "Check if the last character is an alphabetical letter using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    last_char = txt[-1]
+    
+    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input string is empty": {
+      "subproblems": [
+        "Check if the input string is empty"
+      ]
+    },
+    "2. Remove trailing spaces from the input string": {
+      "subproblems": [
+        "Remove trailing spaces from the input string"
+      ]
+    },
+    "3. Split the input string into words": {
+      "subproblems": [
+        "Split the input string into words"
+      ]
+    },
+    "4. Check if the last word contains only alphabetical characters": {
+      "subproblems": [
+        "Check if the last word contains only alphabetical characters"
+      ]
+    },
+    "5. Check if the last character of the input string is an alphabetical letter": {
+      "subproblems": [
+        "Check if the last character of the input string is an alphabetical letter"
+      ]
+    }
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()  # Remove trailing spaces
+    words = txt.split()  # Split the input string into words
+    
+    if not words:
+        return False
+    
+    last_word = words[-1]
+    if not last_word.isalpha():
+        return False
+    
+    last_char = last_word[-1]
+    if last_char.isalpha() and len(last_word) == 1:
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Get the last character of the input string",
+      "Check if the last character is an alphabetical letter using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()  # Remove trailing spaces
+    last_char = txt[-1]
+    
+    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Split the input string into words using spaces as separators",
+      "Check if the last word in the list of words is a single alphabetical letter",
+      "Check if the last character in the input string is an alphabetical letter",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    words = txt.split()
+    
+    if len(words) == 0:
+        return False
+    
+    last_word = words[-1]
+    
+    if len(last_word) == 1 and last_word.isalpha():
+        return True
+    
+    if txt[-1].isalpha():
+        return True
+    
+    return False
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is a letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Get the last character of the input string",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    last_char = txt[-1]
+    
+    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Split the input string into words using spaces as separators",
+      "Check if the last word in the list of words contains only alphabetical letters",
+      "Check if the last character in the input string is an alphabetical letter",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    words = txt.split()
+    
+    if not words:
+        return False
+    
+    last_word = words[-1]
+    
+    if last_word.isalpha() and txt[-1].isalpha():
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is a letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Get the last character of the input string",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word by checking if it is preceded by a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    last_char = txt[-1]
+    
+    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is a letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define the function check_if_last_char_is_a_letter(txt)",
+      "Check if the input string is empty and return False if it is",
+      "Remove any trailing spaces from the input string",
+      "Check if the last character is a letter using isalpha() method",
+      "Check if the last character is not part of a word by checking if the character before it is a space",
+      "Return True if both conditions are met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    
+    if txt[-1].isalpha() and (len(txt) == 1 or txt[-2] == ' '):
+        return True
+    else:
+        return False
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Check if the last character is an alphabetical letter",
+      "Check if the last character is not part of a word"
+    ],
+    "steps": [
+      "Define a function check_if_last_char_is_a_letter that takes a string as input",
+      "Check if the input string is empty, if so, return False",
+      "Remove any trailing spaces from the input string",
+      "Split the input string into words using spaces as delimiters",
+      "Check if the last word in the list of words is a single alphabetical letter",
+      "Check if the last character in the input string is an alphabetical letter",
+      "If both conditions are met, return True, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def check_if_last_char_is_a_letter(txt):
+    if not txt:
+        return False
+    
+    txt = txt.rstrip()
+    words = txt.split()
+    
+    if len(words) == 0:
+        return False
+    
+    last_word = words[-1]
+    if len(last_word) == 1 and last_word.isalpha():
+        return True
+    
+    if txt[-1].isalpha():
+        return True
+    
+    return False
+
+------------------------------
+scores
+[0.9781, 0.9781, 0.9781, 0.9781, 0.2336, 0.9781, 0.292, 0.9781, 0.9781, 0.2336]
+[134, 134, 134, 134, 32, 134, 40, 134, 134, 32]

@@ -1,0 +1,574 @@
+------------------------------
+16
+------------------------------
+original prompt
+------------------------------
+
+
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of
+    >>> count_distinct_characters('xyzXYZ')
+    3
+    >>> count_distinct_characters('Jerry')
+    4
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Determine the number of unique characters in a string, ignoring case.
+    >>> count_distinct_characters('xyzXYZ')
+    3
+    >>> count_distinct_characters('Jerry')
+    4
+    """
+------------------------------
+canonical solution
+------------------------------
+    return len(set(string.lower()))
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of """
+    
+    distinct_chars = set()
+    
+    for char in string:
+        distinct_chars.add(char.lower())
+    
+    return len(distinct_chars)
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of """
+    
+    distinct_chars = set()
+    
+    for char in string:
+        distinct_chars.add(char.lower())
+    
+    return len(distinct_chars)
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of """
+    
+    distinct_chars = set()
+    
+    for char in string:
+        distinct_chars.add(char.lower())
+    
+    return len(distinct_chars)
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    distinct_chars = set()
+    for char in string:
+        distinct_chars.add(char.lower())
+    return len(distinct_chars)
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Ignore case sensitivity when counting distinct characters"
+    ],
+    "high_level_steps": [
+      "Create a function count_distinct_characters that takes a string as input",
+      "Convert the input string to lowercase to ignore case sensitivity",
+      "Initialize an empty set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Add each character to the set if it is not already present",
+      "Return the length of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    distinct_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            distinct_chars.add(char)
+    
+    return len(distinct_chars)
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "high_level_steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    distinct_chars = set()
+    for char in string:
+        distinct_chars.add(char.lower())
+    return len(distinct_chars)
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the length of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of """
+    
+    distinct_chars = set()
+    
+    for char in string:
+        distinct_chars.add(char.lower())
+    
+    return len(distinct_chars)
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "high_level_steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    distinct_chars = set()
+    for char in string:
+        distinct_chars.add(char.lower())
+    return len(distinct_chars)
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "high_level_steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    distinct_chars = set()
+    for char in string:
+        distinct_chars.add(char.lower())
+    return len(distinct_chars)
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all distinct characters in the input string",
+      "Count the number of distinct characters"
+    ],
+    "steps": [
+      "Create a set to store distinct characters",
+      "Iterate through each character in the input string",
+      "Convert each character to lowercase to ignore case sensitivity",
+      "Add each character to the set",
+      "Return the size of the set as the count of distinct characters"
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of """
+    
+    distinct_chars = set()
+    
+    for char in string:
+        distinct_chars.add(char.lower())
+    
+    return len(distinct_chars)
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the characters in the string and keep track of unique characters.",
+    "3. Return the count": "Return the count of unique characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the string and keep track of unique characters using a set data structure.",
+    "3. Return the count": "Return the size of the set as the number of distinct characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    # Step 1: Analyze the input
+    string = string.lower()  # Convert the input string to lowercase to ignore case differences
+    
+    # Step 2: Count unique characters
+    unique_chars = set()
+    for char in string:
+        if char.isalpha():  # Consider only alphabetic characters
+            unique_chars.add(char)
+    
+    # Step 3: Return the count
+    return len(unique_chars)  # Return the size of the set as the number of distinct characters
+
+# Test cases
+print(count_distinct_characters('xyzXYZ'))  # Output: 3
+print(count_distinct_characters('Jerry'))   # Output: 4
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the string and keep track of unique characters using a set data structure.",
+    "3. Return the count": "Return the size of the set as the number of distinct characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    # Step 1: Analyze the input
+    string = string.lower()  # Convert the input string to lowercase to ignore case differences
+    
+    # Step 2: Count unique characters
+    unique_chars = set()
+    for char in string:
+        if char.isalpha():  # Consider only alphabetic characters
+            unique_chars.add(char)
+    
+    # Step 3: Return the count
+    return len(unique_chars)  # Return the size of the set as the number of distinct characters
+
+# Test cases
+print(count_distinct_characters('xyzXYZ'))  # Output: 3
+print(count_distinct_characters('Jerry'))   # Output: 4
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the string and keep track of unique characters using a set.",
+    "3. Return the count": "Return the size of the set as the number of distinct characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    # Step 1: Analyze the input
+    string = string.lower()  # Convert the input string to lowercase to ignore case differences
+    
+    # Step 2: Count unique characters
+    unique_chars = set()
+    for char in string:
+        if char.isalpha():  # Consider only alphabetic characters
+            unique_chars.add(char)
+    
+    # Step 3: Return the count
+    return len(unique_chars)  # Return the size of the set as the number of distinct characters
+
+# Test cases
+print(count_distinct_characters('xyzXYZ'))  # Output: 3
+print(count_distinct_characters('Jerry'))   # Output: 4
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the string and keep track of unique characters using a set.",
+    "3. Return the count": "Return the size of the set as the number of distinct characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    # Step 1: Analyze the input
+    string = string.lower()  # Convert the input string to lowercase to ignore case differences
+    
+    # Step 2: Count unique characters
+    unique_chars = set()
+    for char in string:
+        if char.isalpha():  # Consider only alphabetic characters
+            unique_chars.add(char)
+    
+    # Step 3: Return the count
+    return len(unique_chars)  # Return the size of the set as the number of distinct characters
+
+# Test cases
+print(count_distinct_characters('xyzXYZ'))  # Output: 3
+print(count_distinct_characters('Jerry'))   # Output: 4
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the characters in the string and keep track of unique characters.",
+    "3. Return the count": "Return the count of unique characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the characters in the string and keep track of unique characters.",
+    "3. Return the count": "Return the count of unique characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the characters in the string and keep track of unique characters.",
+    "3. Return the count": "Return the count of unique characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze the input": "Convert the input string to lowercase to ignore case differences.",
+    "2. Count unique characters": "Iterate through the characters in the string and keep track of unique characters.",
+    "3. Return the count": "Return the count of unique characters."
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+# Test cases
+print(count_distinct_characters('xyzXYZ'))  # Output: 3
+print(count_distinct_characters('Jerry'))   # Output: 4
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function count_distinct_characters": [
+      "Create a function named count_distinct_characters that takes a string as input and returns an integer.",
+      "Add a docstring to describe the function and provide examples of input and output."
+    ],
+    "2. Convert the input string to lowercase": [
+      "Use the lower() method to convert all characters in the input string to lowercase."
+    ],
+    "3. Create a set to store unique characters": [
+      "Initialize an empty set to store unique characters."
+    ],
+    "4. Iterate through the characters in the input string": [
+      "Use a for loop to iterate through each character in the input string."
+    ],
+    "5. Add unique characters to the set": [
+      "Check if the character is already in the set, if not, add it to the set."
+    ],
+    "6. Return the length of the set": [
+      "Return the length of the set, which represents the number of unique characters in the input string."
+    ]
+  }
+}
+------------------------------
+def count_distinct_characters(string: str) -> int:
+    """ Determine the number of unique characters in a string, ignoring case.
+    >>> count_distinct_characters('xyzXYZ')
+    3
+    >>> count_distinct_characters('Jerry')
+    4
+    """
+    string = string.lower()
+    unique_chars = set()
+    
+    for char in string:
+        if char.isalpha():
+            unique_chars.add(char)
+    
+    return len(unique_chars)
+
+------------------------------
+scores
+[0.9457, 0.9457, 0.9457, 0.9457, 0.9457, 0.9457, 0.9457, 0.9457, 0.9457, 0.9457]
+[122, 122, 122, 122, 122, 122, 122, 122, 122, 122]

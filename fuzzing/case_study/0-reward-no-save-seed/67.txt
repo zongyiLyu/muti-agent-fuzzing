@@ -1,0 +1,774 @@
+------------------------------
+67
+------------------------------
+original prompt
+------------------------------
+
+def fruit_distribution(s,n):
+    """
+    In this task, you will be given a string that represents a number of apples and oranges 
+    that are distributed in a basket of fruit this basket contains 
+    apples, oranges, and mango fruits. Given the string that represents the total number of 
+    the oranges and apples and an integer that represent the total number of the fruits 
+    in the basket return the number of the mango fruits in the basket.
+    for examble:
+    fruit_distribution("5 apples and 6 oranges", 19) ->19 - 5 - 6 = 8
+    fruit_distribution("0 apples and 1 oranges",3) -> 3 - 0 - 1 = 2
+    fruit_distribution("2 apples and 3 oranges", 100) -> 100 - 2 - 3 = 95
+    fruit_distribution("100 apples and 1 oranges",120) -> 120 - 100 - 1 = 19
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def fruit_distribution(s,n):
+    """
+    In this task, you will be given a string that represents a number of apples and oranges 
+    that are distributed in a basket of fruit this basket contains 
+    apples, oranges, and mango fruits. Given the string that represents the total number of 
+    the oranges and apples and an integer that represent the total number of the fruits 
+    in the basket return the number of the mango fruits in the basket.
+    for examble:
+    fruit_distribution("5 apples and 6 oranges", 19) ->19 - 5 - 6 = 8
+    fruit_distribution("0 apples and 1 oranges",3) -> 3 - 0 - 1 = 2
+    fruit_distribution("2 apples and 3 oranges", 100) -> 100 - 2 - 3 = 95
+    fruit_distribution("100 apples and 1 oranges",120) -> 120 - 100 - 1 = 19
+    
+    You need to extract the number of apples and oranges from the string and subtract their sum from the total number of fruits to find the number of mangoes.
+    """
+
+------------------------------
+canonical solution
+------------------------------
+    lis = list()
+    for i in s.split(' '):
+        if i.isdigit():
+            lis.append(int(i))
+    return n - sum(lis)
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits in the basket from the input integer",
+      "Calculate the number of mango fruits in the basket by subtracting the number of apples and oranges from the total number of fruits"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits in the basket",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the calculated number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    # Extract the number of apples and oranges from the input string
+    apples = int(s.split(' ')[0])
+    oranges = int(s.split(' ')[-2])
+
+    # Extract the total number of fruits in the basket from the input integer
+    total_fruits = n
+
+    # Calculate the number of mango fruits in the basket by subtracting the number of apples and oranges from the total number of fruits
+    mango_fruits = total_fruits - apples - oranges
+
+    return mango_fruits
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits in the basket from the input integer",
+      "Calculate the number of mango fruits in the basket by subtracting the number of apples and oranges from the total number of fruits"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits in the basket",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the calculated number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    # Extract the number of apples and oranges from the input string
+    apples = int(s.split(' ')[0])
+    oranges = int(s.split(' ')[-2])
+
+    # Extract the total number of fruits in the basket from the input integer
+    total_fruits = n
+
+    # Calculate the number of mango fruits in the basket
+    mango_fruits = total_fruits - apples - oranges
+
+    return mango_fruits
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0])
+        oranges = int(fruits[3])
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0]) if fruits[0].isdigit() else 0
+        oranges = int(fruits[3]) if fruits[3].isdigit() else 0
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0]) if fruits[0].isdigit() else 0
+        oranges = int(fruits[3]) if fruits[3].isdigit() else 0
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0]) if fruits[0].isdigit() else 0
+        oranges = int(fruits[3]) if fruits[3].isdigit() else 0
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0]) if fruits[0].isdigit() else 0
+        oranges = int(fruits[3]) if fruits[3].isdigit() else 0
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the calculated number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(fruit_str):
+        fruit_list = fruit_str.split()
+        return int(fruit_list[0]), int(fruit_list[3])
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruit_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the calculated number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(fruit_str):
+        return int(fruit_str.split()[0])
+
+    apples = extract_fruit_count(s.split("and")[0])
+    oranges = extract_fruit_count(s.split("and")[1])
+
+    total_fruits = n
+    mango_fruits = total_fruits - apples - oranges
+
+    return mango_fruits
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Extract the total number of fruits from the input integer",
+      "Calculate the number of mango fruits in the basket"
+    ],
+    "steps": [
+      "Parse the input string to extract the number of apples and oranges",
+      "Parse the input integer to get the total number of fruits",
+      "Calculate the number of mango fruits by subtracting the number of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruits_count(s):
+        fruits = s.split()
+        apples = int(fruits[0]) if fruits[0].isdigit() else 0
+        oranges = int(fruits[3]) if fruits[3].isdigit() else 0
+        return apples, oranges
+
+    def calculate_mango_fruits(apples, oranges, total_fruits):
+        return total_fruits - apples - oranges
+
+    apples, oranges = extract_fruits_count(s)
+    mango_fruits = calculate_mango_fruits(apples, oranges, n)
+    
+    return mango_fruits
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_number(fruit):
+        index = s.find(fruit)
+        if index == -1:
+            return 0
+        start = s.rfind(' ', 0, index) + 1
+        end = s.find(' ', index)
+        try:
+            return int(s[start:end])
+        except ValueError:
+            return 0
+
+    apples = extract_fruit_number('apples')
+    oranges = extract_fruit_number('oranges')
+    
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits as the output": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    # Extract the number of apples and oranges from the input string
+    apples_index = s.find('apples')
+    oranges_index = s.find('oranges')
+    
+    apples = int(s[:apples_index].strip())
+    oranges = int(s[apples_index + len('apples'):oranges_index].strip())
+    
+    # Calculate the total number of mango fruits
+    mangoes = n - apples - oranges
+    
+    # Return the number of mango fruits as the output
+    return mangoes
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(fruit):
+        index = s.find(fruit)
+        if index != -1:
+            start = s.rfind(' ', 0, index) + 1
+            end = s.find(' ', index)
+            return int(s[start:end])
+        return 0
+
+    apples = extract_fruit_count('apples')
+    oranges = extract_fruit_count('oranges')
+    
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits in the basket": {
+      "subproblems": [
+        "Extract the total number of fruits in the basket",
+        "Subtract the number of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(fruit):
+        index = s.find(fruit)
+        if index != -1:
+            start = s.rfind(' ', 0, index) + 1
+            end = s.find(' ', index)
+            try:
+                return int(s[start:end])
+            except ValueError:
+                return 0
+        return 0
+
+    apples = extract_fruit_count('apples')
+    oranges = extract_fruit_count('oranges')
+    
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the numbers of apples and oranges",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(s):
+        apples = 0
+        oranges = 0
+        for word in s.split():
+            if word.isdigit():
+                if "apples" in s:
+                    apples = int(word)
+                elif "oranges" in s:
+                    oranges = int(word)
+        return apples, oranges
+
+    apples, oranges = extract_fruit_count(s)
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_number(fruit):
+        index = s.find(fruit)
+        if index == -1:
+            return 0
+        start = s.rfind(' ', 0, index) + 1
+        end = s.find(' ', index)
+        try:
+            return int(s[start:end])
+        except ValueError:
+            return 0
+
+    apples = extract_fruit_number('apples')
+    oranges = extract_fruit_number('oranges')
+    
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the numbers of apples and oranges",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(s):
+        apples = 0
+        oranges = 0
+        for word in s.split():
+            if word.isdigit():
+                if "apples" in s:
+                    apples = int(word)
+                elif "oranges" in s:
+                    oranges = int(word)
+        return apples, oranges
+
+    apples, oranges = extract_fruit_count(s)
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(s, fruit):
+        index_fruit = s.find(fruit)
+        if index_fruit != -1:
+            index_space_before = s.rfind(' ', 0, index_fruit)
+            index_space_after = s.find(' ', index_fruit)
+            if index_space_before != -1 and index_space_after != -1:
+                return int(s[index_space_before+1:index_fruit]), int(s[index_fruit+1:index_space_after])
+        return 0, 0
+
+    apples, oranges = extract_fruit_count(s, 'apples')
+    total_mangoes = n - apples - oranges
+    return total_mangoes
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the number of apples and oranges from the input string",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits"
+    ],
+    "high-level steps": [
+      "Parse the input string to extract the numbers of apples and oranges",
+      "Convert the extracted numbers to integers",
+      "Calculate the total number of mango fruits by subtracting the sum of apples and oranges from the total number of fruits",
+      "Return the number of mango fruits"
+    ]
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(s):
+        apples = 0
+        oranges = 0
+        for word in s.split():
+            if word.isdigit():
+                if "apples" in s:
+                    apples = int(word)
+                elif "oranges" in s:
+                    oranges = int(word)
+        return apples, oranges
+
+    apples, oranges = extract_fruit_count(s)
+    mangoes = n - apples - oranges
+    return mangoes
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Extract the number of apples and oranges from the input string": {
+      "subproblems": [
+        "Identify the position of 'apples' and 'oranges' in the input string",
+        "Extract the numbers before 'apples' and 'oranges'"
+      ]
+    },
+    "2. Calculate the total number of mango fruits": {
+      "subproblems": [
+        "Subtract the sum of apples and oranges from the total number of fruits"
+      ]
+    },
+    "3. Return the number of mango fruits": {
+      "subproblems": [
+        "Return the calculated number of mango fruits"
+      ]
+    }
+  }
+}
+------------------------------
+def fruit_distribution(s, n):
+    def extract_fruit_count(s, fruit):
+        index_fruit = s.find(fruit)
+        if index_fruit != -1:
+            index_space_before = s.rfind(' ', 0, index_fruit)
+            index_space_after = s.find(' ', index_fruit)
+            if index_space_before == -1:
+                index_space_before = 0
+            if index_space_after == -1:
+                index_space_after = len(s)
+            return int(s[index_space_before:index_fruit].strip()), int(s[index_fruit + len(fruit) + 1:index_space_after].strip())
+        return 0
+
+    apples, oranges = extract_fruit_count(s, 'apples'), extract_fruit_count(s, 'oranges')
+    mangoes = n - apples[0] - oranges[0]
+    return mangoes
+
+------------------------------
+scores
+[0.0, 0.0, 0.0, 0.0, 0.1652, 0.0, 0.1652, 0.0, 0.1652, 0.0]
+[0, 0, 0, 0, 19, 0, 19, 0, 19, 0]

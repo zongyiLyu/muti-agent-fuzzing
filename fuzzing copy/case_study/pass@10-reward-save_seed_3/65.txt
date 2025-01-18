@@ -1,0 +1,753 @@
+------------------------------
+65
+------------------------------
+original prompt
+------------------------------
+
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, return digits reversed.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def circular_shift(x, shift):
+    """Execute a circular shift on the digits of the integer x, rotating the digits to the right by the given shift amount, and return the result as a string.
+    If the shift amount is greater than the number of digits, return the digits in reverse order.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """
+------------------------------
+canonical solution
+------------------------------
+    s = str(x)
+    if shift > len(s):
+        return s[::-1]
+    else:
+        return s[len(s) - shift:] + s[:len(s) - shift]
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the actual shift value based on the input shift and the number of digits",
+      "Perform circular shift operation on the digits of the integer x",
+      "Handle the case where shift is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Calculate the number of digits in the integer x",
+      "Determine the actual shift value by taking the modulo of shift and the number of digits",
+      "Perform circular shift operation on the digits of the integer x based on the actual shift value",
+      "Handle the case where actual shift is greater than the number of digits by reversing the digits"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        if actual_shift > num_digits:
+            return x_str[::-1]
+        else:
+            return shifted_str
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in x",
+      "Determine the direction of the shift",
+      "Calculate the actual shift amount",
+      "Perform the circular shift operation on the digits of x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    
+    if shift > 0:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+    else:
+        shifted_str = x_str[actual_shift:] + x_str[:actual_shift]
+    
+    return shifted_str
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in x",
+      "Determine the direction of the shift",
+      "Calculate the actual shift amount",
+      "Perform the circular shift operation on the digits of x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    
+    if shift > 0:
+        result = x_str[-actual_shift:] + x_str[:-actual_shift]
+    else:
+        result = x_str[actual_shift:] + x_str[:actual_shift]
+    
+    return result
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+    
+    return shifted_str
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount",
+      "Perform the circular shift operation",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    
+    if shift > 0:
+        result = x_str[-actual_shift:] + x_str[:-actual_shift]
+    else:
+        result = x_str[actual_shift:] + x_str[:actual_shift]
+    
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    
+    if shift > 0:
+        result = x_str[-actual_shift:] + x_str[:-actual_shift]
+    else:
+        result = x_str[actual_shift:] + x_str[:actual_shift]
+    
+    return result
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+    
+    return shifted_str
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    
+    if shift > 0:
+        result = x_str[-actual_shift:] + x_str[:-actual_shift]
+    else:
+        result = x_str[actual_shift:] + x_str[:actual_shift]
+    
+    return result
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the effective shift amount based on the number of digits and the given shift",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where shift is greater than the number of digits"
+    ],
+    "major_steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the effective shift amount",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where shift is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    shift %= num_digits
+    if shift == 0:
+        return x_str
+    
+    shifted_num = x_str[-shift:] + x_str[:-shift]
+    
+    return shifted_num
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the integer x",
+      "Determine the direction of the circular shift (right or left)",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift value",
+      "Calculate the number of digits in the integer x",
+      "Determine the direction of the circular shift",
+      "Calculate the actual shift amount based on the number of digits and the given shift value",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle the case where the shift value is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    
+    if shift > num_digits:
+        return x_str[::-1]
+    
+    actual_shift = shift % num_digits
+    shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+    
+    return shifted_str
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high_level_steps": [
+      "Get the input integer x and the shift amount from the user",
+      "Calculate the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level-steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level-steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of the integer x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_digits = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_digits[::-1] if shift > num_digits else shifted_digits
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level-steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level-steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift amount from the user",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_digits = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_digits[::-1] if shift > num_digits else shifted_digits
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the number of digits in the input integer x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits"
+    ],
+    "high-level steps": [
+      "Get the input integer x and the shift amount",
+      "Calculate the number of digits in x",
+      "Determine the actual shift amount based on the input shift and the number of digits",
+      "Perform the circular shift operation on the digits of x",
+      "Handle cases where the shift amount is greater than the number of digits",
+      "Return the result as a string"
+    ]
+  }
+}
+------------------------------
+def circular_shift(x, shift):
+    x_str = str(x)
+    num_digits = len(x_str)
+    actual_shift = shift % num_digits
+    if actual_shift == 0:
+        return x_str
+    else:
+        shifted_str = x_str[-actual_shift:] + x_str[:-actual_shift]
+        return shifted_str[::-1] if shift > num_digits else shifted_str
+
+------------------------------
+scores
+[0.443, 0.443, 0.443, 0.443, 0.443, 0.443, 0.443, 0.443, 0.443, 0.443]
+[35, 35, 35, 35, 35, 35, 35, 35, 35, 35]

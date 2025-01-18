@@ -1,0 +1,617 @@
+------------------------------
+131
+------------------------------
+original prompt
+------------------------------
+
+def digits(n):
+    """Given a positive integer n, return the product of the odd digits.
+    Return 0 if all digits are even.
+    For example:
+    digits(1)  == 1
+    digits(4)  == 0
+    digits(235) == 15
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def digits(n):
+    """Given a positive integer n, return the product of the odd digits.
+    Return 0 if all digits are even.
+    For example:
+    digits(1)  == 1
+    digits(4)  == 0
+    digits(235) == 15
+    Assume the input is always a positive integer.
+    The function should handle numbers of any length.
+    """
+------------------------------
+canonical solution
+------------------------------
+    product = 1
+    odd_count = 0
+    for digit in str(n):
+        int_digit = int(digit)
+        if int_digit%2 == 1:
+            product= product*int_digit
+            odd_count+=1
+    if odd_count ==0:
+        return 0
+    else:
+        return product
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "steps": [
+      "Create a function named 'digits' that takes a positive integer as input",
+      "Initialize a variable to store the product of odd digits",
+      "Iterate through each digit of the input integer",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the product variable",
+      "Return the product variable if it is not 0, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "steps": [
+      "Convert the positive integer n into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the product of odd digits",
+      "Return the product of odd digits or 0 if all digits are even"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "steps": [
+      "Create a function digits(n) that takes a positive integer n as input",
+      "Initialize a variable to store the product of the odd digits",
+      "Iterate through each digit in the integer n",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the product variable",
+      "Return the product variable if it is not 0, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Return 0 if all digits are even"
+    ],
+    "steps": [
+      "Create a function named digits that takes a positive integer n as input",
+      "Convert the integer n into a string to easily access individual digits",
+      "Iterate through each digit in the string representation of n",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the product of odd digits",
+      "If all digits are even, return 0",
+      "Return the product of the odd digits"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    all_even = True
+    
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+            all_even = False
+    
+    if all_even:
+        return 0
+    else:
+        return product
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Return 0 if all digits are even"
+    ],
+    "high-level steps": [
+      "Create a function named digits that takes a positive integer n as input",
+      "Convert the integer n into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "If all digits are even, return 0",
+      "Return the final product of odd digits"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "steps": [
+      "Create a function named 'digits' that takes a positive integer as input",
+      "Convert the integer to a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Return 0 if all digits are even"
+    ],
+    "high-level steps": [
+      "Create a function named digits that takes a positive integer n as input",
+      "Convert the integer n into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "If all digits are even, return 0",
+      "Return the final product of odd digits"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "high-level steps": [
+      "Convert the positive integer n to a string",
+      "Iterate through each digit in the string",
+      "Check if the digit is odd",
+      "If the digit is odd, calculate the product",
+      "Return the product if at least one odd digit is found, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    n_str = str(n)
+    product = 1
+    has_odd_digit = False
+    
+    for digit in n_str:
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+            has_odd_digit = True
+    
+    return product if has_odd_digit else 0
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Handle the case when all digits are even"
+    ],
+    "steps": [
+      "Create a function digits(n) that takes a positive integer n as input",
+      "Initialize a variable to store the product of the odd digits",
+      "Iterate through each digit in the integer n",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the product variable",
+      "Return the product variable if it is not 0, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the given positive integer n",
+      "Calculate the product of the odd digits",
+      "Return 0 if all digits are even"
+    ],
+    "high-level steps": [
+      "Convert the positive integer n to a string",
+      "Iterate through each digit in the string",
+      "Check if the digit is odd",
+      "Calculate the product of the odd digits",
+      "Return the product or 0 if all digits are even"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    n_str = str(n)
+    product = 1
+    all_even = True
+    
+    for digit in n_str:
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+            all_even = False
+    
+    return product if not all_even else 0
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function 'digits' that takes a positive integer as input",
+      "Convert the input number to a string to easily iterate through each digit",
+      "Iterate through each digit and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "If all digits are even, return 0",
+      "Return the final product of the odd digits"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function 'digits' that takes a positive integer as input",
+      "Convert the input number to a string to easily access individual digits",
+      "Iterate through each digit in the input number",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the running product",
+      "Return the product if at least one odd digit is found, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "high-level steps": [
+      "Create a function 'digits' that takes a positive integer as input",
+      "Convert the input number to a string to easily iterate through each digit",
+      "Iterate through each digit and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function that takes a positive integer as input",
+      "Convert the integer into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the running product",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function that takes a positive integer as input",
+      "Convert the integer into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the running product",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "major_steps": [
+      "Create a function 'digits' that takes a positive integer as input",
+      "Convert the input number to a string to easily iterate through each digit",
+      "Iterate through each digit and check if it is odd",
+      "If the digit is odd, multiply it with the product of previous odd digits",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function that takes a positive integer as input",
+      "Convert the integer into a string to iterate through each digit",
+      "Identify the odd digits by checking if the digit is divisible by 2",
+      "Calculate the product of the odd digits",
+      "Return the product or 0 if all digits are even"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function that takes a positive integer as input",
+      "Convert the integer into a string to easily access individual digits",
+      "Iterate through each digit in the string and check if it is odd",
+      "If the digit is odd, multiply it with the running product",
+      "Return the product if there are odd digits, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "steps": [
+      "Create a function 'digits' that takes a positive integer as input",
+      "Convert the input number to a string to easily access individual digits",
+      "Iterate through each digit in the input number",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the running product",
+      "Return the product if at least one odd digit is found, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    product = 1
+    for digit in str(n):
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the odd digits in the input number",
+      "Calculate the product of the odd digits",
+      "Handle the case where all digits are even"
+    ],
+    "high-level steps": [
+      "Convert the input number to a string",
+      "Iterate through each digit in the string",
+      "Check if the digit is odd",
+      "If the digit is odd, multiply it with the product",
+      "Return the product if it is not 0, otherwise return 0"
+    ]
+  }
+}
+------------------------------
+def digits(n):
+    n_str = str(n)
+    product = 1
+    for digit in n_str:
+        if int(digit) % 2 != 0:
+            product *= int(digit)
+    return product if product != 1 else 0
+
+------------------------------
+scores
+[0.902, 0.902, 0.902, 0.902, 0.902, 0.902, 0.902, 0.902, 0.902, 0.902]
+[92, 92, 92, 92, 92, 92, 92, 92, 92, 92]

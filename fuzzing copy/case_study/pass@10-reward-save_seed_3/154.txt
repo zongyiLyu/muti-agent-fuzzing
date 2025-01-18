@@ -1,0 +1,770 @@
+------------------------------
+154
+------------------------------
+original prompt
+------------------------------
+
+def cycpattern_check(a , b):
+    """You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word
+    cycpattern_check("abcd","abd") => False
+    cycpattern_check("hello","ell") => True
+    cycpattern_check("whassup","psus") => False
+    cycpattern_check("abab","baa") => True
+    cycpattern_check("efef","eeff") => False
+    cycpattern_check("himenss","simen") => True
+
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def cycpattern_check(a , b):
+    """You have two strings. Your task is to return True if the second string or any of its rotations appears as a substring in the first string. Consider all possible rotations of the second string to determine if any match a substring in the first string.
+    cycpattern_check("abcd","abd") => False
+    cycpattern_check("hello","ell") => True
+    cycpattern_check("whassup","psus") => False
+    cycpattern_check("abab","baa") => True
+    cycpattern_check("efef","eeff") => False
+    cycpattern_check("himenss","simen") => True
+
+    """
+------------------------------
+canonical solution
+------------------------------
+    l = len(b)
+    pat = b + b
+    for i in range(len(a) - l + 1):
+        for j in range(l + 1):
+            if a[i:i+l] == pat[j:j+l]:
+                return True
+    return False
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation generated",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    rotations = generate_rotations(b)
+    for rotation in rotations:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation of the second word",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    for rotation in generate_rotations(b):
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation generated",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def is_substring(word, sub):
+    return sub in word
+
+def generate_rotations(word):
+    rotations = []
+    for i in range(len(word)):
+        rotations.append(word[i:] + word[:i])
+    return rotations
+
+def cycpattern_check(a, b):
+    if is_substring(a, b):
+        return True
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation generated",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    for rotation in generate_rotations(b):
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for the second word and the first word",
+      "If the second word is not a substring, generate all rotations of the second word",
+      "Call the substring check function for each rotation and the first word",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    if is_substring(a, b):
+        return True
+
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+
+    return False
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation of the second word",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    for rotation in generate_rotations(b):
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Check if any rotation of the second word is a substring of the first word"
+    ],
+    "steps": [
+      "Create a function that takes in two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to rotate a word",
+      "Check if the second word is a substring of the first word",
+      "Check if any rotation of the second word is a substring of the first word",
+      "Return True if either condition is met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    def is_substring(s1, s2):
+        return s1 in s2
+
+    for i in range(len(b)):
+        if is_substring(b, a) or is_rotation(b, a):
+            return True
+        b = b[1:] + b[0]
+    
+    return False
+
+# Test cases
+print(cycpattern_check("abcd", "abd"))  # False
+print(cycpattern_check("hello", "ell"))  # True
+print(cycpattern_check("whassup", "psus"))  # False
+print(cycpattern_check("abab", "baa"))  # True
+print(cycpattern_check("efef", "eeff"))  # False
+print(cycpattern_check("himenss", "simen"))  # True
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Check if any rotation of the second word is a substring of the first word"
+    ],
+    "steps": [
+      "Create a function that takes in two words as input",
+      "Implement a function to check if the second word is a substring of the first word",
+      "Implement a function to generate all rotations of the second word",
+      "Check if any rotation of the second word is a substring of the first word",
+      "Return True if either condition is met, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    def get_rotations(s):
+        rotations = []
+        for i in range(len(s)):
+            rotations.append(s[i:] + s[:i])
+        return rotations
+
+    if b in a:
+        return True
+    rotations = get_rotations(b)
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    return False
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "high-level steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation and return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    def is_substring(s1, s2):
+        return s1 in s2
+
+    def generate_rotations(s):
+        rotations = []
+        for i in range(len(s)):
+            rotations.append(s[i:] + s[:i])
+        return rotations
+
+    if is_substring(b, a):
+        return True
+
+    rotations = generate_rotations(b)
+    for rotation in rotations:
+        if is_substring(rotation, a):
+            return True
+
+    return False
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the second word is a substring of the first word",
+      "Generate all possible rotations of the second word",
+      "Check if any of the rotations is a substring of the first word"
+    ],
+    "steps": [
+      "Define a function cycpattern_check that takes two words as input",
+      "Implement a function to check if a word is a substring of another word",
+      "Implement a function to generate all rotations of a word",
+      "Call the substring check function for each rotation of the second word",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_substring(s1, s2):
+        return s2 in s1
+
+    def generate_rotations(word):
+        rotations = []
+        for i in range(len(word)):
+            rotations.append(word[i:] + word[:i])
+        return rotations
+
+    for rotation in generate_rotations(b):
+        if is_substring(a, rotation):
+            return True
+    return False
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Create a function to generate all rotations of a string",
+      "Iterate through all rotations and check if any is a substring of the first string",
+      "Return True if a match is found, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def generate_rotations(s):
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+    return rotations
+
+def cycpattern_check(a, b):
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if rotation in a:
+            return True
+    return False
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Generate all possible rotations of the second string",
+      "Iterate through each rotation and check if it is a substring of the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    rotations = [b[i:] + b[:i] for i in range(len(b))]
+    
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    
+    return False
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "high-level steps": [
+      "Create a function to generate all rotations of a string",
+      "Create a function to check if a substring is present in another string",
+      "Call the rotation function on the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ]
+  }
+}
+------------------------------
+def generate_rotations(s):
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+    return rotations
+
+def is_substring(s1, s2):
+    return s2 in s1
+
+def cycpattern_check(a, b):
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+# Test cases
+print(cycpattern_check("abcd", "abd"))  # False
+print(cycpattern_check("hello", "ell"))  # True
+print(cycpattern_check("whassup", "psus"))  # False
+print(cycpattern_check("abab", "baa"))  # True
+print(cycpattern_check("efef", "eeff"))  # False
+print(cycpattern_check("himenss", "simen"))  # True
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "high-level steps": [
+      "Create a function to generate all rotations of a string",
+      "Create a function to check if a substring is present in another string",
+      "Call the rotation function on the second string",
+      "Call the substring check function on each rotation and the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def generate_rotations(s):
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+    return rotations
+
+def is_substring(s1, s2):
+    return s2 in s1
+
+def cycpattern_check(a, b):
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Generate all possible rotations of the second string",
+      "Iterate through each rotation and check if it is a substring of the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    def generate_rotations(s):
+        rotations = []
+        for i in range(len(s)):
+            rotations.append(s[i:] + s[:i])
+        return rotations
+
+    rotations = generate_rotations(b)
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    return False
+
+# Test cases
+print(cycpattern_check("abcd", "abd"))  # False
+print(cycpattern_check("hello", "ell"))  # True
+print(cycpattern_check("whassup", "psus"))  # False
+print(cycpattern_check("abab", "baa"))  # True
+print(cycpattern_check("efef", "eeff"))  # False
+print(cycpattern_check("himenss", "simen"))  # True
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Generate all possible rotations of the second string",
+      "Iterate through each rotation and check if it is a substring of the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    rotations = [b[i:] + b[:i] for i in range(len(b))]
+    
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    
+    return False
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Generate all possible rotations of the second string",
+      "Iterate through each rotation and check if it is a substring of the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    def get_rotations(s):
+        rotations = []
+        for i in range(len(s)):
+            rotations.append(s[i:] + s[:i])
+        return rotations
+
+    rotations = get_rotations(b)
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    return False
+
+# Test cases
+print(cycpattern_check("abcd", "abd"))  # False
+print(cycpattern_check("hello", "ell"))  # True
+print(cycpattern_check("whassup", "psus"))  # False
+print(cycpattern_check("abab", "baa"))  # True
+print(cycpattern_check("efef", "eeff"))  # False
+print(cycpattern_check("himenss", "simen"))  # True
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations appear as a substring in the first string"
+    ],
+    "steps": [
+      "Create a function to generate all rotations of a string",
+      "Create a function to check if a given substring appears in another string",
+      "Iterate through all rotations of the second string and check if any of them appear as a substring in the first string",
+      "Return True if a match is found, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def generate_rotations(s):
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+    return rotations
+
+def is_substring(s1, s2):
+    return s2 in s1
+
+def cycpattern_check(a, b):
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "high-level steps": [
+      "Create a function to generate all rotations of a string",
+      "Create a function to check if a substring is present in another string",
+      "Call the rotation function on the second string",
+      "Call the substring check function on each rotation and the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def generate_rotations(s):
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+    return rotations
+
+def is_substring(s1, s2):
+    return s2 in s1
+
+def cycpattern_check(a, b):
+    rotations_b = generate_rotations(b)
+    for rotation in rotations_b:
+        if is_substring(a, rotation):
+            return True
+    return False
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible rotations of the second string",
+      "Check if any of the rotations is a substring of the first string"
+    ],
+    "steps": [
+      "Generate all possible rotations of the second string",
+      "Iterate through each rotation and check if it is a substring of the first string",
+      "Return True if any rotation is a substring, otherwise return False"
+    ]
+  }
+}
+------------------------------
+def cycpattern_check(a, b):
+    def is_rotation(s1, s2):
+        return len(s1) == len(s2) and s1 in s2 + s2
+
+    rotations = [b[i:] + b[:i] for i in range(len(b))]
+    
+    for rotation in rotations:
+        if rotation in a:
+            return True
+    
+    return False
+
+------------------------------
+scores
+[0.8175, 0.8175, 0.8175, 0.8175, 0.8175, 0.8175, 0.8175, 0.8175, 0.8175, 0.8175]
+[103, 103, 103, 103, 103, 103, 103, 103, 103, 103]

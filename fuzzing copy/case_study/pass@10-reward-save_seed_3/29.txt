@@ -1,0 +1,662 @@
+------------------------------
+29
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    """ Filter an input list of strings only for ones that start with a given prefix.
+    >>> filter_by_prefix([], 'a')
+    []
+    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')
+    ['abc', 'array']
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    """ Filter an input list of strings only for ones that start with a given prefix.
+    >>> filter_by_prefix([], 'a')
+    []
+    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')
+    ['abc', 'array']
+    Ensure that the function handles both uppercase and lowercase prefixes correctly.
+    """
+------------------------------
+canonical solution
+------------------------------
+    return [x for x in strings if x.startswith(prefix)]
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "major_steps": [
+      "Define the function filter_by_prefix with the correct input parameters and return type",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix using string slicing",
+      "If the condition is met, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store strings that start with the prefix",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the prefix",
+      "If it does, add the string to the new list",
+      "Return the new list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store strings that start with the prefix",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the prefix",
+      "If it does, add the string to the new list",
+      "Return the new list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Identify the input parameters: a list of strings and a prefix",
+      "Filter the list of strings based on whether each string starts with the given prefix"
+    ],
+    "2. Major steps of the program": [
+      "Define the function filter_by_prefix with input parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store strings that start with the prefix",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If it does, add the string to the list",
+      "Return the list of strings that start with the prefix"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_prefix that takes in a list of strings and a prefix as input",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If the string starts with the prefix, add it to a new list",
+      "Return the new list of strings that start with the prefix"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix(strings, prefix)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the current string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Identify the input parameters: a list of strings and a prefix",
+      "Filter the list of strings based on whether each string starts with the given prefix"
+    ],
+    "2. Major steps of the program": [
+      "Define the function filter_by_prefix with input parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "If it does, add the string to the filtered list",
+      "Return the filtered list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.startswith(prefix):
+            filtered_strings.append(string)
+    return filtered_strings
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the input list of strings and the prefix to filter by",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "Add the string to the output list if it meets the criteria"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix with parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case-insensitive)",
+      "If the string meets the criteria, add it to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle an empty input list",
+      "Filter strings that start with the given prefix",
+      "Handle both uppercase and lowercase prefixes correctly"
+    ],
+    "major_steps": [
+      "Check if the input list is empty, return an empty list if true",
+      "Iterate through the input list and filter strings that start with the given prefix",
+      "Convert both the input strings and the prefix to lowercase for comparison"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    if not strings:
+        return []
+    
+    prefix = prefix.lower()
+    return [s for s in strings if s.lower().startswith(prefix)]
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle an empty input list",
+      "Filter strings that start with the given prefix",
+      "Handle both uppercase and lowercase prefixes correctly"
+    ],
+    "major_steps": [
+      "Check if the input list is empty, return an empty list if true",
+      "Iterate through the input list and filter strings that start with the given prefix",
+      "Convert both the input strings and the prefix to lowercase for comparison"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    if not strings:
+        return []
+    
+    prefix = prefix.lower()
+    return [s for s in strings if s.lower().startswith(prefix)]
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the input list of strings and the prefix to filter by",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "Add the string to the output list if it meets the criteria"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix with parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case-insensitive)",
+      "If it does, add the string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the input list of strings and the prefix to filter by",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "Add the string to the output list if it meets the criteria"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix with parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case-insensitive)",
+      "If the string meets the criteria, add it to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle an empty input list",
+      "Filter strings that start with the given prefix",
+      "Handle both uppercase and lowercase prefixes correctly"
+    ],
+    "high_level_steps": [
+      "Check if the input list is empty, return an empty list if true",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case insensitive)",
+      "Add the string to the result list if it meets the criteria",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    result = []
+    if not strings:
+        return result
+    
+    prefix_lower = prefix.lower()
+    for string in strings:
+        if string.lower().startswith(prefix_lower):
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle an empty input list",
+      "Filter strings that start with the given prefix",
+      "Handle both uppercase and lowercase prefixes"
+    ],
+    "steps": [
+      "Check if the input list is empty, return an empty list if true",
+      "Iterate through the input list and filter strings that start with the given prefix",
+      "Convert both the input prefix and strings to lowercase for comparison"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    if not strings:
+        return []
+    
+    prefix = prefix.lower()
+    return [s for s in strings if s.lower().startswith(prefix)]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the input list of strings and the prefix to filter by",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "Add the string to the output list if it meets the criteria"
+    ],
+    "high_level_steps": [
+      "Define the filter_by_prefix function with input parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case-insensitive)",
+      "If the string meets the criteria, add it to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle an empty input list",
+      "Filter strings that start with the given prefix",
+      "Handle both uppercase and lowercase prefixes"
+    ],
+    "major_steps": [
+      "Check if the input list is empty, return an empty list if true",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (ignoring case)",
+      "If the string meets the criteria, add it to the result list",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    """ Filter an input list of strings only for ones that start with a given prefix.
+    >>> filter_by_prefix([], 'a')
+    []
+    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')
+    ['abc', 'array']
+    Ensure that the function handles both uppercase and lowercase prefixes correctly.
+    """
+    result = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            result.append(string)
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the input list of strings and the prefix to filter by",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix",
+      "Add the string to the output list if it meets the criteria"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_prefix with parameters strings and prefix",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the string starts with the given prefix (case-insensitive)",
+      "If it does, add the string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if string.lower().startswith(prefix.lower()):
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+scores
+[0.9911, 0.9911, 0.9911, 0.9911, 0.9911, 0.9911, 0.9911, 0.9911, 0.9911, 0.9911]
+[111, 111, 111, 111, 111, 111, 111, 111, 111, 111]

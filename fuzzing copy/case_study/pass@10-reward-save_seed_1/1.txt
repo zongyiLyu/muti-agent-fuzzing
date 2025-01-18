@@ -1,0 +1,883 @@
+------------------------------
+1
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """Takes a string with groups of nested parentheses and returns them as a list of individual strings.
+    Each group is balanced, with no nesting within groups. Spaces should be disregarded.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """
+------------------------------
+canonical solution
+------------------------------
+    result = []
+    current_string = []
+    current_depth = 0
+
+    for c in paren_string:
+        if c == '(':
+            current_depth += 1
+            current_string.append(c)
+        elif c == ')':
+            current_depth -= 1
+            current_string.append(c)
+
+            if current_depth == 0:
+                result.append(''.join(current_string))
+                current_string.clear()
+
+    return result
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Identify separate groups of nested parentheses",
+    "Separate each group into separate strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Identify separate groups of nested parentheses",
+    "step_3": "Separate each group into separate strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    groups = []  # Initialize a list to store separate groups
+    
+    start = 0
+    count = 0
+    for i, char in enumerate(paren_string):
+        if char == '(':
+            count += 1
+            if count == 1:
+                start = i
+        elif char == ')':
+            count -= 1
+            if count == 0:
+                groups.append(paren_string[start:i+1])  # Step 2: Identify separate groups of nested parentheses
+    
+    return groups  # Step 3: Separate each group into separate strings
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Identify separate groups of nested parentheses",
+    "Separate each group into individual strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Identify separate groups of nested parentheses",
+    "step_3": "Separate each group into individual strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    groups = []  # Initialize a list to store separate groups
+    
+    start = 0
+    count = 0
+    for i, char in enumerate(paren_string):
+        if char == '(':
+            count += 1
+            if count == 1:
+                start = i
+        elif char == ')':
+            count -= 1
+            if count == 0:
+                groups.append(paren_string[start:i+1])  # Step 2: Identify separate groups of nested parentheses
+    
+    return groups  # Step 3: Separate each group into individual strings
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Identify separate groups of nested parentheses",
+    "Separate each group into separate strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Identify separate groups of nested parentheses",
+    "step_3": "Separate each group into separate strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    groups = []  # Initialize a list to store separate groups
+    
+    start = 0
+    count = 0
+    for i, char in enumerate(paren_string):
+        if char == '(':
+            count += 1
+            if count == 1:
+                start = i
+        elif char == ')':
+            count -= 1
+            if count == 0:
+                groups.append(paren_string[start:i+1])  # Step 2: Identify separate groups of nested parentheses
+    
+    return groups  # Step 3: Separate each group into separate strings
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Separate the groups of nested parentheses",
+    "Ensure each group is balanced (properly closed)",
+    "Return the list of separated groups"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Loop through the input string to identify separate groups of nested parentheses",
+    "step_3": "Check if each group is balanced by counting the number of open and close parentheses",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    result = []
+    group = ""
+    open_count = 0
+
+    for char in paren_string:
+        if char == "(":
+            open_count += 1
+        elif char == ")":
+            open_count -= 1
+        
+        group += char
+        
+        if open_count == 0:
+            result.append(group)  # Step 2: Separate the groups of nested parentheses
+            group = ""
+    
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Separate the groups of nested parentheses",
+    "Ensure each group is balanced (properly closed)",
+    "Return the list of separated groups"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Loop through the input string to identify separate groups of nested parentheses",
+    "step_3": "Check if each group is balanced by counting the number of open and close parentheses",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    result = []
+    group = ""
+    open_count = 0
+
+    for char in paren_string:
+        if char == '(':
+            open_count += 1
+        elif char == ')':
+            open_count -= 1
+        
+        group += char
+
+        if open_count == 0:
+            result.append(group)  # Step 2: Separate the groups of nested parentheses
+            group = ""
+
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Separate the groups of nested parentheses",
+    "Ensure each group is balanced (properly closed)",
+    "Return the list of separated groups"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Loop through the input string and identify separate groups of nested parentheses",
+    "step_3": "Check if each group is balanced by counting the number of open and close parentheses",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    # Step 1: Remove spaces from the input string
+    paren_string = paren_string.replace(" ", "")
+    
+    # Step 2: Loop through the input string and identify separate groups of nested parentheses
+    groups = []
+    current_group = ""
+    open_braces = 0
+    
+    for char in paren_string:
+        if char == "(":
+            open_braces += 1
+        elif char == ")":
+            open_braces -= 1
+        
+        current_group += char
+        
+        if open_braces == 0:
+            groups.append(current_group)
+            current_group = ""
+    
+    # Step 3: Check if each group is balanced by counting the number of open and close parentheses
+    for group in groups:
+        if group.count("(") != group.count(")"):
+            raise ValueError("Unbalanced parentheses in group: {}".format(group))
+    
+    # Step 4: Return the list of separated groups
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Separate the groups of nested parentheses",
+    "Ensure each group is balanced (properly closed)",
+    "Return the list of separated groups"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Loop through the input string to identify separate groups of nested parentheses",
+    "step_3": "Check if each group is balanced by counting the number of open and close parentheses",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    result = []
+    group = ""
+    open_count = 0
+
+    for char in paren_string:
+        if char == "(":
+            open_count += 1
+        elif char == ")":
+            open_count -= 1
+        
+        group += char
+        
+        if open_count == 0:
+            result.append(group)  # Step 2: Separate the groups of nested parentheses
+            group = ""
+    
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Separate the groups of nested parentheses",
+    "Ensure each group is balanced (properly closed)",
+    "Return the list of separated groups"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Loop through the input string and identify separate groups of nested parentheses",
+    "step_3": "Check if each group is balanced by counting the number of open and close parentheses",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    # Step 1: Remove spaces from the input string
+    paren_string = paren_string.replace(" ", "")
+    
+    # Step 2: Loop through the input string and identify separate groups of nested parentheses
+    groups = []
+    current_group = ""
+    open_braces = 0
+    
+    for char in paren_string:
+        if char == "(":
+            open_braces += 1
+        elif char == ")":
+            open_braces -= 1
+        
+        current_group += char
+        
+        if open_braces == 0:
+            groups.append(current_group)
+            current_group = ""
+    
+    # Step 3: Check if each group is balanced by counting the number of open and close parentheses
+    for group in groups:
+        if group.count("(") != group.count(")"):
+            raise ValueError("Unbalanced parentheses in group: {}".format(group))
+    
+    # Step 4: Return the list of separated groups
+    return groups
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "subproblems": [
+    "Remove spaces from the input string",
+    "Identify separate groups of nested parentheses",
+    "Separate each group into separate strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove spaces from the input string",
+    "step_2": "Identify separate groups of nested parentheses",
+    "step_3": "Separate each group into separate strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    paren_string = paren_string.replace(" ", "")  # Step 1: Remove spaces from the input string
+    groups = []  # Initialize a list to store separate groups
+    
+    group = ""  # Initialize an empty string to store each separate group
+    open_braces = 0  # Counter to keep track of open braces
+    
+    for char in paren_string:
+        if char == "(":
+            open_braces += 1
+        elif char == ")":
+            open_braces -= 1
+        
+        group += char  # Add the character to the current group
+        
+        if open_braces == 0:  # If all open braces are closed
+            groups.append(group)  # Add the group to the list
+            group = ""  # Reset the group for the next separate group
+    
+    return groups
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "subproblems": [
+    "Remove any spaces from the input string",
+    "Identify and extract each group of nested parentheses",
+    "Separate each group into separate strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Remove any spaces from the input string",
+    "step_2": "Loop through the input string and identify each group of nested parentheses",
+    "step_3": "Extract each group and add it to a list",
+    "step_4": "Return the list of separated groups"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    # Step 1: Remove any spaces from the input string
+    paren_string = paren_string.replace(" ", "")
+    
+    # Step 2: Loop through the input string and identify each group of nested parentheses
+    groups = []
+    current_group = ""
+    open_braces = 0
+    
+    for char in paren_string:
+        if char == "(":
+            open_braces += 1
+        elif char == ")":
+            open_braces -= 1
+        
+        current_group += char
+        
+        if open_braces == 0:
+            groups.append(current_group)
+            current_group = ""
+    
+    # Step 3: Extract each group and add it to a list
+    result = [group for group in groups if group != ""]
+    
+    # Step 4: Return the list of separated groups
+    return result
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group of parentheses and separate them into individual strings",
+    "step_3": "Remove spaces from the individual strings",
+    "step_4": "Return the list of individual strings as the output"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Identify the opening and closing parentheses in the input string",
+    "step_2": "Extract the groups of nested parentheses",
+    "step_3": "Separate each group into individual strings",
+    "step_4": "Ignore spaces in the input string",
+    "step_5": "Return the list of individual strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of nested parentheses into individual strings",
+    "Remove any spaces from the individual strings"
+  ],
+  "high_level_plan": {
+    "step_1": "Identify the opening and closing parentheses in the input string",
+    "step_2": "Extract the groups of nested parentheses",
+    "step_3": "Separate each group into individual strings",
+    "step_4": "Remove any spaces from the individual strings",
+    "step_5": "Return the list of individual strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    def extract_groups(paren_string):
+        groups = []
+        group = ""
+        count = 0
+        for char in paren_string:
+            if char == '(':
+                count += 1
+                if count == 1:
+                    group += char
+            elif char == ')':
+                count -= 1
+                if count == 0:
+                    group += char
+                    groups.append(group)
+                    group = ""
+            else:
+                if count > 0:
+                    group += char
+        return groups
+
+    def remove_spaces(groups):
+        return [group.replace(" ", "") for group in groups]
+
+    groups = extract_groups(paren_string)
+    individual_strings = remove_spaces(groups)
+    
+    return individual_strings
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "subproblems": [
+    "Identify and extract groups of nested parentheses from the input string",
+    "Separate each group of nested parentheses into individual strings",
+    "Ignore spaces in the input string"
+  ],
+  "high_level_plan": {
+    "step_1": "Parse the input string to identify groups of nested parentheses",
+    "step_2": "Iterate through each group and remove spaces",
+    "step_3": "Separate each group into individual strings",
+    "step_4": "Return the list of individual strings"
+  }
+}
+------------------------------
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = ""
+    in_group = False
+    
+    for char in paren_string:
+        if char == '(':
+            in_group = True
+        elif char == ')':
+            in_group = False
+            groups.append(current_group)
+            current_group = ""
+        elif in_group:
+            current_group += char
+    
+    return groups
+
+# Test the function
+print(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']
+
+------------------------------
+scores
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0145, 0.0]
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0]

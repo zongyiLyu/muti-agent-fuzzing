@@ -1,0 +1,797 @@
+------------------------------
+128
+------------------------------
+original prompt
+------------------------------
+
+def prod_signs(arr):
+    """
+    You are given an array arr of integers and you need to return
+    sum of magnitudes of integers multiplied by product of all signs
+    of each number in the array, represented by 1, -1 or 0.
+    Note: return None for empty arr.
+
+    Example:
+    >>> prod_signs([1, 2, 2, -4]) == -9
+    >>> prod_signs([0, 1]) == 0
+    >>> prod_signs([]) == None
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def prod_signs(arr):
+    """
+    Given an array arr of integers, return the sum of magnitudes of integers
+    multiplied by the product of all signs of each number in the array (1, -1, or 0).
+    Return None for an empty arr.
+
+    Example:
+    >>> prod_signs([1, 2, 2, -4]) == -9
+    >>> prod_signs([0, 1]) == 0
+    >>> prod_signs([]) == None
+    """
+------------------------------
+canonical solution
+------------------------------
+    if not arr: return None
+    prod = 0 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))
+    return prod * sum([abs(i) for i in arr])
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty, return None if it is",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_signs = 1
+    sum_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_signs *= 1
+            sum_magnitudes += num
+        elif num < 0:
+            product_signs *= -1
+            sum_magnitudes += abs(num)
+    
+    return product_signs * sum_magnitudes
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs as 1",
+      "Iterate through the array and calculate the product of signs",
+      "Initialize a variable to store the sum of magnitudes as 0",
+      "Iterate through the array and calculate the sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+    
+    sum_of_magnitudes = sum(abs(num) for num in arr)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs with value 1",
+      "Iterate through the array and calculate the product of signs",
+      "Initialize a variable to store the sum of magnitudes with value 0",
+      "Iterate through the array and calculate the sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+        else:
+            product_of_signs *= 0
+    
+    sum_of_magnitudes = sum(abs(num) for num in arr)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs as 1",
+      "Iterate through the array and calculate the product of signs",
+      "Initialize a variable to store the sum of magnitudes as 0",
+      "Iterate through the array and calculate the sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+    
+    sum_of_magnitudes = sum(abs(num) for num in arr)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs as 1",
+      "Iterate through the array and calculate the product of signs",
+      "Initialize a variable to store the sum of magnitudes as 0",
+      "Iterate through the array and calculate the sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+        else:
+            product_of_signs *= 0
+    
+    sum_of_magnitudes = sum(abs(num) for num in arr)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize variables to store product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_signs = 1
+    sum_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_signs *= 1
+            sum_magnitudes += num
+        elif num < 0:
+            product_signs *= -1
+            sum_magnitudes += abs(num)
+    
+    return product_signs * sum_magnitudes
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs with value 1",
+      "Iterate through the array and update the product of signs based on the sign of each number",
+      "Initialize a variable to store the sum of magnitudes with value 0",
+      "Iterate through the array and update the sum of magnitudes by adding the absolute value of each number",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+    
+    sum_of_magnitudes = 0
+    for num in arr:
+        sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs as 1",
+      "Iterate through the array and calculate the product of signs",
+      "Initialize a variable to store the sum of magnitudes as 0",
+      "Iterate through the array and calculate the sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+    
+    sum_of_magnitudes = sum(abs(num) for num in arr)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs with value 1",
+      "Iterate through the array and update the product of signs based on the sign of each number",
+      "Initialize a variable to store the sum of magnitudes with value 0",
+      "Iterate through the array and update the sum of magnitudes by adding the absolute value of each number",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+        elif num < 0:
+            product_of_signs *= -1
+    
+    sum_of_magnitudes = 0
+    for num in arr:
+        sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "steps": [
+      "Check if the input array is empty, return None if it is",
+      "Initialize a variable to store the product of signs with value 1",
+      "Iterate through the array and update the product of signs based on the sign of each number",
+      "Initialize a variable to store the sum of magnitudes with value 0",
+      "Iterate through the array and update the sum of magnitudes by adding the absolute value of each number",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_signs = 1
+    for num in arr:
+        if num > 0:
+            product_signs *= 1
+        elif num < 0:
+            product_signs *= -1
+    
+    sum_magnitudes = 0
+    for num in arr:
+        sum_magnitudes += abs(num)
+    
+    return product_signs * sum_magnitudes
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level-steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array to calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "major_steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_signs = 1
+    sum_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_signs *= 1
+            sum_magnitudes += num
+        elif num < 0:
+            product_signs *= -1
+            sum_magnitudes += abs(num)
+    
+    return product_signs * sum_magnitudes
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array to calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += abs(num)
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += abs(num)
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level-steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input array is empty",
+      "Calculate the product of all signs of each number in the array",
+      "Calculate the sum of magnitudes of integers in the array",
+      "Multiply the product of signs with the sum of magnitudes"
+    ],
+    "high-level steps": [
+      "Check if the input array is empty",
+      "Initialize variables for product of signs and sum of magnitudes",
+      "Iterate through the array and calculate the product of signs and sum of magnitudes",
+      "Multiply the product of signs with the sum of magnitudes and return the result"
+    ]
+  }
+}
+------------------------------
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_of_signs = 1
+    sum_of_magnitudes = 0
+    
+    for num in arr:
+        if num > 0:
+            product_of_signs *= 1
+            sum_of_magnitudes += num
+        elif num < 0:
+            product_of_signs *= -1
+            sum_of_magnitudes += abs(num)
+    
+    return product_of_signs * sum_of_magnitudes
+
+------------------------------
+scores
+[0.8364, 0.8364, 0.8364, 0.8364, 0.8364, 0.8364, 0.8364, 0.8364, 0.8364, 0.8364]
+[92, 92, 92, 92, 92, 92, 92, 92, 92, 92]

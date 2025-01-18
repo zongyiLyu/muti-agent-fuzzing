@@ -1,0 +1,705 @@
+------------------------------
+87
+------------------------------
+original prompt
+------------------------------
+
+def get_row(lst, x):
+    """
+    You are given a 2 dimensional data, as a nested lists,
+    which is similar to matrix, however, unlike matrices,
+    each row may contain a different number of columns.
+    Given lst, and integer x, find integers x in the list,
+    and return list of tuples, [(x1, y1), (x2, y2) ...] such that
+    each tuple is a coordinate - (row, columns), starting with 0.
+    Sort coordinates initially by rows in ascending order.
+    Also, sort coordinates of the row by columns in descending order.
+    
+    Examples:
+    get_row([
+      [1,2,3,4,5,6],
+      [1,2,3,4,1,6],
+      [1,2,3,4,5,1]
+    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]
+    get_row([], 1) == []
+    get_row([[], [1], [1, 2, 3]], 3) == [(2, 2)]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def get_row(lst, x):
+    """
+    You are given a 2 dimensional data, as a nested lists,
+    which is similar to matrix, however, unlike matrices,
+    each row may contain a different number of columns.
+    Given lst, and integer x, find integers x in the list,
+    and return list of tuples, [(x1, y1), (x2, y2) ...] such that
+    each tuple is a coordinate - (row, columns), starting with 0.
+    Sort coordinates initially by rows in ascending order.
+    Also, sort coordinates of the row by columns in descending order.
+    
+    Examples:
+    get_row([
+      [1,2,3,4,5,6],
+      [1,2,3,4,1,6],
+      [1,2,3,4,5,1]
+    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]
+    get_row([], 1) == []
+    get_row([[], [1], [1, 2, 3]], 3) == [(2, 2)]
+    
+    Ensure that the function handles edge cases gracefully.
+    """
+------------------------------
+canonical solution
+------------------------------
+    coords = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if lst[i][j] == x]
+    return sorted(sorted(coords, key=lambda x: x[1], reverse=True), key=lambda x: x[0])
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Iterate through each row in the 2D list",
+      "Find the index of the integer x in each row",
+      "Create a tuple with the row index and column index of x",
+      "Sort the tuples by row index in ascending order",
+      "Sort the tuples by column index in descending order"
+    ],
+    "high-level steps": [
+      "Create a function get_row(lst, x) that takes a 2D list and an integer x as input",
+      "Initialize an empty list to store the tuples",
+      "Iterate through each row in the 2D list",
+      "Find the index of x in the row and create a tuple with the row index and column index",
+      "Append the tuple to the list",
+      "Sort the list of tuples by row index in ascending order",
+      "Sort the list of tuples by column index in descending order",
+      "Return the sorted list of tuples"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    result = []
+    for i, row in enumerate(lst):
+        for j, val in enumerate(row):
+            if val == x:
+                result.append((i, j))
+    
+    result.sort(key=lambda tup: (tup[0], -tup[1]))
+    
+    return result
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns in each row by descending order"
+    ],
+    "steps": [
+      "Iterate through the 2D list to find rows containing x",
+      "Sort the rows by ascending order based on the row index",
+      "Sort the columns in each row by descending order based on the column index",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_columns_desc(row):
+        return sorted(enumerate(row), key=lambda x: x[1], reverse=True)
+    
+    rows_with_x = [(i, row) for i, row in enumerate(lst) if x in row]
+    sorted_rows = sorted(rows_with_x, key=lambda x: x[0])
+    
+    result = []
+    for row_idx, row in sorted_rows:
+        sorted_columns = sort_columns_desc(row)
+        for col_idx, _ in sorted_columns:
+            result.append((row_idx, col_idx))
+    
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the 2D list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]))
+    
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+    
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    
+    sorted_coordinates = sort_coordinates(sorted_rows)
+    
+    return sorted_coordinates
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the 2D list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]))
+    
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+    
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    
+    sorted_coordinates = sort_coordinates(sorted_rows)
+    
+    return sorted_coordinates
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns in each row by descending order"
+    ],
+    "steps": [
+      "Iterate through the 2D list to find rows containing x",
+      "Sort the rows by ascending order based on row index",
+      "Sort the columns in each row by descending order based on column index",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_columns_desc(row):
+        return sorted(enumerate(row), key=lambda x: x[1], reverse=True)
+    
+    rows_with_x = [(i, row) for i, row in enumerate(lst) if x in row]
+    sorted_rows = sorted(rows_with_x, key=lambda x: x[0])
+    
+    result = []
+    for row_idx, row in sorted_rows:
+        sorted_columns = sort_columns_desc(row)
+        for col_idx, _ in sorted_columns:
+            result.append((row_idx, col_idx))
+    
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Iterate through each row in the 2D list",
+      "Find the index of the integer x in each row",
+      "Create a tuple with the row index and column index of x",
+      "Sort the tuples by row index in ascending order",
+      "Sort the tuples by column index in descending order"
+    ],
+    "high-level steps": [
+      "Create a function get_row(lst, x) that takes a 2D list and an integer x as input",
+      "Initialize an empty list to store the tuples",
+      "Iterate through each row in the 2D list",
+      "Find the index of x in the row and create a tuple with the row index and column index",
+      "Append the tuple to the list",
+      "Sort the list of tuples by row index in ascending order",
+      "Sort the list of tuples by column index in descending order",
+      "Return the sorted list of tuples"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    result = []
+    for i, row in enumerate(lst):
+        for j, val in enumerate(row):
+            if val == x:
+                result.append((i, j))
+    
+    result.sort(key=lambda tup: (tup[0], -tup[1]))
+    
+    return result
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the 2D list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]))
+    
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+    
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    
+    sorted_coordinates = sort_coordinates(sorted_rows)
+    
+    return sorted_coordinates
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]), reverse=False)
+
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0], reverse=False)
+    sorted_coordinates = [(row[0], row[1]) for row in sorted_rows]
+
+    return sort_coordinates(sorted_coordinates)
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the 2D list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]))
+    
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+    
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    
+    sorted_coordinates = sort_coordinates(sorted_rows)
+    
+    return sorted_coordinates
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the rows containing the integer x",
+      "Sort the rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples"
+    ],
+    "steps": [
+      "Iterate through the 2D list to identify rows containing x",
+      "Sort the identified rows by ascending order",
+      "Sort the columns within each row by descending order",
+      "Convert the sorted coordinates into tuples and return the result"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_coordinates(coordinates):
+        return sorted(coordinates, key=lambda coord: (coord[0], -coord[1]))
+    
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row.index(x)))
+    
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    
+    sorted_coordinates = sort_coordinates(sorted_rows)
+    
+    return sorted_coordinates
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Iterate through each row in the input list",
+    "step_2": "For each row, iterate through each element to find the integer x",
+    "step_3": "If x is found in the row, store the coordinates (row index, column index) in a list of tuples",
+    "step_4": "Sort the list of tuples by row index in ascending order",
+    "step_5": "Sort the list of tuples by column index in descending order",
+    "step_6": "Return the sorted list of tuples as the output"
+  }
+}
+------------------------------
+def get_row(lst, x):
+    coordinates = []
+    
+    for i, row in enumerate(lst):
+        for j, num in enumerate(row):
+            if num == x:
+                coordinates.append((i, j))
+    
+    coordinates.sort(key=lambda coord: coord[0])
+    coordinates.sort(key=lambda coord: coord[1], reverse=True)
+    
+    return coordinates
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the rows containing the integer x from the given 2D list",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order"
+    ],
+    "high-level steps": [
+      "Create a function get_row(lst, x) that takes a 2D list and an integer x as input",
+      "Iterate through the rows of the 2D list and extract rows containing the integer x",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def get_coordinates(row):
+        return [(row_index, col_index) for col_index, val in enumerate(row) if val == x]
+
+    rows_with_x = [(row_index, row) for row_index, row in enumerate(lst) if x in row]
+    sorted_rows = sorted(rows_with_x, key=lambda row: row[0])
+    sorted_coordinates = [(row_index, col_index) for row_index, row in sorted_rows for col_index in sorted(get_coordinates(row), key=lambda coord: coord[1], reverse=True)]
+
+    return sorted_coordinates
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Iterate through each row in the input list",
+    "step_2": "For each row, iterate through each element to find the integer x",
+    "step_3": "If x is found in the row, store the coordinates (row index, column index) in a list of tuples",
+    "step_4": "Sort the list of tuples by row index in ascending order",
+    "step_5": "Sort the coordinates of each row by column index in descending order",
+    "step_6": "Return the sorted list of tuples as the output"
+  }
+}
+------------------------------
+def get_row(lst, x):
+    coordinates = []
+    
+    for i, row in enumerate(lst):
+        for j, num in enumerate(row):
+            if num == x:
+                coordinates.append((i, j))
+    
+    coordinates.sort(key=lambda coord: coord[0])
+    coordinates.sort(key=lambda coord: coord[1], reverse=True)
+    
+    return coordinates
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Iterate through each row in the input list",
+    "step_2": "For each row, iterate through each element to find the integer x",
+    "step_3": "If x is found in the row, store the coordinates (row index, column index) in a list of tuples",
+    "step_4": "Sort the list of tuples by row index in ascending order",
+    "step_5": "Sort the coordinates of each row by column index in descending order",
+    "step_6": "Return the sorted list of tuples as the output"
+  }
+}
+------------------------------
+def get_row(lst, x):
+    coordinates = []
+    
+    for i, row in enumerate(lst):
+        for j, num in enumerate(row):
+            if num == x:
+                coordinates.append((i, j))
+    
+    coordinates.sort(key=lambda coord: coord[0])
+    coordinates.sort(key=lambda coord: coord[1], reverse=True)
+    
+    return coordinates
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Iterate through each row in the input list",
+    "step_2": "For each row, iterate through each element to find the integer x",
+    "step_3": "If x is found in the row, store the coordinates (row index, column index) in a list of tuples",
+    "step_4": "Sort the list of tuples by row index in ascending order",
+    "step_5": "Sort the coordinates of each row by column index in descending order",
+    "step_6": "Return the sorted list of tuples as the output"
+  }
+}
+------------------------------
+def get_row(lst, x):
+    coordinates = []
+    
+    for i, row in enumerate(lst):
+        for j, num in enumerate(row):
+            if num == x:
+                coordinates.append((i, j))
+    
+    coordinates.sort(key=lambda coord: coord[0])
+    coordinates.sort(key=lambda coord: coord[1], reverse=True)
+    
+    return coordinates
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the rows containing the integer x from the given 2D list",
+      "Sort the extracted rows by columns in descending order",
+      "Convert the sorted rows into a list of tuples representing coordinates"
+    ],
+    "high-level steps": [
+      "Iterate through the 2D list to extract rows containing the integer x",
+      "Sort the extracted rows by columns in descending order",
+      "Convert the sorted rows into a list of tuples representing coordinates",
+      "Sort the list of tuples by rows in ascending order"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    extracted_rows = []
+    for i, row in enumerate(lst):
+        if x in row:
+            extracted_rows.append((i, row.index(x)))
+    
+    extracted_rows.sort(key=lambda row: row[1], reverse=True)
+    extracted_rows.sort(key=lambda row: row[0])
+    
+    return extracted_rows
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Iterate through each row in the input list",
+    "step_2": "For each row, iterate through each element to find the integer x",
+    "step_3": "If x is found in the row, store the coordinates (row index, column index) in a list of tuples",
+    "step_4": "Sort the list of tuples by row index in ascending order",
+    "step_5": "Sort the coordinates of each row by column index in descending order",
+    "step_6": "Return the sorted list of tuples as the output"
+  }
+}
+------------------------------
+def get_row(lst, x):
+    coordinates = []
+    
+    for i, row in enumerate(lst):
+        for j, num in enumerate(row):
+            if num == x:
+                coordinates.append((i, j))
+    
+    coordinates.sort(key=lambda coord: coord[0])
+    coordinates.sort(key=lambda coord: coord[1], reverse=True)
+    
+    return coordinates
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the rows containing the integer x from the given 2D list",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the columns within each row in descending order"
+    ],
+    "major_steps": [
+      "Iterate through the 2D list to extract rows containing the integer x",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the columns within each row in descending order",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    rows_with_x = []
+    for i, row in enumerate(lst):
+        if x in row:
+            rows_with_x.append((i, row))
+    
+    rows_with_x.sort(key=lambda tup: tup[0])
+    
+    result = []
+    for row_index, row in rows_with_x:
+        coordinates = [(row_index, col_index) for col_index, val in sorted(enumerate(row), key=lambda tup: tup[1], reverse=True)]
+        result.extend(coordinates)
+    
+    return result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the rows containing the integer x from the given 2D list",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order"
+    ],
+    "high-level steps": [
+      "Create a function get_row(lst, x) that takes a 2D list and an integer x as input",
+      "Iterate through the rows of the 2D list and extract rows containing x",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def get_coordinates(row):
+        return [(lst.index(row), i) for i, val in enumerate(row) if val == x]
+
+    rows_with_x = [row for row in lst if x in row]
+    sorted_rows = sorted(rows_with_x, key=lambda row: lst.index(row))
+    sorted_coordinates = [sorted(get_coordinates(row), key=lambda coord: coord[1], reverse=True) for row in sorted_rows]
+
+    return [(row_idx, col_idx) for row_idx, coordinates in enumerate(sorted_coordinates) for col_idx in coordinates]
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract the rows containing the integer x from the given 2D list",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order"
+    ],
+    "high-level steps": [
+      "Create a function get_row(lst, x) that takes a 2D list and an integer x as input",
+      "Iterate through the rows of the 2D list and extract rows containing x",
+      "Sort the extracted rows by row index in ascending order",
+      "Sort the coordinates of each row by column index in descending order",
+      "Return the list of tuples containing the coordinates"
+    ]
+  }
+}
+------------------------------
+def get_row(lst, x):
+    def sort_columns(row):
+        return sorted(enumerate(row), key=lambda tup: tup[1], reverse=True)
+
+    result = []
+    for i, row in enumerate(lst):
+        if x in row:
+            for j, col in sort_columns(row):
+                result.append((i, j))
+
+    return result
+
+------------------------------
+scores
+[0.5172, 0.2874, 0.5172, 0.5172, 0.5172, 0.6092, 0.5172, 0.3103, 0.2874, 0.3103]
+[45, 25, 45, 45, 45, 53, 45, 27, 25, 27]

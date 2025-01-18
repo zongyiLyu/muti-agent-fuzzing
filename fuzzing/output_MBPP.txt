@@ -1,0 +1,1973 @@
+./output_fuzzing_one_per_time/test/results-MBPP_all_result_3/
+Namespace(alpha=0.25, append=False, calc_analyst=1, calc_final_result=1, calc_relative_reward=1, clean_data=1, dataset='MBPP', dataset_type='MBPP', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/data/MBPP_ET.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo-0301', mutate_method='random', num_generate=10, num_round=1000, only_consider_passed_cases=0, output_file_name='MBPP_all_result', output_path='./output_fuzzing_one_per_time/test/results-MBPP_all_result_3/', recover=0, reward_ratio=1, save_all_seed=0, save_seed=1, set_threshold_analyst=1, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+974
+----------executing task: 0----------
+True
+current round: 0
+current pass@10: 1.0
+----------executing task: 1----------
+False
+----------executing task: 2----------
+False
+----------executing task: 3----------
+False
+----------executing task: 4----------
+True
+----------executing task: 5----------
+False
+----------executing task: 6----------
+True
+----------executing task: 7----------
+True
+----------executing task: 8----------
+True
+----------executing task: 9----------
+True
+----------executing task: 10----------
+False
+----------executing task: 11----------
+True
+----------executing task: 12----------
+False
+----------executing task: 13----------
+False
+----------executing task: 14----------
+False
+----------executing task: 15----------
+False
+----------executing task: 16----------
+True
+----------executing task: 17----------
+True
+----------executing task: 18----------
+True
+----------executing task: 19----------
+False
+----------executing task: 20----------
+True
+----------executing task: 21----------
+False
+----------executing task: 22----------
+True
+----------executing task: 23----------
+True
+----------executing task: 24----------
+False
+----------executing task: 25----------
+False
+----------executing task: 26----------
+True
+----------executing task: 27----------
+True
+----------executing task: 28----------
+False
+----------executing task: 29----------
+True
+----------executing task: 30----------
+False
+----------executing task: 31----------
+False
+----------executing task: 32----------
+False
+----------executing task: 33----------
+False
+----------executing task: 34----------
+False
+----------executing task: 35----------
+False
+----------executing task: 36----------
+True
+----------executing task: 37----------
+False
+----------executing task: 38----------
+False
+----------executing task: 39----------
+True
+----------executing task: 40----------
+True
+----------executing task: 41----------
+False
+----------executing task: 42----------
+False
+----------executing task: 43----------
+False
+----------executing task: 44----------
+True
+----------executing task: 45----------
+True
+----------executing task: 46----------
+False
+----------executing task: 47----------
+False
+----------executing task: 48----------
+True
+----------executing task: 49----------
+False
+----------executing task: 50----------
+False
+----------executing task: 51----------
+False
+----------executing task: 52----------
+False
+----------executing task: 53----------
+True
+----------executing task: 54----------
+False
+----------executing task: 55----------
+False
+----------executing task: 56----------
+False
+----------executing task: 57----------
+True
+----------executing task: 58----------
+True
+----------executing task: 59----------
+False
+----------executing task: 60----------
+False
+----------executing task: 61----------
+True
+----------executing task: 62----------
+True
+----------executing task: 63----------
+False
+----------executing task: 64----------
+False
+----------executing task: 65----------
+False
+----------executing task: 66----------
+True
+----------executing task: 67----------
+True
+----------executing task: 68----------
+True
+----------executing task: 69----------
+False
+----------executing task: 70----------
+True
+----------executing task: 71----------
+False
+----------executing task: 72----------
+False
+----------executing task: 73----------
+False
+----------executing task: 74----------
+False
+----------executing task: 75----------
+False
+----------executing task: 76----------
+False
+----------executing task: 77----------
+False
+----------executing task: 78----------
+True
+----------executing task: 79----------
+True
+----------executing task: 80----------
+False
+----------executing task: 81----------
+False
+----------executing task: 82----------
+False
+----------executing task: 83----------
+True
+----------executing task: 84----------
+False
+----------executing task: 85----------
+True
+----------executing task: 86----------
+False
+----------executing task: 87----------
+False
+----------executing task: 88----------
+True
+----------executing task: 89----------
+False
+----------executing task: 90----------
+True
+----------executing task: 91----------
+False
+----------executing task: 92----------
+True
+----------executing task: 93----------
+False
+----------executing task: 94----------
+True
+----------executing task: 95----------
+True
+----------executing task: 96----------
+True
+----------executing task: 97----------
+True
+----------executing task: 98----------
+False
+----------executing task: 99----------
+True
+----------executing task: 100----------
+False
+current round: 100
+current pass@10: 0.42574257425742573
+----------executing task: 101----------
+False
+----------executing task: 102----------
+False
+----------executing task: 103----------
+False
+----------executing task: 104----------
+False
+----------executing task: 105----------
+True
+----------executing task: 106----------
+False
+----------executing task: 107----------
+False
+----------executing task: 108----------
+False
+----------executing task: 109----------
+False
+----------executing task: 110----------
+True
+----------executing task: 111----------
+False
+----------executing task: 112----------
+True
+----------executing task: 113----------
+False
+----------executing task: 114----------
+False
+----------executing task: 115----------
+True
+----------executing task: 116----------
+False
+----------executing task: 117----------
+False
+----------executing task: 118----------
+False
+----------executing task: 119----------
+False
+----------executing task: 120----------
+False
+----------executing task: 121----------
+False
+----------executing task: 122----------
+False
+----------executing task: 123----------
+False
+----------executing task: 124----------
+False
+----------executing task: 125----------
+False
+----------executing task: 126----------
+True
+----------executing task: 127----------
+False
+----------executing task: 128----------
+False
+----------executing task: 129----------
+False
+----------executing task: 130----------
+True
+----------executing task: 131----------
+True
+----------executing task: 132----------
+True
+----------executing task: 133----------
+False
+----------executing task: 134----------
+True
+----------executing task: 135----------
+False
+----------executing task: 136----------
+False
+----------executing task: 137----------
+True
+----------executing task: 138----------
+False
+----------executing task: 139----------
+False
+----------executing task: 140----------
+True
+----------executing task: 141----------
+True
+----------executing task: 142----------
+False
+----------executing task: 143----------
+False
+----------executing task: 144----------
+False
+----------executing task: 145----------
+False
+----------executing task: 146----------
+False
+----------executing task: 147----------
+False
+----------executing task: 148----------
+False
+----------executing task: 149----------
+False
+----------executing task: 150----------
+True
+----------executing task: 151----------
+True
+----------executing task: 152----------
+False
+----------executing task: 153----------
+False
+----------executing task: 154----------
+False
+----------executing task: 155----------
+False
+----------executing task: 156----------
+False
+----------executing task: 157----------
+False
+----------executing task: 158----------
+False
+----------executing task: 159----------
+False
+----------executing task: 160----------
+True
+----------executing task: 161----------
+True
+----------executing task: 162----------
+False
+----------executing task: 163----------
+False
+----------executing task: 164----------
+True
+----------executing task: 165----------
+False
+----------executing task: 166----------
+True
+----------executing task: 167----------
+True
+----------executing task: 168----------
+False
+----------executing task: 169----------
+True
+----------executing task: 170----------
+True
+----------executing task: 171----------
+False
+----------executing task: 172----------
+True
+----------executing task: 173----------
+True
+----------executing task: 174----------
+True
+----------executing task: 175----------
+False
+----------executing task: 176----------
+False
+----------executing task: 177----------
+False
+----------executing task: 178----------
+False
+----------executing task: 179----------
+False
+----------executing task: 180----------
+False
+----------executing task: 181----------
+False
+----------executing task: 182----------
+False
+----------executing task: 183----------
+False
+----------executing task: 184----------
+False
+----------executing task: 185----------
+False
+----------executing task: 186----------
+False
+----------executing task: 187----------
+False
+----------executing task: 188----------
+False
+----------executing task: 189----------
+False
+----------executing task: 190----------
+False
+----------executing task: 191----------
+True
+----------executing task: 192----------
+True
+----------executing task: 193----------
+False
+----------executing task: 194----------
+False
+----------executing task: 195----------
+True
+----------executing task: 196----------
+False
+----------executing task: 197----------
+False
+----------executing task: 198----------
+False
+----------executing task: 199----------
+True
+----------executing task: 200----------
+True
+current round: 200
+current pass@10: 0.3582089552238806
+----------executing task: 201----------
+False
+----------executing task: 202----------
+True
+----------executing task: 203----------
+True
+----------executing task: 204----------
+False
+----------executing task: 205----------
+False
+----------executing task: 206----------
+True
+----------executing task: 207----------
+False
+----------executing task: 208----------
+False
+----------executing task: 209----------
+True
+----------executing task: 210----------
+False
+----------executing task: 211----------
+True
+----------executing task: 212----------
+False
+----------executing task: 213----------
+True
+----------executing task: 214----------
+False
+----------executing task: 215----------
+False
+----------executing task: 216----------
+False
+----------executing task: 217----------
+False
+----------executing task: 218----------
+False
+----------executing task: 219----------
+False
+----------executing task: 220----------
+False
+----------executing task: 221----------
+True
+----------executing task: 222----------
+False
+----------executing task: 223----------
+True
+----------executing task: 224----------
+False
+----------executing task: 225----------
+True
+----------executing task: 226----------
+True
+----------executing task: 227----------
+False
+----------executing task: 228----------
+False
+----------executing task: 229----------
+True
+----------executing task: 230----------
+False
+----------executing task: 231----------
+True
+----------executing task: 232----------
+False
+----------executing task: 233----------
+True
+----------executing task: 234----------
+False
+----------executing task: 235----------
+False
+----------executing task: 236----------
+False
+----------executing task: 237----------
+True
+----------executing task: 238----------
+False
+----------executing task: 239----------
+False
+----------executing task: 240----------
+False
+----------executing task: 241----------
+False
+----------executing task: 242----------
+False
+----------executing task: 243----------
+False
+----------executing task: 244----------
+False
+----------executing task: 245----------
+False
+----------executing task: 246----------
+False
+----------executing task: 247----------
+False
+----------executing task: 248----------
+True
+----------executing task: 249----------
+True
+----------executing task: 250----------
+True
+----------executing task: 251----------
+True
+----------executing task: 252----------
+True
+----------executing task: 253----------
+False
+----------executing task: 254----------
+False
+----------executing task: 255----------
+True
+----------executing task: 256----------
+True
+----------executing task: 257----------
+True
+----------executing task: 258----------
+False
+----------executing task: 259----------
+False
+----------executing task: 260----------
+False
+----------executing task: 261----------
+True
+----------executing task: 262----------
+True
+----------executing task: 263----------
+False
+----------executing task: 264----------
+False
+----------executing task: 265----------
+True
+----------executing task: 266----------
+False
+----------executing task: 267----------
+True
+----------executing task: 268----------
+True
+----------executing task: 269----------
+False
+----------executing task: 270----------
+True
+----------executing task: 271----------
+True
+----------executing task: 272----------
+True
+----------executing task: 273----------
+True
+----------executing task: 274----------
+False
+----------executing task: 275----------
+False
+----------executing task: 276----------
+False
+----------executing task: 277----------
+False
+----------executing task: 278----------
+False
+----------executing task: 279----------
+False
+----------executing task: 280----------
+True
+----------executing task: 281----------
+True
+----------executing task: 282----------
+True
+----------executing task: 283----------
+True
+----------executing task: 284----------
+False
+----------executing task: 285----------
+False
+----------executing task: 286----------
+False
+----------executing task: 287----------
+False
+----------executing task: 288----------
+False
+----------executing task: 289----------
+False
+----------executing task: 290----------
+False
+----------executing task: 291----------
+False
+----------executing task: 292----------
+False
+----------executing task: 293----------
+False
+----------executing task: 294----------
+False
+----------executing task: 295----------
+False
+----------executing task: 296----------
+True
+----------executing task: 297----------
+False
+----------executing task: 298----------
+False
+----------executing task: 299----------
+True
+----------executing task: 300----------
+True
+current round: 300
+current pass@10: 0.3654485049833887
+----------executing task: 301----------
+True
+----------executing task: 302----------
+False
+----------executing task: 303----------
+False
+----------executing task: 304----------
+False
+----------executing task: 305----------
+False
+----------executing task: 306----------
+False
+----------executing task: 307----------
+True
+----------executing task: 308----------
+True
+----------executing task: 309----------
+False
+----------executing task: 310----------
+False
+----------executing task: 311----------
+False
+----------executing task: 312----------
+False
+----------executing task: 313----------
+False
+----------executing task: 314----------
+False
+----------executing task: 315----------
+False
+----------executing task: 316----------
+False
+----------executing task: 317----------
+False
+----------executing task: 318----------
+True
+----------executing task: 319----------
+True
+----------executing task: 320----------
+False
+----------executing task: 321----------
+True
+----------executing task: 322----------
+False
+----------executing task: 323----------
+False
+----------executing task: 324----------
+True
+----------executing task: 325----------
+True
+----------executing task: 326----------
+False
+----------executing task: 327----------
+False
+----------executing task: 328----------
+False
+----------executing task: 329----------
+True
+----------executing task: 330----------
+True
+----------executing task: 331----------
+True
+----------executing task: 332----------
+True
+----------executing task: 333----------
+True
+----------executing task: 334----------
+False
+----------executing task: 335----------
+False
+----------executing task: 336----------
+False
+----------executing task: 337----------
+True
+----------executing task: 338----------
+False
+----------executing task: 339----------
+True
+----------executing task: 340----------
+True
+----------executing task: 341----------
+False
+----------executing task: 342----------
+False
+----------executing task: 343----------
+False
+----------executing task: 344----------
+True
+----------executing task: 345----------
+False
+----------executing task: 346----------
+False
+----------executing task: 347----------
+False
+----------executing task: 348----------
+False
+----------executing task: 349----------
+False
+----------executing task: 350----------
+False
+----------executing task: 351----------
+True
+----------executing task: 352----------
+True
+----------executing task: 353----------
+False
+----------executing task: 354----------
+False
+----------executing task: 355----------
+True
+----------executing task: 356----------
+False
+----------executing task: 357----------
+True
+----------executing task: 358----------
+False
+----------executing task: 359----------
+True
+----------executing task: 360----------
+True
+----------executing task: 361----------
+True
+----------executing task: 362----------
+False
+----------executing task: 363----------
+False
+----------executing task: 364----------
+True
+----------executing task: 365----------
+True
+----------executing task: 366----------
+False
+----------executing task: 367----------
+False
+----------executing task: 368----------
+False
+----------executing task: 369----------
+False
+----------executing task: 370----------
+False
+----------executing task: 371----------
+True
+----------executing task: 372----------
+True
+----------executing task: 373----------
+False
+----------executing task: 374----------
+True
+----------executing task: 375----------
+False
+----------executing task: 376----------
+True
+----------executing task: 377----------
+True
+----------executing task: 378----------
+False
+----------executing task: 379----------
+False
+----------executing task: 380----------
+True
+----------executing task: 381----------
+True
+----------executing task: 382----------
+False
+----------executing task: 383----------
+False
+----------executing task: 384----------
+True
+----------executing task: 385----------
+False
+----------executing task: 386----------
+False
+----------executing task: 387----------
+True
+----------executing task: 388----------
+True
+----------executing task: 389----------
+False
+----------executing task: 390----------
+False
+----------executing task: 391----------
+True
+----------executing task: 392----------
+False
+----------executing task: 393----------
+True
+----------executing task: 394----------
+False
+----------executing task: 395----------
+False
+----------executing task: 396----------
+True
+----------executing task: 397----------
+False
+----------executing task: 398----------
+True
+----------executing task: 399----------
+False
+----------executing task: 400----------
+True
+current round: 400
+current pass@10: 0.3765586034912718
+----------executing task: 401----------
+False
+----------executing task: 402----------
+True
+----------executing task: 403----------
+True
+----------executing task: 404----------
+True
+----------executing task: 405----------
+False
+----------executing task: 406----------
+False
+----------executing task: 407----------
+False
+----------executing task: 408----------
+False
+----------executing task: 409----------
+False
+----------executing task: 410----------
+False
+----------executing task: 411----------
+False
+----------executing task: 412----------
+True
+----------executing task: 413----------
+False
+----------executing task: 414----------
+True
+----------executing task: 415----------
+True
+----------executing task: 416----------
+False
+----------executing task: 417----------
+False
+----------executing task: 418----------
+False
+----------executing task: 419----------
+True
+----------executing task: 420----------
+False
+----------executing task: 421----------
+True
+----------executing task: 422----------
+False
+----------executing task: 423----------
+True
+----------executing task: 424----------
+True
+----------executing task: 425----------
+True
+----------executing task: 426----------
+False
+----------executing task: 427----------
+True
+----------executing task: 428----------
+False
+----------executing task: 429----------
+False
+----------executing task: 430----------
+False
+----------executing task: 431----------
+False
+----------executing task: 432----------
+False
+----------executing task: 433----------
+False
+----------executing task: 434----------
+True
+----------executing task: 435----------
+False
+----------executing task: 436----------
+False
+----------executing task: 437----------
+False
+----------executing task: 438----------
+True
+----------executing task: 439----------
+False
+----------executing task: 440----------
+False
+----------executing task: 441----------
+False
+----------executing task: 442----------
+False
+----------executing task: 443----------
+False
+----------executing task: 444----------
+False
+----------executing task: 445----------
+False
+----------executing task: 446----------
+True
+----------executing task: 447----------
+False
+----------executing task: 448----------
+False
+----------executing task: 449----------
+True
+----------executing task: 450----------
+True
+----------executing task: 451----------
+False
+----------executing task: 452----------
+False
+----------executing task: 453----------
+False
+----------executing task: 454----------
+True
+----------executing task: 455----------
+True
+----------executing task: 456----------
+False
+----------executing task: 457----------
+False
+----------executing task: 458----------
+False
+----------executing task: 459----------
+True
+----------executing task: 460----------
+False
+----------executing task: 461----------
+False
+----------executing task: 462----------
+True
+----------executing task: 463----------
+False
+----------executing task: 464----------
+True
+----------executing task: 465----------
+False
+----------executing task: 466----------
+False
+----------executing task: 467----------
+False
+----------executing task: 468----------
+False
+----------executing task: 469----------
+False
+----------executing task: 470----------
+False
+----------executing task: 471----------
+True
+----------executing task: 472----------
+False
+----------executing task: 473----------
+True
+----------executing task: 474----------
+False
+----------executing task: 475----------
+True
+----------executing task: 476----------
+True
+----------executing task: 477----------
+True
+----------executing task: 478----------
+True
+----------executing task: 479----------
+False
+----------executing task: 480----------
+False
+----------executing task: 481----------
+False
+----------executing task: 482----------
+False
+----------executing task: 483----------
+False
+----------executing task: 484----------
+False
+----------executing task: 485----------
+False
+----------executing task: 486----------
+True
+----------executing task: 487----------
+False
+----------executing task: 488----------
+False
+----------executing task: 489----------
+False
+----------executing task: 490----------
+False
+----------executing task: 491----------
+False
+----------executing task: 492----------
+False
+----------executing task: 493----------
+False
+----------executing task: 494----------
+False
+----------executing task: 495----------
+False
+----------executing task: 496----------
+True
+----------executing task: 497----------
+True
+----------executing task: 498----------
+False
+----------executing task: 499----------
+False
+----------executing task: 500----------
+False
+current round: 500
+current pass@10: 0.36327345309381237
+----------executing task: 501----------
+True
+----------executing task: 502----------
+False
+----------executing task: 503----------
+True
+----------executing task: 504----------
+True
+----------executing task: 505----------
+False
+----------executing task: 506----------
+True
+----------executing task: 507----------
+False
+----------executing task: 508----------
+False
+----------executing task: 509----------
+False
+----------executing task: 510----------
+False
+----------executing task: 511----------
+True
+----------executing task: 512----------
+True
+----------executing task: 513----------
+False
+----------executing task: 514----------
+False
+----------executing task: 515----------
+False
+----------executing task: 516----------
+True
+----------executing task: 517----------
+False
+----------executing task: 518----------
+False
+----------executing task: 519----------
+True
+----------executing task: 520----------
+False
+----------executing task: 521----------
+False
+----------executing task: 522----------
+False
+----------executing task: 523----------
+False
+----------executing task: 524----------
+False
+----------executing task: 525----------
+False
+----------executing task: 526----------
+False
+----------executing task: 527----------
+False
+----------executing task: 528----------
+False
+----------executing task: 529----------
+False
+----------executing task: 530----------
+False
+----------executing task: 531----------
+True
+----------executing task: 532----------
+False
+----------executing task: 533----------
+False
+----------executing task: 534----------
+False
+----------executing task: 535----------
+False
+----------executing task: 536----------
+False
+----------executing task: 537----------
+False
+----------executing task: 538----------
+False
+----------executing task: 539----------
+False
+----------executing task: 540----------
+True
+----------executing task: 541----------
+True
+----------executing task: 542----------
+False
+----------executing task: 543----------
+False
+----------executing task: 544----------
+True
+----------executing task: 545----------
+False
+----------executing task: 546----------
+True
+----------executing task: 547----------
+True
+----------executing task: 548----------
+True
+----------executing task: 549----------
+False
+----------executing task: 550----------
+True
+----------executing task: 551----------
+False
+----------executing task: 552----------
+False
+----------executing task: 553----------
+True
+----------executing task: 554----------
+True
+----------executing task: 555----------
+False
+----------executing task: 556----------
+True
+----------executing task: 557----------
+False
+----------executing task: 558----------
+False
+----------executing task: 559----------
+True
+----------executing task: 560----------
+False
+----------executing task: 561----------
+True
+----------executing task: 562----------
+True
+----------executing task: 563----------
+False
+----------executing task: 564----------
+True
+----------executing task: 565----------
+True
+----------executing task: 566----------
+True
+----------executing task: 567----------
+False
+----------executing task: 568----------
+True
+----------executing task: 569----------
+False
+----------executing task: 570----------
+False
+----------executing task: 571----------
+False
+----------executing task: 572----------
+True
+----------executing task: 573----------
+False
+----------executing task: 574----------
+False
+----------executing task: 575----------
+False
+----------executing task: 576----------
+True
+----------executing task: 577----------
+False
+----------executing task: 578----------
+True
+----------executing task: 579----------
+False
+----------executing task: 580----------
+False
+----------executing task: 581----------
+True
+----------executing task: 582----------
+True
+----------executing task: 583----------
+False
+----------executing task: 584----------
+True
+----------executing task: 585----------
+False
+----------executing task: 586----------
+True
+----------executing task: 587----------
+True
+----------executing task: 588----------
+True
+----------executing task: 589----------
+False
+----------executing task: 590----------
+True
+----------executing task: 591----------
+False
+----------executing task: 592----------
+False
+----------executing task: 593----------
+False
+----------executing task: 594----------
+False
+----------executing task: 595----------
+False
+----------executing task: 596----------
+False
+----------executing task: 597----------
+True
+----------executing task: 598----------
+False
+----------executing task: 599----------
+True
+----------executing task: 600----------
+False
+current round: 600
+current pass@10: 0.36605657237936773
+----------executing task: 601----------
+False
+----------executing task: 602----------
+False
+----------executing task: 603----------
+False
+----------executing task: 604----------
+False
+----------executing task: 605----------
+True
+----------executing task: 606----------
+False
+----------executing task: 607----------
+True
+----------executing task: 608----------
+False
+----------executing task: 609----------
+True
+----------executing task: 610----------
+False
+----------executing task: 611----------
+False
+----------executing task: 612----------
+False
+----------executing task: 613----------
+True
+----------executing task: 614----------
+False
+----------executing task: 615----------
+True
+----------executing task: 616----------
+False
+----------executing task: 617----------
+True
+----------executing task: 618----------
+True
+----------executing task: 619----------
+False
+----------executing task: 620----------
+True
+----------executing task: 621----------
+False
+----------executing task: 622----------
+True
+----------executing task: 623----------
+True
+----------executing task: 624----------
+True
+----------executing task: 625----------
+False
+----------executing task: 626----------
+False
+----------executing task: 627----------
+False
+----------executing task: 628----------
+True
+----------executing task: 629----------
+False
+----------executing task: 630----------
+False
+----------executing task: 631----------
+True
+----------executing task: 632----------
+False
+----------executing task: 633----------
+True
+----------executing task: 634----------
+True
+----------executing task: 635----------
+False
+----------executing task: 636----------
+False
+----------executing task: 637----------
+False
+----------executing task: 638----------
+False
+----------executing task: 639----------
+False
+----------executing task: 640----------
+True
+----------executing task: 641----------
+False
+----------executing task: 642----------
+False
+----------executing task: 643----------
+True
+----------executing task: 644----------
+True
+----------executing task: 645----------
+True
+----------executing task: 646----------
+False
+----------executing task: 647----------
+True
+----------executing task: 648----------
+True
+----------executing task: 649----------
+False
+----------executing task: 650----------
+False
+----------executing task: 651----------
+False
+----------executing task: 652----------
+False
+----------executing task: 653----------
+False
+----------executing task: 654----------
+True
+----------executing task: 655----------
+False
+----------executing task: 656----------
+False
+----------executing task: 657----------
+True
+----------executing task: 658----------
+False
+----------executing task: 659----------
+False
+----------executing task: 660----------
+False
+----------executing task: 661----------
+False
+----------executing task: 662----------
+False
+----------executing task: 663----------
+False
+----------executing task: 664----------
+False
+----------executing task: 665----------
+True
+----------executing task: 666----------
+False
+----------executing task: 667----------
+True
+----------executing task: 668----------
+False
+----------executing task: 669----------
+False
+----------executing task: 670----------
+False
+----------executing task: 671----------
+True
+----------executing task: 672----------
+True
+----------executing task: 673----------
+True
+----------executing task: 674----------
+False
+----------executing task: 675----------
+True
+----------executing task: 676----------
+False
+----------executing task: 677----------
+False
+----------executing task: 678----------
+False
+----------executing task: 679----------
+False
+----------executing task: 680----------
+True
+----------executing task: 681----------
+True
+----------executing task: 682----------
+False
+----------executing task: 683----------
+False
+----------executing task: 684----------
+True
+----------executing task: 685----------
+False
+----------executing task: 686----------
+True
+----------executing task: 687----------
+False
+----------executing task: 688----------
+False
+----------executing task: 689----------
+False
+----------executing task: 690----------
+True
+----------executing task: 691----------
+False
+----------executing task: 692----------
+False
+----------executing task: 693----------
+False
+----------executing task: 694----------
+False
+----------executing task: 695----------
+False
+----------executing task: 696----------
+True
+----------executing task: 697----------
+True
+----------executing task: 698----------
+False
+----------executing task: 699----------
+True
+----------executing task: 700----------
+True
+current round: 700
+current pass@10: 0.3680456490727532
+----------executing task: 701----------
+False
+----------executing task: 702----------
+True
+----------executing task: 703----------
+False
+----------executing task: 704----------
+False
+----------executing task: 705----------
+False
+----------executing task: 706----------
+True
+----------executing task: 707----------
+False
+----------executing task: 708----------
+False
+----------executing task: 709----------
+True
+----------executing task: 710----------
+True
+----------executing task: 711----------
+False
+----------executing task: 712----------
+False
+----------executing task: 713----------
+False
+----------executing task: 714----------
+False
+----------executing task: 715----------
+True
+----------executing task: 716----------
+False
+----------executing task: 717----------
+True
+----------executing task: 718----------
+False
+----------executing task: 719----------
+False
+----------executing task: 720----------
+False
+----------executing task: 721----------
+False
+----------executing task: 722----------
+True
+----------executing task: 723----------
+True
+----------executing task: 724----------
+True
+----------executing task: 725----------
+False
+----------executing task: 726----------
+True
+----------executing task: 727----------
+True
+----------executing task: 728----------
+True
+----------executing task: 729----------
+True
+----------executing task: 730----------
+False
+----------executing task: 731----------
+True
+----------executing task: 732----------
+False
+----------executing task: 733----------
+False
+----------executing task: 734----------
+True
+----------executing task: 735----------
+True
+----------executing task: 736----------
+False
+----------executing task: 737----------
+False
+----------executing task: 738----------
+False
+----------executing task: 739----------
+True
+----------executing task: 740----------
+True
+----------executing task: 741----------
+True
+----------executing task: 742----------
+False
+----------executing task: 743----------
+True
+----------executing task: 744----------
+True
+----------executing task: 745----------
+False
+----------executing task: 746----------
+False
+----------executing task: 747----------
+False
+----------executing task: 748----------
+False
+----------executing task: 749----------
+False
+----------executing task: 750----------
+False
+----------executing task: 751----------
+True
+----------executing task: 752----------
+False
+----------executing task: 753----------
+False
+----------executing task: 754----------
+False
+----------executing task: 755----------
+False
+----------executing task: 756----------
+False
+----------executing task: 757----------
+False
+----------executing task: 758----------
+False
+----------executing task: 759----------
+False
+----------executing task: 760----------
+False
+----------executing task: 761----------
+True
+----------executing task: 762----------
+False
+----------executing task: 763----------
+False
+----------executing task: 764----------
+False
+----------executing task: 765----------
+True
+----------executing task: 766----------
+False
+----------executing task: 767----------
+False
+----------executing task: 768----------
+True
+----------executing task: 769----------
+True
+----------executing task: 770----------
+False
+----------executing task: 771----------
+True
+----------executing task: 772----------
+False
+----------executing task: 773----------
+False
+----------executing task: 774----------
+False
+----------executing task: 775----------
+False
+----------executing task: 776----------
+False
+----------executing task: 777----------
+True
+----------executing task: 778----------
+False
+----------executing task: 779----------
+False
+----------executing task: 780----------
+True
+----------executing task: 781----------
+True
+----------executing task: 782----------
+False
+----------executing task: 783----------
+False
+----------executing task: 784----------
+False
+----------executing task: 785----------
+False
+----------executing task: 786----------
+False
+----------executing task: 787----------
+False
+----------executing task: 788----------
+False
+----------executing task: 789----------
+False
+----------executing task: 790----------
+True
+----------executing task: 791----------
+True
+----------executing task: 792----------
+False
+----------executing task: 793----------
+False
+----------executing task: 794----------
+False
+----------executing task: 795----------
+True
+----------executing task: 796----------
+False
+----------executing task: 797----------
+True
+----------executing task: 798----------
+False
+----------executing task: 799----------
+True
+----------executing task: 800----------
+False
+current round: 800
+current pass@10: 0.365792759051186
+----------executing task: 801----------
+False
+----------executing task: 802----------
+True
+----------executing task: 803----------
+False
+----------executing task: 804----------
+True
+----------executing task: 805----------
+False
+----------executing task: 806----------
+False
+----------executing task: 807----------
+True
+----------executing task: 808----------
+True
+----------executing task: 809----------
+False
+----------executing task: 810----------
+True
+----------executing task: 811----------
+False
+----------executing task: 812----------
+True
+----------executing task: 813----------
+False
+----------executing task: 814----------
+False
+----------executing task: 815----------
+False
+----------executing task: 816----------
+True
+----------executing task: 817----------
+True
+----------executing task: 818----------
+False
+----------executing task: 819----------
+True
+----------executing task: 820----------
+False
+----------executing task: 821----------
+False
+----------executing task: 822----------
+False
+----------executing task: 823----------
+False
+----------executing task: 824----------
+True
+----------executing task: 825----------
+False
+----------executing task: 826----------
+True
+----------executing task: 827----------
+True
+----------executing task: 828----------
+False
+----------executing task: 829----------
+False
+----------executing task: 830----------
+False
+----------executing task: 831----------
+True
+----------executing task: 832----------
+True
+----------executing task: 833----------
+True
+----------executing task: 834----------
+False
+----------executing task: 835----------
+False
+----------executing task: 836----------
+True
+----------executing task: 837----------
+False
+----------executing task: 838----------
+False
+----------executing task: 839----------
+False
+----------executing task: 840----------
+False
+----------executing task: 841----------
+False
+----------executing task: 842----------
+False
+----------executing task: 843----------
+False
+----------executing task: 844----------
+True
+----------executing task: 845----------
+False
+----------executing task: 846----------
+False
+----------executing task: 847----------
+False
+----------executing task: 848----------
+True
+----------executing task: 849----------
+False
+----------executing task: 850----------
+False
+----------executing task: 851----------
+True
+----------executing task: 852----------
+False
+----------executing task: 853----------
+True
+----------executing task: 854----------
+False
+----------executing task: 855----------
+False
+----------executing task: 856----------
+True
+----------executing task: 857----------
+True
+----------executing task: 858----------
+False
+----------executing task: 859----------
+False
+----------executing task: 860----------
+False
+----------executing task: 861----------
+True
+----------executing task: 862----------
+False
+----------executing task: 863----------
+True
+----------executing task: 864----------
+False
+----------executing task: 865----------
+False
+----------executing task: 866----------
+False
+----------executing task: 867----------
+True
+----------executing task: 868----------
+True
+----------executing task: 869----------
+True
+----------executing task: 870----------
+True
+----------executing task: 871----------
+False
+----------executing task: 872----------
+True
+----------executing task: 873----------
+False
+----------executing task: 874----------
+False
+----------executing task: 875----------
+True
+----------executing task: 876----------
+True
+----------executing task: 877----------
+False
+----------executing task: 878----------
+False
+----------executing task: 879----------
+False
+----------executing task: 880----------
+True
+----------executing task: 881----------
+False
+----------executing task: 882----------
+True
+----------executing task: 883----------
+False
+----------executing task: 884----------
+True
+----------executing task: 885----------
+True
+----------executing task: 886----------
+True
+----------executing task: 887----------
+False
+----------executing task: 888----------
+False
+----------executing task: 889----------
+False
+----------executing task: 890----------
+False
+----------executing task: 891----------
+True
+----------executing task: 892----------
+True
+----------executing task: 893----------
+False
+----------executing task: 894----------
+True
+----------executing task: 895----------
+True
+----------executing task: 896----------
+True
+----------executing task: 897----------
+False
+----------executing task: 898----------
+False
+----------executing task: 899----------
+True
+----------executing task: 900----------
+False
+current round: 900
+current pass@10: 0.37180910099889014
+----------executing task: 901----------
+False
+----------executing task: 902----------
+True
+----------executing task: 903----------
+True
+----------executing task: 904----------
+True
+----------executing task: 905----------
+False
+----------executing task: 906----------
+False
+----------executing task: 907----------
+False
+----------executing task: 908----------
+True
+----------executing task: 909----------
+False
+----------executing task: 910----------
+True
+----------executing task: 911----------
+False
+----------executing task: 912----------
+False
+----------executing task: 913----------
+True
+----------executing task: 914----------
+False
+----------executing task: 915----------
+False
+----------executing task: 916----------
+False
+----------executing task: 917----------
+False
+----------executing task: 918----------
+True
+----------executing task: 919----------
+False
+----------executing task: 920----------
+True
+----------executing task: 921----------
+True
+----------executing task: 922----------
+False
+----------executing task: 923----------
+True
+----------executing task: 924----------
+True
+----------executing task: 925----------
+False
+----------executing task: 926----------
+False
+----------executing task: 927----------
+False
+----------executing task: 928----------
+False
+----------executing task: 929----------
+False
+----------executing task: 930----------
+True
+----------executing task: 931----------
+True
+----------executing task: 932----------
+False
+----------executing task: 933----------
+False
+----------executing task: 934----------
+True
+----------executing task: 935----------
+False
+----------executing task: 936----------
+False
+----------executing task: 937----------
+False
+----------executing task: 938----------
+False
+----------executing task: 939----------
+True
+----------executing task: 940----------
+True
+----------executing task: 941----------
+True
+----------executing task: 942----------
+True
+----------executing task: 943----------
+False
+----------executing task: 944----------
+True
+----------executing task: 945----------
+False
+----------executing task: 946----------
+False
+----------executing task: 947----------
+False
+----------executing task: 948----------
+False
+----------executing task: 949----------
+False
+----------executing task: 950----------
+False
+----------executing task: 951----------
+True
+----------executing task: 952----------
+False
+----------executing task: 953----------
+False
+----------executing task: 954----------
+True
+----------executing task: 955----------
+True
+----------executing task: 956----------
+False
+----------executing task: 957----------
+True
+----------executing task: 958----------
+True
+----------executing task: 959----------
+False
+----------executing task: 960----------
+True
+----------executing task: 961----------
+False
+----------executing task: 962----------
+False
+----------executing task: 963----------
+True
+----------executing task: 964----------
+False
+----------executing task: 965----------
+True
+----------executing task: 966----------
+False
+----------executing task: 967----------
+False
+----------executing task: 968----------
+False
+----------executing task: 969----------
+True
+----------executing task: 970----------
+False
+----------executing task: 971----------
+False
+----------executing task: 972----------
+True
+----------executing task: 973----------
+True
+----------------------------------------------------------------------------------------------------
+final_result: 0.37474332648870634

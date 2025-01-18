@@ -1,0 +1,701 @@
+------------------------------
+99
+------------------------------
+original prompt
+------------------------------
+
+def closest_integer(value):
+    '''
+    Create a function that takes a value (string) representing a number
+    and returns the closest integer to it. If the number is equidistant
+    from two integers, round it away from zero.
+
+    Examples
+    >>> closest_integer("10")
+    10
+    >>> closest_integer("15.3")
+    15
+
+    Note:
+    Rounding away from zero means that if the given number is equidistant
+    from two integers, the one you should return is the one that is the
+    farthest from zero. For example closest_integer("14.5") should
+    return 15 and closest_integer("-14.5") should return -15.
+    '''
+
+------------------------------
+mutated prompt
+------------------------------
+
+def closest_integer(value):
+    '''
+    Create a function that takes a value (string) representing a number
+    and returns the closest integer to it. If the number is equidistant
+    from two integers, round it away from zero.
+
+    Examples
+    >>> closest_integer("10")
+    10
+    >>> closest_integer("15.3")
+    15
+
+    Note:
+    Rounding away from zero means if the number is equidistant from two
+    integers, return the one farthest from zero. For example, closest_integer("14.5")
+    should return 15 and closest_integer("-14.5") should return -15.
+
+    The input string will always represent a valid number.
+    '''
+------------------------------
+canonical solution
+------------------------------
+    from math import floor, ceil
+
+    if value.count('.') == 1:
+        # remove trailing zeros
+        while (value[-1] == '0'):
+            value = value[:-1]
+
+    num = float(value)
+    if value[-2:] == '.5':
+        if num > 0:
+            res = ceil(num)
+        else:
+            res = floor(num)
+    elif len(value) > 0:
+        res = int(round(num))
+    else:
+        res = 0
+
+    return res
+
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the input value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    diff_floor = abs(num - floor_num)
+    diff_ceil = abs(num - ceil_num)
+    
+    if diff_floor == diff_ceil:
+        return ceil_num if num > 0 else floor_num
+    else:
+        return ceil_num if diff_ceil < diff_floor else floor_num
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the float value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    value = float(value)
+    floor_val = math.floor(value)
+    ceil_val = math.ceil(value)
+    
+    diff_floor = abs(value - floor_val)
+    diff_ceil = abs(value - ceil_val)
+    
+    if diff_floor == diff_ceil:
+        return ceil_val if value > 0 else floor_val
+    else:
+        return ceil_val if diff_ceil < diff_floor else floor_val
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the input value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    diff_floor = abs(num - floor_num)
+    diff_ceil = abs(num - ceil_num)
+    
+    if diff_floor == diff_ceil:
+        return ceil_num if num > 0 else floor_num
+    else:
+        return ceil_num if diff_ceil < diff_floor else floor_num
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Convert the input value from string to float",
+    "Determine the two closest integers to the input value",
+    "Round the input value away from zero to the closest integer"
+  ],
+  "high_level_plan": {
+    "step_1": "Convert the input value from string to float",
+    "step_2": "Calculate the two closest integers to the input value",
+    "step_3": "Round the input value away from zero to the closest integer",
+    "step_4": "Return the closest integer"
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    lower_int = int(num)
+    upper_int = lower_int + 1
+
+    if num - lower_int < upper_int - num:
+        return lower_int
+    elif num - lower_int > upper_int - num:
+        return upper_int
+    else:
+        if num >= 0:
+            return upper_int
+        else:
+            return lower_int
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the input value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    diff_floor = abs(num - floor_num)
+    diff_ceil = abs(num - ceil_num)
+    
+    if diff_floor == diff_ceil:
+        return ceil_num if num > 0 else floor_num
+    else:
+        return ceil_num if diff_ceil < diff_floor else floor_num
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "steps": [
+      "Convert the input value to a float",
+      "Calculate the difference between the input value and the floor and ceiling of the float value",
+      "Return the integer that is farthest from zero"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    diff_floor = abs(num - floor_num)
+    diff_ceil = abs(num - ceil_num)
+    
+    if diff_floor == diff_ceil:
+        return ceil_num if num > 0 else floor_num
+    else:
+        return ceil_num if diff_ceil < diff_floor else floor_num
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the input value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    diff_floor = abs(num - floor_num)
+    diff_ceil = abs(num - ceil_num)
+    
+    if diff_floor == diff_ceil:
+        return ceil_num if num > 0 else floor_num
+    else:
+        return ceil_num if diff_ceil < diff_floor else floor_num
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string value to a float number",
+      "Determine the closest integer to the float number",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "steps": [
+      "Create a function closest_integer that takes a string value as input",
+      "Convert the input string value to a float number",
+      "Calculate the difference between the float number and its floor and ceil values",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    diff_floor = num - math.floor(num)
+    diff_ceil = math.ceil(num) - num
+
+    if diff_floor == diff_ceil:
+        return math.ceil(num) if num >= 0 else math.floor(num)
+    elif diff_floor < diff_ceil:
+        return math.floor(num)
+    else:
+        return math.ceil(num)
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the input value is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value from string to float",
+      "Calculate the difference between the input value and the floor and ceiling of the input value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    value = float(value)
+    floor_val = math.floor(value)
+    ceil_val = math.ceil(value)
+    
+    diff_floor = abs(value - floor_val)
+    diff_ceil = abs(value - ceil_val)
+    
+    if diff_floor == diff_ceil:
+        return ceil_val if value > 0 else floor_val
+    else:
+        return ceil_val if diff_ceil < diff_floor else floor_val
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input value from string to float",
+      "Determine the closest integer to the input value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Convert the input value to a float data type",
+      "Calculate the difference between the input value and the floor and ceiling of the float value",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    value = float(value)
+    floor_val = math.floor(value)
+    ceil_val = math.ceil(value)
+    
+    diff_floor = abs(value - floor_val)
+    diff_ceil = abs(value - ceil_val)
+    
+    if diff_floor == diff_ceil:
+        return ceil_val if value > 0 else floor_val
+    else:
+        return ceil_val if diff_ceil < diff_floor else floor_val
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers",
+      "Return the closest integer"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers by rounding away from zero"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers by rounding away from zero",
+      "Return the closest integer"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers by rounding away from zero"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string to a float number",
+      "Determine the two closest integers to the float number",
+      "Round the float number away from zero to the closest integer"
+    ],
+    "major_steps": [
+      "Convert the input string to a float number",
+      "Calculate the difference between the float number and its floor and ceil values",
+      "Check which integer is closer to the float number",
+      "Round the float number away from zero to the closest integer"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    if num - floor_num < ceil_num - num:
+        return math.floor(num)
+    else:
+        return math.ceil(num)
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers",
+      "Return the closest integer"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers",
+      "Return the closest integer"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Convert the input string to a float number",
+      "Determine the closest integer to the float number",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "steps": [
+      "Create a function closest_integer that takes a string input",
+      "Convert the input string to a float number",
+      "Calculate the difference between the float number and its floor and ceiling values",
+      "Return the integer value that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_val = math.floor(num)
+    ceil_val = math.ceil(num)
+    
+    if abs(num - floor_val) < abs(num - ceil_val):
+        return int(floor_val)
+    else:
+        return int(ceil_val)
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers"
+    ],
+    "major_steps": [
+      "Create a function closest_integer that takes a string input",
+      "Extract the numerical value from the input string",
+      "Determine the closest integer to the extracted numerical value",
+      "Handle cases where the number is equidistant from two integers by rounding away from zero",
+      "Return the closest integer"
+    ]
+  }
+}
+------------------------------
+def closest_integer(value):
+    num = float(value)
+    if num % 1 < 0.5:
+        return int(num)
+    elif num > 0:
+        return int(num) + 1
+    else:
+        return int(num) - 1
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Convert the input string to a float number",
+      "Determine the two closest integers to the float number",
+      "Round the float number to the closest integer away from zero"
+    ],
+    "major_steps": [
+      "Parse the input string to a float number",
+      "Calculate the difference between the float number and its floor and ceiling values",
+      "Return the integer that is farthest from zero based on the calculated differences"
+    ]
+  }
+}
+------------------------------
+import math
+
+def closest_integer(value):
+    num = float(value)
+    floor_num = math.floor(num)
+    ceil_num = math.ceil(num)
+    
+    if num - floor_num < ceil_num - num:
+        return math.floor(num)
+    else:
+        return math.ceil(num)
+
+------------------------------
+scores
+[0.9923, 0.9923, 0.9923, 0.9923, 0.9923, 0.9923, 0.9923, 0.9923, 0.9923, 0.9923]
+[129, 129, 129, 129, 129, 129, 129, 129, 129, 129]

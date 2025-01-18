@@ -1,0 +1,590 @@
+------------------------------
+64
+------------------------------
+original prompt
+------------------------------
+
+FIX = """
+Add more test cases.
+"""
+
+def vowels_count(s):
+    """Write a function vowels_count which takes a string representing
+    a word as input and returns the number of vowels in the string.
+    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+    vowel, but only when it is at the end of the given word.
+
+    Example:
+    >>> vowels_count("abcde")
+    2
+    >>> vowels_count("ACEDY")
+    3
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+```python
+def vowels_count(s):
+    """Create a function named vowels_count that accepts a string as input,
+    representing a word, and calculates the total number of vowels present
+    in the string. The vowels to consider are 'a', 'e', 'i', 'o', 'u'. Additionally,
+    'y' is considered a vowel only if it appears at the end of the word.
+
+    Example:
+    >>> vowels_count("abcde")
+    2
+    >>> vowels_count("ACEDY")
+    3
+    """
+```
+------------------------------
+canonical solution
+------------------------------
+    vowels = "aeiouAEIOU"
+    n_vowels = sum(c in vowels for c in s)
+    if s[-1] == 'y' or s[-1] == 'Y':
+        n_vowels += 1
+    return n_vowels
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Iterate through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count of vowels if the character is a vowel",
+      "Return the count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count if the character is a vowel",
+      "Return the final count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i == len(s) - 1:
+                count += 1
+            elif s[i].lower() != 'y':
+                count += 1
+    return count
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle the special case where 'y' is a vowel only at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Iterate through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y', check if it is at the end of the word",
+      "Increment the count of vowels if the character is a vowel",
+      "Return the total count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count of vowels if a vowel is found",
+      "Return the count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count if the character is a vowel",
+      "Return the final count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y', check if it is at the end of the word",
+      "Increment the count of vowels if the character is a vowel",
+      "Return the count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Consider 'y' as a vowel only when it is at the end of the word"
+    ],
+    "high-level steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Iterate through each character in the string",
+      "Check if the character is a vowel or 'y' at the end of the word",
+      "Increment the count if the character is a vowel",
+      "Return the final count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i, char in enumerate(s):
+        if char.lower() in vowels or (char.lower() == 'y' and i == len(s) - 1):
+            count += 1
+    return count
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Iterate through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count of vowels if the character is a vowel",
+      "Return the final count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i == len(s) - 1:
+                count += 1
+            elif s[i].lower() != 'y':
+                count += 1
+    return count
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the input string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count if the character is a vowel",
+      "Return the final count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i != len(s) - 1:
+                continue
+            count += 1
+    return count
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all vowels in the given word",
+      "Count the number of vowels in the word",
+      "Handle 'y' as a vowel only when it is at the end of the word"
+    ],
+    "steps": [
+      "Create a function vowels_count that takes a string as input",
+      "Initialize a variable to store the count of vowels",
+      "Loop through each character in the string",
+      "Check if the character is a vowel ('a', 'e', 'i', 'o', 'u')",
+      "If the character is 'y' and it is at the end of the word, consider it as a vowel",
+      "Increment the count if the character is a vowel",
+      "Return the count of vowels"
+    ]
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if s[i].lower() == 'y' and i == len(s) - 1:
+                count += 1
+            elif s[i].lower() != 'y':
+                count += 1
+    return count
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Calculate the total number of vowels present in the string.",
+    "4. Consider 'y' as a vowel": "Check if 'y' appears at the end of the word and consider it as a vowel.",
+    "5. Return the count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Calculate the total number of vowels present in the string.",
+    "4. Consider 'y' as a vowel": "Check if 'y' appears at the end of the word and consider it as a vowel.",
+    "5. Return the count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Calculate the total number of vowels present in the string.",
+    "4. Consider 'y' as a vowel": "Check if 'y' appears at the end of the word and consider it as a vowel.",
+    "5. Return the count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Calculate the total number of vowels present in the string.",
+    "4. Consider 'y' as a vowel": "Check if 'y' appears at the end of the word and count it as a vowel if it does.",
+    "5. Return the count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the function": "Create a function named vowels_count that accepts a string as input.",
+    "2. Identify vowels": "Identify the vowels 'a', 'e', 'i', 'o', 'u' in the input string.",
+    "3. Count vowels": "Count the total number of vowels present in the string, considering 'y' as a vowel only if it appears at the end of the word.",
+    "4. Return count": "Return the total count of vowels in the string."
+  }
+}
+------------------------------
+def vowels_count(s):
+    vowels = set('aeiou')
+    count = 0
+    for i in range(len(s)):
+        if s[i].lower() in vowels:
+            if i == len(s) - 1 or (i == len(s) - 2 and s[i+1].lower() == 'y'):
+                count += 1
+    return count
+
+------------------------------
+scores
+[0.4174, 0.4174, 0.4174, 0.4174, 0.4174, 0.4174, 0.4174, 0.4174, 0.4174, 0.4174]
+[48, 48, 48, 48, 48, 48, 48, 48, 48, 48]

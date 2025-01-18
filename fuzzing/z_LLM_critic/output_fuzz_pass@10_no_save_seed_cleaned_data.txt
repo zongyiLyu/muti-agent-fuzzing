@@ -1,0 +1,269 @@
+['You have been tasked to write a function that receives a hexadecimal number as a string and counts the number of hexadecimal digits that are primes. Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. Prime numbers are 2, 3, 5, 7, 11, 13, 17,... So you have to determine a number of the following digits: 2, 3, 5, 7, B (=decimal 11), D (=decimal 13). Note: you may assume the input is always correct or empty string, and symbols A,B,C,D,E,F are always uppercase.']
+../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/
+Namespace(alpha=0.25, append=False, calc_analyst=0, calc_final_result=1, calc_original_plan=0, calc_relative_reward=1, clean_data=1, dataset='humaneval', dataset_type='HumanEval', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/output_mutated/original/code_round_0_with_score.jsonl', lang='python', llm_critic='none', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo', mutate_level='sentence', mutate_method='random', num_generate=10, num_round=10000, only_consider_passed_cases=0, output_file_name='no_save_seed_cleaned_data', output_path='../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/', parallel=0, recover=0, reward_ratio=1, save_all_seed=0, save_seed=0, set_threshold_analyst=1, signature=True, split_input=0, temperature=0.0, timeout=10, top_p=0.95, verbose=False, with_reference=1)
+164 164 164
+67
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 1------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_node_1.jsonl
+----------------------------------------round: 2------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 3------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:3
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 4------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:4
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 5------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:5
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 6------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:6
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 7------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:7
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 8------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:8
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 9------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:9
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 10------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:10
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 11------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:11
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_node_11.jsonl
+----------------------------------------round: 12------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:12
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 13------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:13
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 14------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:14
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 15------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:15
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 16------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:16
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 17------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:17
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 18------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 19------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:19
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 20------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:20
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 21------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:21
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/whole_prompt/sentence_level/results-no_save_seed_cleaned_data_2/_node_21.jsonl
+----------------------------------------round: 22------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:22
+----------mutating----------
+----------evaluating mutated seed----------

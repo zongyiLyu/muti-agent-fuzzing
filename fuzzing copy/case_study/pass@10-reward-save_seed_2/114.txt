@@ -1,0 +1,748 @@
+------------------------------
+114
+------------------------------
+original prompt
+------------------------------
+
+def minSubArraySum(nums):
+    """
+    Given an array of integers nums, find the minimum sum of any non-empty sub-array
+    of nums.
+    Example
+    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+    minSubArraySum([-1, -2, -3]) == -6
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def minSubArraySum(nums):
+    """
+    Given an array of integers nums, find the minimum sum of any non-empty sub-array
+    of nums. The function should return the smallest possible sum that can be obtained from any contiguous sub-array. Ensure that the solution is efficient and can handle large input sizes.
+    Example
+    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+    minSubArraySum([-1, -2, -3]) == -6
+    """
+
+------------------------------
+canonical solution
+------------------------------
+    max_sum = 0
+    s = 0
+    for num in nums:
+        s += -num
+        if (s < 0):
+            s = 0
+        max_sum = max(s, max_sum)
+    if max_sum == 0:
+        max_sum = max(-i for i in nums)
+    min_sum = -max_sum
+    return min_sum
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a nested loop",
+      "Track the minimum sum found so far and update it if a smaller sum is found"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            min_sum = min(min_sum, current_sum)
+    
+    return min_sum
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            if left < len(nums):
+                current_sum -= nums[left]
+                left += 1
+            else:
+                break
+    
+    return min_sum
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            if left < len(nums):
+                current_sum -= nums[left]
+                left += 1
+            else:
+                break
+    
+    return min_sum
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify all possible subarrays of the given array",
+      "Calculate the sum of each subarray",
+      "Find the minimum sum among all subarrays"
+    ],
+    "high-level steps": [
+      "Iterate through the array to identify all possible subarrays",
+      "Calculate the sum of each subarray using a sliding window approach",
+      "Track the minimum sum found so far",
+      "Return the minimum sum"
+    ]
+  }
+}
+------------------------------
+def minSubArraySum(nums):
+    if not nums:
+        return 0
+    
+    min_sum = float('inf')
+    current_sum = 0
+    left = 0
+    
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum >= 0:
+            min_sum = min(min_sum, current_sum)
+            current_sum -= nums[left]
+            left += 1
+    
+    return min_sum
+
+------------------------------
+scores
+[0.0, 0.0, 0.0, 0.0083, 0.0, 0.0, 0.0083, 0.0, 0.0, 0.0]
+[0, 0, 0, 1, 0, 0, 1, 0, 0, 0]

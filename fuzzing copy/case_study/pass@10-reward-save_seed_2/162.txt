@@ -1,0 +1,613 @@
+------------------------------
+162
+------------------------------
+original prompt
+------------------------------
+
+def string_to_md5(text):
+    """
+    Given a string 'text', return its md5 hash equivalent string.
+    If 'text' is an empty string, return None.
+
+    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def string_to_md5(text):
+    """
+    Given a string 'text', return its md5 hash equivalent string.
+    If 'text' is an empty string, return None.
+
+    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+    
+    Ensure that the function handles both uppercase and lowercase characters correctly.
+    """
+------------------------------
+canonical solution
+------------------------------
+    import hashlib
+    return hashlib.md5(text.encode('ascii')).hexdigest() if text else None
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is not empty, convert it to its md5 hash equivalent using the hashlib library",
+      "Return the md5 hash equivalent string",
+      "Write test cases to verify the correctness of the function"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input string is empty": {
+      "subproblems": [
+        "Check if the input string is empty"
+      ]
+    },
+    "2. Convert the input string to its md5 hash equivalent": {
+      "subproblems": [
+        "Convert the input string to its md5 hash equivalent"
+      ]
+    },
+    "3. Return the md5 hash equivalent string or None if the input string is empty": {
+      "subproblems": [
+        "Return the md5 hash equivalent string or None if the input string is empty"
+      ]
+    }
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if text == "":
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to its md5 hash equivalent",
+      "Return the md5 hash equivalent string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "If the input string is empty, return None",
+      "Convert the input string to its md5 hash equivalent using md5 hashing algorithm",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    else:
+        return hashlib.md5(text.encode()).hexdigest()
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Handle empty string input",
+      "Convert input string to lowercase",
+      "Calculate md5 hash of the input string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty, return None if true",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the lowercase string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if text == "":
+        return None
+    
+    text_lower = text.lower()
+    md5_hash = hashlib.md5(text_lower.encode()).hexdigest()
+    
+    return md5_hash
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash equivalent string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ],
+    "major_steps": [
+      "Check if the input string is empty",
+      "Convert the input string to lowercase",
+      "Calculate the md5 hash of the input string",
+      "Return the md5 hash as a string"
+    ]
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    text = text.lower()
+    return hashlib.md5(text.encode()).hexdigest()
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input string is empty": {
+      "subproblems": [
+        "Check if the input string is empty"
+      ]
+    },
+    "2. Convert the input string to lowercase": {
+      "subproblems": [
+        "Convert the input string to lowercase"
+      ]
+    },
+    "3. Calculate the md5 hash of the lowercase string": {
+      "subproblems": [
+        "Calculate the md5 hash of the lowercase string"
+      ]
+    },
+    "4. Return the md5 hash equivalent string": {
+      "subproblems": [
+        "Return the md5 hash equivalent string"
+      ]
+    }
+  }
+}
+------------------------------
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    
+    lowercase_text = text.lower()
+    md5_hash = hashlib.md5(lowercase_text.encode()).hexdigest()
+    
+    return md5_hash
+
+------------------------------
+scores
+[0.4962, 0.4962, 0.4962, 0.4962, 0.4962, 0.4962, 0.4962, 0.4962, 0.4962, 0.4962]
+[65, 65, 65, 65, 65, 65, 65, 65, 65, 65]

@@ -1,0 +1,8 @@
+./output_fuzzing_one_per_time/test/results-2024-12-02-23-52-53/
+Namespace(append=False, calc_analyst=1, calc_final_result=1, dataset='humaneval', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/output_mutated/original/code_round_0_with_score.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo-0301', mutate_method='random', num_generate=10, num_round=10, only_consider_passed_cases=0, output_path='./output_fuzzing_one_per_time/test/results-2024-12-02-23-52-53/', recover=0, reward_ratio=1, save_seed=1, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+164 166 164
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------

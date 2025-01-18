@@ -1,0 +1,1065 @@
+------------------------------
+25
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def factorize(n: int) -> List[int]:
+    """ Return list of prime factors of given integer in the order from smallest to largest.
+    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+    Input number should be equal to the product of all factors
+    >>> factorize(8)
+    [2, 2, 2]
+    >>> factorize(25)
+    [5, 5]
+    >>> factorize(70)
+    [2, 5, 7]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+
+def factorize(n: int) -> List[int]:
+    """ Provide a list of prime factors for a given integer, arranged from smallest to largest.
+    Each factor should appear as many times as it is present in the factorization.
+    The input number must be equal to the product of all the factors.
+    The function should be capable of handling special cases such as when n is 1 or a prime number.
+    Ensure that the function performs efficiently for large values of n.
+    >>> factorize(8)
+    [2, 2, 2]
+    >>> factorize(25)
+    [5, 5]
+    >>> factorize(70)
+    [2, 5, 7]
+    """
+------------------------------
+canonical solution
+------------------------------
+    import math
+    fact = []
+    i = 2
+    while i <= int(math.sqrt(n) + 1):
+        if n % i == 0:
+            fact.append(i)
+            n //= i
+        else:
+            i += 1
+
+    if n > 1:
+        fact.append(n)
+    return fact
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in ascending order based on their occurrences"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Create a function that generates a list of prime factors in ascending order based on their occurrences",
+      "Integrate the above functions to create the final factorize function"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    def generate_sorted_factors(occurrences):
+        sorted_factors = []
+        for factor, count in sorted(occurrences.items(), key=lambda x: x[1]):
+            sorted_factors.extend([factor] * count)
+        return sorted_factors
+
+    factors = prime_factors(n)
+    occurrences = count_occurrences(factors)
+    sorted_factors = generate_sorted_factors(occurrences)
+
+    return sorted_factors
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "major_steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Create a function that generates a list of prime factors in the required order",
+      "Integrate the above functions to create the final factorize function"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def get_prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    def generate_ordered_list(factors):
+        ordered_list = []
+        for factor in sorted(factors):
+            ordered_list.extend([factor] * factors[factor])
+        return ordered_list
+
+    prime_factors = get_prime_factors(n)
+    occurrences = count_occurrences(prime_factors)
+    ordered_list = generate_ordered_list(occurrences)
+
+    return ordered_list
+
+# Test cases
+print(factorize(8))  # Output: [2, 2, 2]
+print(factorize(25))  # Output: [5, 5]
+print(factorize(70))  # Output: [2, 5, 7]
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Create a function that generates a list of prime factors in the order from smallest to largest",
+      "Integrate the above functions to create the final factorize function"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    def generate_sorted_list(occurrences):
+        sorted_list = []
+        for factor, count in sorted(occurrences.items()):
+            sorted_list.extend([factor] * count)
+        return sorted_list
+
+    factors = prime_factors(n)
+    occurrences = count_occurrences(factors)
+    sorted_list = generate_sorted_list(occurrences)
+
+    return sorted_list
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    all_factors = prime_factors(n)
+    occurrences = count_occurrences(all_factors)
+
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    all_factors = prime_factors(n)
+    occurrences = count_occurrences(all_factors)
+
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    all_factors = prime_factors(n)
+    occurrences = count_occurrences(all_factors)
+
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+
+    return result
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    all_factors = prime_factors(n)
+    occurrences = count_occurrences(all_factors)
+
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Define a function factorize(n) that takes an integer n as input",
+    "step_2": "Initialize an empty list to store the prime factors",
+    "step_3": "Create a loop to iterate through numbers starting from 2 up to the square root of n",
+    "step_4": "Check if the current number is a factor of n",
+    "step_5": "If the current number is a factor, divide n by the number and add the number to the list of prime factors",
+    "step_6": "Repeat steps 4 and 5 until n is no longer divisible by the current number",
+    "step_7": "If n is greater than 1 after the loop, add n to the list of prime factors",
+    "step_8": "Return the list of prime factors in ascending order"
+  }
+}
+------------------------------
+from typing import List
+import math
+
+def factorize(n: int) -> List[int]:
+    factors = []
+    for i in range(2, int(math.sqrt(n)) + 1):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+    if n > 1:
+        factors.append(n)
+    return factors
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    def prime_factors(num):
+        factors = []
+        divisor = 2
+        while divisor <= num:
+            if num % divisor == 0:
+                factors.append(divisor)
+                num = num / divisor
+            else:
+                divisor += 1
+        return factors
+
+    def count_occurrences(factors):
+        occurrences = {}
+        for factor in factors:
+            if factor in occurrences:
+                occurrences[factor] += 1
+            else:
+                occurrences[factor] = 1
+        return occurrences
+
+    all_factors = prime_factors(n)
+    occurrences = count_occurrences(all_factors)
+
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+
+    return result
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify prime factors of a given integer",
+      "Count the occurrences of each prime factor",
+      "Generate a list of prime factors in the order from smallest to largest"
+    ],
+    "steps": [
+      "Create a function that finds all prime factors of a given integer",
+      "Create a function that counts the occurrences of each prime factor",
+      "Combine the above two functions to generate the final list of prime factors"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(n):
+    factors = []
+    i = 2
+    while i <= n:
+        if n % i == 0 and is_prime(i):
+            factors.append(i)
+            n = n // i
+        else:
+            i += 1
+    return factors
+
+def count_occurrences(factors):
+    occurrences = {}
+    for factor in factors:
+        if factor in occurrences:
+            occurrences[factor] += 1
+        else:
+            occurrences[factor] = 1
+    return occurrences
+
+def factorize(n: int) -> List[int]:
+    prime_factors = find_prime_factors(n)
+    occurrences = count_occurrences(prime_factors)
+    result = []
+    for factor, count in occurrences.items():
+        result.extend([factor] * count)
+    return result
+
+# Test cases
+print(factorize(8))  # Output: [2, 2, 2]
+print(factorize(25))  # Output: [5, 5]
+print(factorize(70))  # Output: [2, 5, 7]
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Implement a function to arrange the prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Combine the above functions to return the list of prime factors for the input number."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def arrange_factors(factors: List[int]) -> List[int]:
+    return sorted(factors)
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    arranged_factors = arrange_factors(prime_factors)
+    return arranged_factors
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number": {
+      "subproblems": [
+        "Check if the input number is equal to 1",
+        "Check if the input number is a prime number"
+      ]
+    },
+    "2. Find all prime factors of the input number": {
+      "subproblems": [
+        "Iterate through numbers starting from 2 up to the square root of the input number",
+        "Check if each number is a factor of the input number",
+        "If a number is a factor, check if it is a prime number"
+      ]
+    },
+    "3. Return the list of prime factors in ascending order": {
+      "subproblems": [
+        "Sort the list of prime factors in ascending order"
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+import math
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    
+    factors = []
+    for i in range(2, int(math.sqrt(n)) + 1):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+    if n > 1:
+        factors.append(n)
+    
+    return factors
+
+# Test cases
+print(factorize(8))  # Output: [2, 2, 2]
+print(factorize(25))  # Output: [5, 5]
+print(factorize(70))  # Output: [2, 5, 7]
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Implement a function to arrange the prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Combine the above functions to return the list of prime factors for the input number."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def arrange_factors(factors: List[int]) -> List[int]:
+    return sorted(factors)
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    arranged_factors = arrange_factors(prime_factors)
+    return arranged_factors
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Sort the list of prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Return the list of prime factors as the output of the function."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    prime_factors.sort()
+    return prime_factors
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number": {
+      "subproblems": [
+        "Check if the input number is equal to 1",
+        "Check if the input number is a prime number"
+      ]
+    },
+    "2. Find all prime factors of the input number": {
+      "subproblems": [
+        "Iterate through numbers from 2 to the square root of the input number",
+        "Check if each number is a factor of the input number",
+        "Check if the factor is a prime number"
+      ]
+    },
+    "3. Arrange the prime factors in ascending order and return the list": {
+      "subproblems": [
+        "Sort the list of prime factors in ascending order"
+      ]
+    }
+  }
+}
+------------------------------
+from typing import List
+import math
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    
+    factors = []
+    for i in range(2, int(math.sqrt(n)) + 1):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+    if n > 1:
+        factors.append(n)
+    
+    return factors
+
+# Test cases
+print(factorize(8))  # Output: [2, 2, 2]
+print(factorize(25))  # Output: [5, 5]
+print(factorize(70))  # Output: [2, 5, 7]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Implement a function to arrange the prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Combine the above functions to return the list of prime factors for the input number."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def arrange_factors(factors: List[int]) -> List[int]:
+    return sorted(factors)
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    arranged_factors = arrange_factors(prime_factors)
+    return arranged_factors
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Sort the list of prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Return the list of prime factors as the output of the function."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    prime_factors.sort()
+    return prime_factors
+
+# Test cases
+print(factorize(8))  # Output: [2, 2, 2]
+print(factorize(25))  # Output: [5, 5]
+print(factorize(70))  # Output: [2, 5, 7]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "step_1": "Check if the input number is 1 or a prime number, return the number itself as a list if true",
+    "step_2": "Initialize an empty list to store the prime factors",
+    "step_3": "Iterate through numbers starting from 2 up to the square root of the input number",
+    "step_4": "For each number, check if it is a factor of the input number",
+    "step_5": "If a number is a factor, divide the input number by that factor and add the factor to the list",
+    "step_6": "Repeat step 4 and 5 until the input number becomes 1",
+    "step_7": "Return the list of prime factors"
+  }
+}
+------------------------------
+from typing import List
+import math
+
+def factorize(n: int) -> List[int]:
+    if n == 1 or is_prime(n):
+        return [n]
+    
+    factors = []
+    for i in range(2, int(math.sqrt(n)) + 1):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+    
+    if n > 1:
+        factors.append(n)
+    
+    return factors
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Implement a function to arrange the prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Combine the above functions to return the list of prime factors for the input number."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def arrange_factors(factors: List[int]) -> List[int]:
+    return sorted(factors)
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    arranged_factors = arrange_factors(prime_factors)
+    return arranged_factors
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Check if the input number is 1 or a prime number":
+      "Implement a function to check if the input number is 1 or a prime number.",
+    "2. Find all prime factors of the input number":
+      "Implement a function to find all prime factors of the input number.",
+    "3. Arrange the prime factors in ascending order":
+      "Implement a function to arrange the prime factors in ascending order.",
+    "4. Return the list of prime factors":
+      "Combine the above functions to return the list of prime factors for the input number."
+  }
+}
+------------------------------
+from typing import List
+
+def is_prime(num: int) -> bool:
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def find_prime_factors(num: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while divisor <= num:
+        if num % divisor == 0:
+            factors.append(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
+    return factors
+
+def arrange_factors(factors: List[int]) -> List[int]:
+    return sorted(factors)
+
+def factorize(n: int) -> List[int]:
+    if n == 1:
+        return [1]
+    if is_prime(n):
+        return [n]
+    prime_factors = find_prime_factors(n)
+    arranged_factors = arrange_factors(prime_factors)
+    return arranged_factors
+
+------------------------------
+scores
+[0.9867, 0.9867, 0.9867, 0.9867, 0.9867, 0.9867, 0.9867, 0.9867, 0.9867, 0.9867]
+[74, 74, 74, 74, 74, 74, 74, 74, 74, 74]

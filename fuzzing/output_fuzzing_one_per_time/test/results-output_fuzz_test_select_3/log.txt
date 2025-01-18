@@ -1,0 +1,223 @@
+round:0
+current node number: 68
+old score: True ,new score: True
+seed prompt:
+ from typing import List
+
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """
+
+mutated prompt:
+def separate_paren_groups(paren_string: str) -> List[str]:	
+'''The function takes a string input which includes several groups of nested parentheses. Your objective is to split these groups into distinct strings and provide a list of them. Distinct groups are balanced (every opening brace has a matching closing brace) and they are not nested inside one another. Disregard any spaces present in the input string.>>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    '''
+
+
+
+round:1
+current node number: 69
+old score: True ,new score: False
+seed prompt:
+ from typing import List
+
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring
+    >>> filter_by_substring([], 'a')
+    []
+    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+    ['abc', 'bacd', 'array']
+    """
+
+mutated prompt:
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:	
+'''From a given list of strings, select only those that include a specified substring.>>> filter_by_substring([], 'a')
+    []
+    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+    ['abc', 'bacd', 'array']
+    '''
+
+
+
+round:2
+current node number: 70
+old score: True ,new score: True
+seed prompt:
+ from typing import List, Tuple
+
+
+def sum_product(numbers: List[int]) -> Tuple[int, int]:
+    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+    Empty sum should be equal to 0 and empty product should be equal to 1.
+    >>> sum_product([])
+    (0, 1)
+    >>> sum_product([1, 2, 3, 4])
+    (10, 24)
+    """
+
+mutated prompt:
+def sum_product(numbers: List[int]) -> Tuple[int, int]:	
+'''For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list. An empty sum should be equal to 0. An empty product should be equal to 1.>>> sum_product([])
+    (0, 1)
+    >>> sum_product([1, 2, 3, 4])
+    (10, 24)
+    '''
+
+
+
+round:3
+current node number: 71
+old score: True ,new score: True
+seed prompt:
+ from typing import List, Tuple
+
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+    in the sequence.
+    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+    [1, 2, 3, 3, 3, 4, 4]
+    """
+
+mutated prompt:
+def rolling_max(numbers: List[int]) -> List[int]:	
+'''From a provided list of integers, create a list that contains the maximum element encountered at each point up to the given moment in the sequence.>>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+    [1, 2, 3, 3, 3, 4, 4]
+    '''
+
+
+
+round:4
+current node number: 72
+old score: True ,new score: True
+seed prompt:
+ 
+
+def count_distinct_characters(string: str) -> int:
+    """ Given a string, find out how many distinct characters (regardless of case) does it consist of
+    >>> count_distinct_characters('xyzXYZ')
+    3
+    >>> count_distinct_characters('Jerry')
+    4
+    """
+
+mutated prompt:
+def count_distinct_characters(string: str) -> int:	
+'''Given a string, find how many distinct characters it contains, ignoring case.>>> count_distinct_characters('xyzXYZ')
+    3
+    >>> count_distinct_characters('Jerry')
+    4
+    '''
+
+
+
+round:5
+current node number: 73
+old score: True ,new score: False
+seed prompt:
+ 
+
+def how_many_times(string: str, substring: str) -> int:
+    """ Find how many times a given substring can be found in the original string. Count overlaping cases.
+    >>> how_many_times('', 'a')
+    0
+    >>> how_many_times('aaa', 'a')
+    3
+    >>> how_many_times('aaaa', 'aa')
+    3
+    """
+
+mutated prompt:
+def how_many_times(string: str, substring: str) -> int:	
+'''Find how many times a given substring can be found in the original string. Make sure to include overlapping cases in your count. Overlapping cases are those where parts of the substring overlap in the original string.>>> how_many_times('', 'a')
+    0
+    >>> how_many_times('aaa', 'a')
+    3
+    >>> how_many_times('aaaa', 'aa')
+    3
+    '''
+
+
+
+round:6
+current node number: 74
+old score: True ,new score: True
+seed prompt:
+ from typing import List
+
+
+def sort_numbers(numbers: str) -> str:
+    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+    Return the string with numbers sorted from smallest to largest
+    >>> sort_numbers('three one five')
+    'one three five'
+    """
+
+mutated prompt:
+def sort_numbers(numbers: str) -> str:	
+'''Input is a space-delimited string of numerals from 'zero' to 'nine'. Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', and 'nine'. Return the string with numbers sorted from smallest to largest. Ensure that the output maintains the same format as the input, with numbers represented by their respective words.>>> sort_numbers('three one five')
+    'one three five'
+    '''
+
+
+
+round:7
+current node number: 75
+old score: True ,new score: True
+seed prompt:
+ from typing import List, Tuple
+
+
+def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+    other and return them in order (smaller number, larger number).
+    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+    (2.0, 2.2)
+    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
+    (2.0, 2.0)
+    """
+
+mutated prompt:
+def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:	
+''' From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+    other and return them in order (smaller number, larger number). Ensure to handle the case where multiple pairs have the same minimum difference by returning the pair consisting of the smallest numbers.>>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+    (2.0, 2.2)
+    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
+    (2.0, 2.0)
+    '''
+
+
+
+round:8
+current node number: 76
+old score: True ,new score: True
+seed prompt:
+ 
+
+def strlen(string: str) -> int:
+    """ Return length of given string
+    >>> strlen('')
+    0
+    >>> strlen('abc')
+    3
+    """
+
+mutated prompt:
+def strlen(string: str) -> int:	
+'''Determine the length of the provided string.>>> strlen('')
+    0
+    >>> strlen('abc')
+    3
+    '''
+
+
+

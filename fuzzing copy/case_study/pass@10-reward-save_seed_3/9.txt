@@ -1,0 +1,777 @@
+------------------------------
+9
+------------------------------
+original prompt
+------------------------------
+from typing import List, Tuple
+
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+    in the sequence.
+    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+    [1, 2, 3, 3, 3, 4, 4]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    """ Generate a list of rolling maximum elements from a given list of integers.
+    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+    [1, 2, 3, 3, 3, 4, 4]
+    """
+------------------------------
+canonical solution
+------------------------------
+    running_max = None
+    result = []
+
+    for n in numbers:
+        if running_max is None:
+            running_max = n
+        else:
+            running_max = max(running_max, n)
+
+        result.append(running_max)
+
+    return result
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a new list with the rolling maximum elements"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial subarray of size k",
+      "Iterate through the list and update the rolling maximum element at each step"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Set the initial subarray of size k as the rolling maximum",
+      "Iterate through the list starting from index k",
+      "At each step, update the rolling maximum by comparing the current element with the previous rolling maximum",
+      "Append the updated rolling maximum to the list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+    
+    k = 3  # Size of the initial subarray
+    rolling_max_list = []
+    max_element = max(numbers[:k])
+    rolling_max_list.append(max_element)
+    
+    for i in range(k, len(numbers)):
+        if numbers[i] >= max_element:
+            max_element = numbers[i]
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial subarray of size k",
+      "Iterate through the list and update the rolling maximum element at each step"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Set the initial subarray of size k as the rolling maximum",
+      "Iterate through the list starting from index k",
+      "At each step, update the rolling maximum by comparing the current element with the previous rolling maximum",
+      "Append the updated rolling maximum to the list",
+      "Return the list of rolling maximum elements"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    k = 3  # Size of the initial subarray
+    max_val = max(numbers[:k])  # Identify the maximum element in the initial subarray
+    rolling_max_list.append(max_val)  # Append the initial rolling maximum
+    
+    for i in range(k, len(numbers)):
+        max_val = max(max_val, numbers[i])  # Update the rolling maximum at each step
+        rolling_max_list.append(max_val)  # Append the updated rolling maximum to the list
+        
+    return rolling_max_list
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial subarray of size k",
+      "Iterate through the list and update the rolling maximum element at each step"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Set the initial subarray of size k as the rolling maximum",
+      "Iterate through the list starting from index k",
+      "At each step, update the rolling maximum by comparing the current element with the previous rolling maximum",
+      "Append the updated rolling maximum to the list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # Size of the initial subarray
+    rolling_max_list = []
+    max_element = max(numbers[:k])
+    rolling_max_list.append(max_element)
+
+    for i in range(k, len(numbers)):
+        if numbers[i] >= max_element:
+            max_element = numbers[i]
+        rolling_max_list.append(max_element)
+
+    return rolling_max_list
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial subarray of size k",
+      "Iterate through the list and update the rolling maximum element at each step"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Set the initial subarray of size k as the rolling maximum",
+      "Iterate through the list starting from index k",
+      "At each step, update the rolling maximum by comparing the current element with the previous rolling maximum",
+      "Append the updated rolling maximum to the list",
+      "Return the list of rolling maximum elements"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    k = 3  # Size of the initial subarray
+    max_val = max(numbers[:k])  # Identify the maximum element in the initial subarray
+    rolling_max_list.append(max_val)  # Append the initial rolling maximum
+    
+    for i in range(k, len(numbers)):
+        max_val = max(max_val, numbers[i])  # Update the rolling maximum at each step
+        rolling_max_list.append(max_val)  # Append the updated rolling maximum to the list
+        
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [1, 2, 3, 3, 3, 4, 4]
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a new list with the rolling maximum elements"
+    ],
+    "high-level steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a list of rolling maximum elements based on the updated maximum element"
+    ],
+    "high-level steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a new list with the rolling maximum elements"
+    ],
+    "high-level steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a new list with the rolling maximum elements"
+    ],
+    "major_steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in the initial sublist of the input list",
+      "Update the maximum element as the sublist moves forward",
+      "Generate a new list with the rolling maximum elements"
+    ],
+    "steps": [
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list",
+      "For each element, update the maximum element in the current sublist",
+      "Append the updated maximum element to the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    max_element = float('-inf')
+    
+    for num in numbers:
+        max_element = max(max_element, num)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "high-level steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window approach with a window size of 1",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    rolling_max_list = []
+    window_size = 1
+
+    for i in range(len(numbers) - window_size + 1):
+        max_in_window = max(numbers[i:i+window_size])
+        rolling_max_list.append(max_in_window)
+
+    return rolling_max_list
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window of size k",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # Size of the sliding window
+    rolling_max_list = []
+    window = []
+
+    for i in range(len(numbers)):
+        if i >= k:
+            window.pop(0)
+
+        while window and numbers[i] >= numbers[window[-1]]:
+            window.pop()
+
+        window.append(i)
+
+        if i >= k - 1:
+            rolling_max_list.append(numbers[window[0]])
+
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [1, 2, 3, 3, 3, 4, 4]
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window of size k",
+      "Find the maximum element in each window",
+      "Append the maximum element to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # window size
+    rolling_max_list = []
+    window = []
+
+    for i, num in enumerate(numbers):
+        if i >= k and window[0] == numbers[i - k]:
+            window.pop(0)
+
+        while window and window[-1] < num:
+            window.pop()
+
+        window.append(num)
+
+        if i >= k - 1:
+            rolling_max_list.append(window[0])
+
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [1, 2, 3, 3, 3, 4, 4]
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Define the rolling_max function that takes a list of integers as input",
+    "Iterate through the input list to find the rolling maximum elements",
+    "Generate a new list with the rolling maximum elements"
+  ],
+  "high_level_plan": {
+    "step_1": "Define the rolling_max function with the specified input and output types",
+    "step_2": "Initialize an empty list to store the rolling maximum elements",
+    "step_3": "Iterate through the input list using a loop",
+    "step_4": "For each element in the input list, find the maximum value in the current window",
+    "step_5": "Append the maximum value to the output list",
+    "step_6": "Return the output list"
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+    
+    result = []
+    window = []
+    
+    for i, num in enumerate(numbers):
+        if window and window[0] <= i - 3:
+            window.pop(0)
+        
+        while window and numbers[window[-1]] <= num:
+            window.pop()
+        
+        window.append(i)
+        result.append(numbers[window[0]])
+    
+    return result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window of size k",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # Size of the sliding window
+    rolling_max_list = []
+    
+    for i in range(len(numbers) - k + 1):
+        window = numbers[i:i+k]
+        max_element = max(window)
+        rolling_max_list.append(max_element)
+    
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [3, 3, 3, 3, 4, 4]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window approach with a window size of 1",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    window_size = 1
+    
+    for i in range(len(numbers) - window_size + 1):
+        max_in_window = max(numbers[i:i+window_size])
+        rolling_max_list.append(max_in_window)
+    
+    return rolling_max_list
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "high_level_steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the input list using a sliding window of size k",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # Size of the sliding window
+    rolling_max_list = []
+    window = []
+
+    for i, num in enumerate(numbers):
+        if i >= k and window[0] == numbers[i - k]:
+            window.pop(0)
+
+        while window and window[-1] < num:
+            window.pop()
+
+        window.append(num)
+
+        if i >= k - 1:
+            rolling_max_list.append(window[0])
+
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [1, 2, 3, 3, 3, 4, 4]
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window approach with a window size of 1",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    rolling_max_list = []
+    window_size = 1
+    
+    for i in range(len(numbers) - window_size + 1):
+        max_in_window = max(numbers[i:i+window_size])
+        rolling_max_list.append(max_in_window)
+    
+    return rolling_max_list
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window of size k",
+      "For each window, find the maximum element and append it to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # Define the size of the sliding window
+    rolling_max_list = []  # Initialize list to store rolling maximum elements
+
+    for i in range(len(numbers) - k + 1):
+        window = numbers[i:i+k]
+        max_element = max(window)
+        rolling_max_list.append(max_element)
+
+    return rolling_max_list
+
+# Test the function with the provided example
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [3, 3, 3, 3, 4]
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the maximum element in a sliding window of size k",
+      "Iterate through the list and update the rolling maximum for each window"
+    ],
+    "steps": [
+      "Define a function rolling_max that takes a list of integers as input",
+      "Initialize an empty list to store the rolling maximum elements",
+      "Iterate through the list using a sliding window of size k",
+      "Find the maximum element in each window",
+      "Append the maximum element to the rolling maximum list",
+      "Return the rolling maximum list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    if not numbers:
+        return []
+
+    k = 3  # window size
+    rolling_max_list = []
+    window = []
+
+    for i, num in enumerate(numbers):
+        if i >= k and window[0] == numbers[i - k]:
+            window.pop(0)
+
+        while window and window[-1] < num:
+            window.pop()
+
+        window.append(num)
+
+        if i >= k - 1:
+            rolling_max_list.append(window[0])
+
+    return rolling_max_list
+
+# Test the function
+print(rolling_max([1, 2, 3, 2, 3, 4, 2]))  # Output: [1, 2, 3, 3, 3, 4, 4]
+
+------------------------------
+scores
+[0.0707, 0.0101, 0.0101, 0.8485, 0.0101, 0.0707, 0.0101, 0.0707, 0.0101, 0.0101]
+[7, 1, 1, 84, 1, 7, 1, 7, 1, 1]

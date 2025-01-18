@@ -1,0 +1,602 @@
+------------------------------
+116
+------------------------------
+original prompt
+------------------------------
+
+def sort_array(arr):
+    """
+    In this Kata, you have to sort an array of non-negative integers according to
+    number of ones in their binary representation in ascending order.
+    For similar number of ones, sort based on decimal value.
+
+    It must be implemented like this:
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+```python
+def sort_array(arr):
+    """
+    Arrange an array of non-negative integers by the count of ones in their binary form in increasing order.
+    If two numbers have the same number of ones, order them by their decimal value.
+
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    
+    Ensure the function handles edge cases such as empty arrays or arrays with a single element.
+    The function should be efficient and handle large arrays within a reasonable time.
+    """
+```
+------------------------------
+canonical solution
+------------------------------
+    return sorted(sorted(arr), key=lambda x: bin(x)[2:].count('1'))
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in the binary representation of each element",
+      "For elements with the same number of ones, sort based on decimal value"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in the binary representation of each element",
+      "If two elements have the same number of ones, sort them based on their decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "For similar number of ones, sort based on decimal value"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If two numbers have the same number of ones, sort them based on their decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "For similar number of ones, sort based on decimal value"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If two numbers have the same number of ones, sort them based on their decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Sort the array based on the number of ones in their binary representation",
+      "Sort the array based on decimal value if the number of ones is the same"
+    ],
+    "steps": [
+      "Create a function sort_array that takes an array as input",
+      "Implement a sorting algorithm that sorts the array based on the number of ones in their binary representation",
+      "If the number of ones is the same, sort based on decimal value",
+      "Return the sorted array"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle cases where two numbers have the same number of ones",
+      "Handle negative numbers in the array",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Iterate through the array and convert each number to binary form",
+      "Count the number of ones in each binary form",
+      "Sort the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones",
+      "Handle edge cases by checking for empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num & 0xFFFFFFFF).count('1')
+
+    def custom_sort(num):
+        return (count_ones(num), num)
+
+    if not arr:
+        return arr
+
+    arr.sort(key=custom_sort)
+    return arr
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle cases where two numbers have the same number of ones",
+      "Handle negative numbers in the array",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Iterate through the array and convert each number to binary form",
+      "Count the number of ones in each binary form",
+      "Sort the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones",
+      "Handle edge cases by checking for empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num & 0xFFFFFFFF).count('1')
+
+    def custom_sort(num):
+        return (count_ones(num), num)
+
+    if not arr:
+        return arr
+
+    arr.sort(key=custom_sort)
+    return arr
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle cases where two numbers have the same number of ones",
+      "Handle negative numbers in the array",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Iterate through the array and convert each number to binary form",
+      "Count the number of ones in each binary form",
+      "Sort the array based on the count of ones, then by decimal value if necessary",
+      "Handle negative numbers by converting them to positive before counting ones",
+      "Handle edge cases by checking for empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num & 0xFFFFFFFF).count('1')
+
+    return sorted(arr, key=lambda x: (count_ones(x), x))
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle cases where two numbers have the same number of ones",
+      "Handle negative numbers in the array",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Iterate through the array and convert each number to binary form",
+      "Count the number of ones in each binary form",
+      "Sort the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones",
+      "Handle edge cases by checking for empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def sort_array(arr):
+    def count_ones(num):
+        return bin(num & 0xFFFFFFFF).count('1')
+
+    def custom_sort(num):
+        return (count_ones(num), num)
+
+    if not arr:
+        return arr
+
+    arr.sort(key=custom_sort)
+    return arr
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Sort the array based on the count of ones in their binary form",
+      "Handle negative numbers appropriately",
+      "Handle edge cases such as empty arrays or arrays with a single element"
+    ],
+    "major_steps": [
+      "Create a function to count the number of ones in the binary form of a number",
+      "Implement a custom sorting algorithm that sorts the array based on the count of ones and then by decimal value",
+      "Handle negative numbers by converting them to positive before counting ones and then converting them back to negative after sorting",
+      "Add checks to handle edge cases such as empty arrays or arrays with a single element"
+    ]
+  }
+}
+------------------------------
+def count_ones(num):
+    return bin(num).count('1')
+
+def sort_array(arr):
+    if not arr:
+        return arr
+    
+    positive_nums = [abs(num) for num in arr]
+    sorted_nums = sorted(positive_nums, key=lambda x: (count_ones(x), x))
+    
+    return [num if num >= 0 else -num for num in sorted_nums]
+
+------------------------------
+scores
+[0.8584, 0.8584, 0.8584, 0.8584, 0.8584, 0.8673, 0.8673, 0.8673, 0.8673, 0.8584]
+[97, 97, 97, 97, 97, 98, 98, 98, 98, 97]

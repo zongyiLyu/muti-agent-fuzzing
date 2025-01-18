@@ -1,0 +1,710 @@
+------------------------------
+55
+------------------------------
+original prompt
+------------------------------
+
+
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def fib(n: int):
+    """Calculate and return the Fibonacci number at position n.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+------------------------------
+canonical solution
+------------------------------
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the fib function": {
+      "subproblems": [
+        "Define the function fib with parameter n"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the fib function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n+1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Define a function fib(n) that takes an integer n as input",
+      "Implement the Fibonacci sequence algorithm to calculate the n-th Fibonacci number",
+      "Write test cases to verify the correctness of the function"
+    ],
+    "major_steps": [
+      "Define the fib function with the specified input parameter",
+      "Implement the Fibonacci sequence algorithm using recursion or iteration",
+      "Write test cases to validate the function's output for different input values"
+    ]
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input. Please provide a positive integer."
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the fib function": {
+      "subproblems": [
+        "Define the function fib with parameter n"
+      ]
+    },
+    "2. Implement the Fibonacci logic": {
+      "subproblems": [
+        "Implement the logic to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the fib function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Define a function fib(n) that takes an integer n as input",
+      "Implement the Fibonacci sequence algorithm to calculate the n-th Fibonacci number",
+      "Write test cases to verify the correctness of the function"
+    ],
+    "major_steps": [
+      "Define the fib function with the specified input parameter",
+      "Implement the Fibonacci sequence algorithm using recursion or iteration",
+      "Write test cases using the provided examples to validate the function"
+    ]
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input. Please provide a positive integer."
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Implement a function fib(n) that calculates the n-th Fibonacci number",
+      "Write test cases to verify the correctness of the function"
+    ],
+    "major_steps": [
+      "Define a function fib(n) that takes an integer n as input",
+      "Implement the Fibonacci sequence logic to calculate the n-th Fibonacci number",
+      "Write test cases using the docstring examples provided in the requirement"
+    ]
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n+1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the n-th Fibonacci number"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n+1):
+            a, b = b, a + b
+        return b
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Calculate the Fibonacci number at position n": {
+      "subproblems": [
+        "Implement the Fibonacci sequence algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Return the calculated Fibonacci number": {
+      "subproblems": [
+        "Return the calculated Fibonacci number"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Test the Fibonacci function": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Test the Fibonacci function": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define the Fibonacci function": {
+      "subproblems": [
+        "Define a function named fib that takes an integer n as input"
+      ]
+    },
+    "2. Implement the Fibonacci algorithm": {
+      "subproblems": [
+        "Implement the Fibonacci algorithm to calculate the Fibonacci number at position n"
+      ]
+    },
+    "3. Write test cases": {
+      "subproblems": [
+        "Write test cases to verify the correctness of the Fibonacci function"
+      ]
+    },
+    "4. Refactor and optimize the code": {
+      "subproblems": [
+        "Refactor the code to improve readability and maintainability",
+        "Optimize the code for better performance"
+      ]
+    }
+  }
+}
+------------------------------
+def fib(n: int):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
+------------------------------
+scores
+[0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697, 0.9697]
+[32, 32, 32, 32, 32, 32, 32, 32, 32, 32]

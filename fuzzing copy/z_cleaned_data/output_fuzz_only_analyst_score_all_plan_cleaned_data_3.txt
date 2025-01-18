@@ -1,0 +1,3143 @@
+../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/
+Namespace(alpha=0.25, append=False, calc_analyst=1, calc_final_result=0, calc_relative_reward=1, clean_data=1, dataset='humaneval', dataset_type='HumanEval', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/output_mutated/original/code_round_0_with_score.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo-0301', mutate_method='random', num_generate=10, num_round=10000, only_consider_passed_cases=0, output_file_name='only_analyst_score_all_plan_cleaned_data', output_path='../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/', recover=0, reward_ratio=1, save_all_seed=0, save_seed=1, set_threshold_analyst=1, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+164 164 164
+67
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10373866558074951
+final_output reward: 0
+total reward: 0.025934666395187378
+add mutated seed into prompt node list
+seed_index: 0
+mutated_seed_index: 67
+reward = 0.025934666395187378
+saving......
+----------------------------------------round: 1------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_1.jsonl
+----------------------------------------round: 2------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 3------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:3
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.22797441482543945
+final_output reward: 0
+total reward: 0.05699360370635986
+add mutated seed into prompt node list
+seed_index: 3
+mutated_seed_index: 68
+reward = 0.05699360370635986
+saving......
+----------------------------------------round: 4------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:4
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2023402452468872
+final_output reward: 0
+total reward: 0.0505850613117218
+add mutated seed into prompt node list
+seed_index: 4
+mutated_seed_index: 69
+reward = 0.0505850613117218
+saving......
+----------------------------------------round: 5------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:5
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.19989442825317383
+final_output reward: 0
+total reward: 0.04997360706329346
+add mutated seed into prompt node list
+seed_index: 5
+mutated_seed_index: 70
+reward = 0.04997360706329346
+saving......
+----------------------------------------round: 6------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:6
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14230728149414062
+final_output reward: 0
+total reward: 0.035576820373535156
+add mutated seed into prompt node list
+seed_index: 6
+mutated_seed_index: 71
+reward = 0.035576820373535156
+saving......
+----------------------------------------round: 7------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:7
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1513824462890625
+final_output reward: 0
+total reward: 0.037845611572265625
+add mutated seed into prompt node list
+seed_index: 7
+mutated_seed_index: 72
+reward = 0.037845611572265625
+saving......
+----------------------------------------round: 8------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:8
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11797046661376953
+final_output reward: 0
+total reward: 0.029492616653442383
+add mutated seed into prompt node list
+seed_index: 8
+mutated_seed_index: 73
+reward = 0.029492616653442383
+saving......
+----------------------------------------round: 9------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:9
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 10------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:10
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.26181191205978394
+final_output reward: 0
+total reward: 0.06545297801494598
+add mutated seed into prompt node list
+seed_index: 10
+mutated_seed_index: 74
+reward = 0.06545297801494598
+saving......
+----------------------------------------round: 11------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:11
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_11.jsonl
+----------------------------------------round: 12------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:12
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 13------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:13
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2834842801094055
+final_output reward: 0
+total reward: 0.07087107002735138
+add mutated seed into prompt node list
+seed_index: 13
+mutated_seed_index: 75
+reward = 0.07087107002735138
+saving......
+----------------------------------------round: 14------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:14
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2661615014076233
+final_output reward: 0
+total reward: 0.06654037535190582
+add mutated seed into prompt node list
+seed_index: 14
+mutated_seed_index: 76
+reward = 0.06654037535190582
+saving......
+----------------------------------------round: 15------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:15
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13807255029678345
+final_output reward: 0
+total reward: 0.03451813757419586
+add mutated seed into prompt node list
+seed_index: 15
+mutated_seed_index: 77
+reward = 0.03451813757419586
+saving......
+----------------------------------------round: 16------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:16
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10002791881561279
+final_output reward: 0
+total reward: 0.025006979703903198
+add mutated seed into prompt node list
+seed_index: 16
+mutated_seed_index: 78
+reward = 0.025006979703903198
+saving......
+----------------------------------------round: 17------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:17
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2595908045768738
+final_output reward: 0
+total reward: 0.06489770114421844
+add mutated seed into prompt node list
+seed_index: 17
+mutated_seed_index: 79
+reward = 0.06489770114421844
+saving......
+----------------------------------------round: 18------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 19------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:19
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13955271244049072
+final_output reward: 0
+total reward: 0.03488817811012268
+add mutated seed into prompt node list
+seed_index: 19
+mutated_seed_index: 80
+reward = 0.03488817811012268
+saving......
+----------------------------------------round: 20------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:20
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11941927671432495
+final_output reward: 0
+total reward: 0.029854819178581238
+add mutated seed into prompt node list
+seed_index: 20
+mutated_seed_index: 81
+reward = 0.029854819178581238
+saving......
+----------------------------------------round: 21------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:21
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_21.jsonl
+----------------------------------------round: 22------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:22
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 23------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:23
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 23 finish fuzzing!
+seed_index: 23
+mutated_seed_index: 82
+current seed length: 66
+saving......
+----------------------------------------round: 24------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:24
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17829227447509766
+final_output reward: 0
+total reward: 0.044573068618774414
+add mutated seed into prompt node list
+seed_index: 24
+mutated_seed_index: 83
+reward = 0.044573068618774414
+saving......
+----------------------------------------round: 25------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:25
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 26------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:26
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1727188229560852
+final_output reward: 0
+total reward: 0.0431797057390213
+add mutated seed into prompt node list
+seed_index: 26
+mutated_seed_index: 84
+reward = 0.0431797057390213
+saving......
+----------------------------------------round: 27------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:27
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11187708377838135
+final_output reward: 0
+total reward: 0.027969270944595337
+add mutated seed into prompt node list
+seed_index: 27
+mutated_seed_index: 85
+reward = 0.027969270944595337
+saving......
+----------------------------------------round: 28------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:28
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 29------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:29
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 30------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:30
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16408419609069824
+final_output reward: 0
+total reward: 0.04102104902267456
+add mutated seed into prompt node list
+seed_index: 30
+mutated_seed_index: 86
+reward = 0.04102104902267456
+saving......
+----------------------------------------round: 31------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:31
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14563053846359253
+final_output reward: 0
+total reward: 0.03640763461589813
+add mutated seed into prompt node list
+seed_index: 31
+mutated_seed_index: 87
+reward = 0.03640763461589813
+saving......
+total pass@10:66
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_31.jsonl
+----------------------------------------round: 32------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:32
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1612059473991394
+final_output reward: 0
+total reward: 0.04030148684978485
+add mutated seed into prompt node list
+seed_index: 32
+mutated_seed_index: 88
+reward = 0.04030148684978485
+saving......
+----------------------------------------round: 33------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:33
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 34------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:34
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12212175130844116
+final_output reward: 0
+total reward: 0.03053043782711029
+add mutated seed into prompt node list
+seed_index: 34
+mutated_seed_index: 89
+reward = 0.03053043782711029
+saving......
+----------------------------------------round: 35------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:35
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17224860191345215
+final_output reward: 0
+total reward: 0.04306215047836304
+add mutated seed into prompt node list
+seed_index: 35
+mutated_seed_index: 90
+reward = 0.04306215047836304
+saving......
+----------------------------------------round: 36------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:36
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 37------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:37
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.18906503915786743
+final_output reward: 0
+total reward: 0.04726625978946686
+add mutated seed into prompt node list
+seed_index: 37
+mutated_seed_index: 91
+reward = 0.04726625978946686
+saving......
+----------------------------------------round: 38------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:38
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12739449739456177
+final_output reward: 0
+total reward: 0.03184862434864044
+add mutated seed into prompt node list
+seed_index: 38
+mutated_seed_index: 92
+reward = 0.03184862434864044
+saving......
+----------------------------------------round: 39------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:39
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.18153977394104004
+final_output reward: 0
+total reward: 0.04538494348526001
+add mutated seed into prompt node list
+seed_index: 39
+mutated_seed_index: 93
+reward = 0.04538494348526001
+saving......
+----------------------------------------round: 40------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:40
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.20763367414474487
+final_output reward: 0
+total reward: 0.05190841853618622
+add mutated seed into prompt node list
+seed_index: 40
+mutated_seed_index: 94
+reward = 0.05190841853618622
+saving......
+----------------------------------------round: 41------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:41
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:66
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_41.jsonl
+----------------------------------------round: 42------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:42
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2843688130378723
+final_output reward: 0
+total reward: 0.07109220325946808
+add mutated seed into prompt node list
+seed_index: 42
+mutated_seed_index: 95
+reward = 0.07109220325946808
+saving......
+----------------------------------------round: 43------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:43
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12468570470809937
+final_output reward: 0
+total reward: 0.03117142617702484
+add mutated seed into prompt node list
+seed_index: 43
+mutated_seed_index: 96
+reward = 0.03117142617702484
+saving......
+----------------------------------------round: 44------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:44
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 44 finish fuzzing!
+seed_index: 44
+mutated_seed_index: 97
+current seed length: 65
+saving......
+----------------------------------------round: 45------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:45
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 46------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:46
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 47------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:47
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 48------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:48
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 49------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:49
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12379640340805054
+final_output reward: 0
+total reward: 0.030949100852012634
+add mutated seed into prompt node list
+seed_index: 49
+mutated_seed_index: 98
+reward = 0.030949100852012634
+saving......
+----------------------------------------round: 50------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:50
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 51------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:51
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2725609540939331
+final_output reward: 0
+total reward: 0.06814023852348328
+add mutated seed into prompt node list
+seed_index: 51
+mutated_seed_index: 99
+reward = 0.06814023852348328
+saving......
+total pass@10:65
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_51.jsonl
+----------------------------------------round: 52------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:52
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 53------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:53
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 54------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:54
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 55------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:55
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17908024787902832
+final_output reward: 0
+total reward: 0.04477006196975708
+add mutated seed into prompt node list
+seed_index: 55
+mutated_seed_index: 100
+reward = 0.04477006196975708
+saving......
+----------------------------------------round: 56------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:56
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10077542066574097
+final_output reward: 0
+total reward: 0.02519385516643524
+add mutated seed into prompt node list
+seed_index: 56
+mutated_seed_index: 101
+reward = 0.02519385516643524
+saving......
+----------------------------------------round: 57------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:57
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12780886888504028
+final_output reward: 0
+total reward: 0.03195221722126007
+add mutated seed into prompt node list
+seed_index: 57
+mutated_seed_index: 102
+reward = 0.03195221722126007
+saving......
+----------------------------------------round: 58------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:58
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.18650680780410767
+final_output reward: 0
+total reward: 0.046626701951026917
+add mutated seed into prompt node list
+seed_index: 58
+mutated_seed_index: 103
+reward = 0.046626701951026917
+saving......
+----------------------------------------round: 59------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:59
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 60------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:60
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.19200485944747925
+final_output reward: 0
+total reward: 0.04800121486186981
+add mutated seed into prompt node list
+seed_index: 60
+mutated_seed_index: 104
+reward = 0.04800121486186981
+saving......
+----------------------------------------round: 61------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:61
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 61 finish fuzzing!
+seed_index: 61
+mutated_seed_index: 105
+current seed length: 64
+saving......
+total pass@10:64
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_61.jsonl
+----------------------------------------round: 62------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:62
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11865127086639404
+final_output reward: 0
+total reward: 0.02966281771659851
+add mutated seed into prompt node list
+seed_index: 62
+mutated_seed_index: 106
+reward = 0.02966281771659851
+saving......
+----------------------------------------round: 63------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:63
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 64------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:64
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17622894048690796
+final_output reward: 0
+total reward: 0.04405723512172699
+add mutated seed into prompt node list
+seed_index: 64
+mutated_seed_index: 107
+reward = 0.04405723512172699
+saving......
+----------------------------------------round: 65------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:65
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.139498770236969
+final_output reward: 0
+total reward: 0.03487469255924225
+add mutated seed into prompt node list
+seed_index: 65
+mutated_seed_index: 108
+reward = 0.03487469255924225
+saving......
+----------------------------------------round: 66------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:66
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 67------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:95
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 95 finish fuzzing!
+seed_index: 95
+mutated_seed_index: 109
+current seed length: 63
+saving......
+----------------------------------------round: 68------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:75
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16216087341308594
+final_output reward: 0
+total reward: 0.040540218353271484
+add mutated seed into prompt node list
+seed_index: 75
+mutated_seed_index: 110
+reward = 0.040540218353271484
+saving......
+----------------------------------------round: 69------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:99
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.25393348932266235
+final_output reward: 0
+total reward: 0.06348337233066559
+add mutated seed into prompt node list
+seed_index: 99
+mutated_seed_index: 111
+reward = 0.06348337233066559
+saving......
+----------------------------------------round: 70------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:76
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 71------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:74
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:63
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_71.jsonl
+----------------------------------------round: 72------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:79
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2773810029029846
+final_output reward: 0
+total reward: 0.06934525072574615
+add mutated seed into prompt node list
+seed_index: 79
+mutated_seed_index: 112
+reward = 0.06934525072574615
+saving......
+----------------------------------------round: 73------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:68
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 74------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:94
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 94 finish fuzzing!
+seed_index: 94
+mutated_seed_index: 113
+current seed length: 62
+saving......
+----------------------------------------round: 75------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:4
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.22219783067703247
+final_output reward: 0
+total reward: 0.05554945766925812
+add mutated seed into prompt node list
+seed_index: 4
+mutated_seed_index: 114
+reward = 0.05554945766925812
+saving......
+----------------------------------------round: 76------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:70
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 77------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:104
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16176897287368774
+final_output reward: 0
+total reward: 0.040442243218421936
+add mutated seed into prompt node list
+seed_index: 104
+mutated_seed_index: 115
+reward = 0.040442243218421936
+saving......
+----------------------------------------round: 78------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:91
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16308945417404175
+final_output reward: 0
+total reward: 0.04077236354351044
+add mutated seed into prompt node list
+seed_index: 91
+mutated_seed_index: 116
+reward = 0.04077236354351044
+saving......
+----------------------------------------round: 79------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:103
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1226239800453186
+final_output reward: 0
+total reward: 0.03065599501132965
+add mutated seed into prompt node list
+seed_index: 103
+mutated_seed_index: 117
+reward = 0.03065599501132965
+saving......
+----------------------------------------round: 80------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:93
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 81------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:100
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:62
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_81.jsonl
+----------------------------------------round: 82------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:83
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16897743940353394
+final_output reward: 0
+total reward: 0.042244359850883484
+add mutated seed into prompt node list
+seed_index: 83
+mutated_seed_index: 118
+reward = 0.042244359850883484
+saving......
+----------------------------------------round: 83------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:107
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.150202214717865
+final_output reward: 0
+total reward: 0.03755055367946625
+add mutated seed into prompt node list
+seed_index: 107
+mutated_seed_index: 119
+reward = 0.03755055367946625
+saving......
+----------------------------------------round: 84------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:84
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 85------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:90
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 86------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:86
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13971984386444092
+final_output reward: 0
+total reward: 0.03492996096611023
+add mutated seed into prompt node list
+seed_index: 86
+mutated_seed_index: 120
+reward = 0.03492996096611023
+saving......
+----------------------------------------round: 87------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:88
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 88------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:72
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.3694440722465515
+final_output reward: 0
+total reward: 0.09236101806163788
+add mutated seed into prompt node list
+seed_index: 72
+mutated_seed_index: 121
+reward = 0.09236101806163788
+saving......
+----------------------------------------round: 89------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:87
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.20569628477096558
+final_output reward: 0
+total reward: 0.051424071192741394
+add mutated seed into prompt node list
+seed_index: 87
+mutated_seed_index: 122
+reward = 0.051424071192741394
+saving......
+----------------------------------------round: 90------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:71
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 91------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:80
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14415526390075684
+final_output reward: 0
+total reward: 0.03603881597518921
+add mutated seed into prompt node list
+seed_index: 80
+mutated_seed_index: 123
+reward = 0.03603881597518921
+saving......
+total pass@10:62
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_91.jsonl
+----------------------------------------round: 92------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:108
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11038118600845337
+final_output reward: 0
+total reward: 0.027595296502113342
+add mutated seed into prompt node list
+seed_index: 108
+mutated_seed_index: 124
+reward = 0.027595296502113342
+saving......
+----------------------------------------round: 93------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:77
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14031493663787842
+final_output reward: 0
+total reward: 0.035078734159469604
+add mutated seed into prompt node list
+seed_index: 77
+mutated_seed_index: 125
+reward = 0.035078734159469604
+saving......
+----------------------------------------round: 94------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:102
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1735069751739502
+final_output reward: 0
+total reward: 0.04337674379348755
+add mutated seed into prompt node list
+seed_index: 102
+mutated_seed_index: 126
+reward = 0.04337674379348755
+saving......
+----------------------------------------round: 95------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:92
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 96------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:43
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 97------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:98
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.100375235080719
+final_output reward: 0
+total reward: 0.02509380877017975
+add mutated seed into prompt node list
+seed_index: 98
+mutated_seed_index: 127
+reward = 0.02509380877017975
+saving......
+----------------------------------------round: 98------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:89
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 99------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:81
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 100------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:106
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 101------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:73
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.31124347448349
+final_output reward: 0
+total reward: 0.0778108686208725
+add mutated seed into prompt node list
+seed_index: 73
+mutated_seed_index: 128
+reward = 0.0778108686208725
+saving......
+total pass@10:62
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_101.jsonl
+----------------------------------------round: 102------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:85
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 103------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 0 finish fuzzing!
+seed_index: 0
+mutated_seed_index: 129
+current seed length: 61
+saving......
+----------------------------------------round: 104------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:101
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.28112703561782837
+final_output reward: 0
+total reward: 0.07028175890445709
+add mutated seed into prompt node list
+seed_index: 101
+mutated_seed_index: 130
+reward = 0.07028175890445709
+saving......
+----------------------------------------round: 105------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:78
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10861361026763916
+final_output reward: 0
+total reward: 0.02715340256690979
+add mutated seed into prompt node list
+seed_index: 78
+mutated_seed_index: 131
+reward = 0.02715340256690979
+saving......
+----------------------------------------round: 106------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 107------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 108------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:9
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 109------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:11
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 110------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:12
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 12 finish fuzzing!
+seed_index: 12
+mutated_seed_index: 132
+current seed length: 60
+saving......
+----------------------------------------round: 111------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:60
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_111.jsonl
+----------------------------------------round: 112------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:21
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 113------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:22
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 22 finish fuzzing!
+seed_index: 22
+mutated_seed_index: 133
+current seed length: 59
+saving......
+----------------------------------------round: 114------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:25
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 115------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:28
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 116------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:29
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 117------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:33
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 33 finish fuzzing!
+seed_index: 33
+mutated_seed_index: 134
+current seed length: 58
+saving......
+----------------------------------------round: 118------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:36
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1278606653213501
+final_output reward: 0
+total reward: 0.031965166330337524
+add mutated seed into prompt node list
+seed_index: 36
+mutated_seed_index: 135
+reward = 0.031965166330337524
+saving......
+----------------------------------------round: 119------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:41
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.15704411268234253
+final_output reward: 0
+total reward: 0.03926102817058563
+add mutated seed into prompt node list
+seed_index: 41
+mutated_seed_index: 136
+reward = 0.03926102817058563
+saving......
+----------------------------------------round: 120------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:45
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 121------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:46
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11087357997894287
+final_output reward: 0
+total reward: 0.027718394994735718
+add mutated seed into prompt node list
+seed_index: 46
+mutated_seed_index: 137
+reward = 0.027718394994735718
+saving......
+total pass@10:58
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_121.jsonl
+----------------------------------------round: 122------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:47
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 123------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:48
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 124------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:50
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13717198371887207
+final_output reward: 0
+total reward: 0.03429299592971802
+add mutated seed into prompt node list
+seed_index: 50
+mutated_seed_index: 138
+reward = 0.03429299592971802
+saving......
+----------------------------------------round: 125------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:52
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13252300024032593
+final_output reward: 0
+total reward: 0.03313075006008148
+add mutated seed into prompt node list
+seed_index: 52
+mutated_seed_index: 139
+reward = 0.03313075006008148
+saving......
+----------------------------------------round: 126------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:53
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 127------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:54
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.19701892137527466
+final_output reward: 0
+total reward: 0.049254730343818665
+add mutated seed into prompt node list
+seed_index: 54
+mutated_seed_index: 140
+reward = 0.049254730343818665
+saving......
+----------------------------------------round: 128------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:59
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 129------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:63
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1941172480583191
+final_output reward: 0
+total reward: 0.04852931201457977
+add mutated seed into prompt node list
+seed_index: 63
+mutated_seed_index: 141
+reward = 0.04852931201457977
+saving......
+----------------------------------------round: 130------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:66
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 131------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:112
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1489657759666443
+final_output reward: 0
+total reward: 0.03724144399166107
+add mutated seed into prompt node list
+seed_index: 112
+mutated_seed_index: 142
+reward = 0.03724144399166107
+saving......
+total pass@10:58
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_131.jsonl
+----------------------------------------round: 132------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:111
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.19842594861984253
+final_output reward: 0
+total reward: 0.04960648715496063
+add mutated seed into prompt node list
+seed_index: 111
+mutated_seed_index: 143
+reward = 0.04960648715496063
+saving......
+----------------------------------------round: 133------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:121
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.34410667419433594
+final_output reward: 0
+total reward: 0.08602666854858398
+add mutated seed into prompt node list
+seed_index: 121
+mutated_seed_index: 144
+reward = 0.08602666854858398
+saving......
+----------------------------------------round: 134------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:110
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 135------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:69
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.15413910150527954
+final_output reward: 0
+total reward: 0.038534775376319885
+add mutated seed into prompt node list
+seed_index: 69
+mutated_seed_index: 145
+reward = 0.038534775376319885
+saving......
+----------------------------------------round: 136------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:128
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1917736530303955
+final_output reward: 0
+total reward: 0.04794341325759888
+add mutated seed into prompt node list
+seed_index: 128
+mutated_seed_index: 146
+reward = 0.04794341325759888
+saving......
+----------------------------------------round: 137------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:101
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17369872331619263
+final_output reward: 0
+total reward: 0.04342468082904816
+add mutated seed into prompt node list
+seed_index: 101
+mutated_seed_index: 147
+reward = 0.04342468082904816
+saving......
+----------------------------------------round: 138------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:104
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2117334008216858
+final_output reward: 0
+total reward: 0.05293335020542145
+add mutated seed into prompt node list
+seed_index: 104
+mutated_seed_index: 148
+reward = 0.05293335020542145
+saving......
+----------------------------------------round: 139------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:116
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 140------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:122
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.17516130208969116
+final_output reward: 0
+total reward: 0.04379032552242279
+add mutated seed into prompt node list
+seed_index: 122
+mutated_seed_index: 149
+reward = 0.04379032552242279
+saving......
+----------------------------------------round: 141------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:118
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1506437063217163
+final_output reward: 0
+total reward: 0.03766092658042908
+add mutated seed into prompt node list
+seed_index: 118
+mutated_seed_index: 150
+reward = 0.03766092658042908
+saving......
+total pass@10:58
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_141.jsonl
+----------------------------------------round: 142------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:119
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16206741333007812
+final_output reward: 0
+total reward: 0.04051685333251953
+add mutated seed into prompt node list
+seed_index: 119
+mutated_seed_index: 151
+reward = 0.04051685333251953
+saving......
+----------------------------------------round: 143------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:117
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 117 finish fuzzing!
+seed_index: 117
+mutated_seed_index: 152
+current seed length: 57
+saving......
+----------------------------------------round: 144------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:86
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12959986925125122
+final_output reward: 0
+total reward: 0.032399967312812805
+add mutated seed into prompt node list
+seed_index: 86
+mutated_seed_index: 153
+reward = 0.032399967312812805
+saving......
+----------------------------------------round: 145------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:126
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16160976886749268
+final_output reward: 0
+total reward: 0.04040244221687317
+add mutated seed into prompt node list
+seed_index: 126
+mutated_seed_index: 154
+reward = 0.04040244221687317
+saving......
+----------------------------------------round: 146------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:19
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 147------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:76
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 148------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:125
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 149------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:74
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 74 finish fuzzing!
+seed_index: 74
+mutated_seed_index: 155
+current seed length: 56
+saving......
+----------------------------------------round: 150------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:124
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 151------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:68
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.25497299432754517
+final_output reward: 0
+total reward: 0.06374324858188629
+add mutated seed into prompt node list
+seed_index: 68
+mutated_seed_index: 156
+reward = 0.06374324858188629
+saving......
+total pass@10:56
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_151.jsonl
+----------------------------------------round: 152------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:127
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.15612709522247314
+final_output reward: 0
+total reward: 0.039031773805618286
+add mutated seed into prompt node list
+seed_index: 127
+mutated_seed_index: 157
+reward = 0.039031773805618286
+saving......
+----------------------------------------round: 153------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:70
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14332908391952515
+final_output reward: 0
+total reward: 0.03583227097988129
+add mutated seed into prompt node list
+seed_index: 70
+mutated_seed_index: 158
+reward = 0.03583227097988129
+saving......
+----------------------------------------round: 154------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:78
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.104594886302948
+final_output reward: 0
+total reward: 0.026148721575737
+add mutated seed into prompt node list
+seed_index: 78
+mutated_seed_index: 159
+reward = 0.026148721575737
+saving......
+----------------------------------------round: 155------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:140
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1359243392944336
+final_output reward: 0
+total reward: 0.0339810848236084
+add mutated seed into prompt node list
+seed_index: 140
+mutated_seed_index: 160
+reward = 0.0339810848236084
+saving......
+----------------------------------------round: 156------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:141
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 157------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:93
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 93 finish fuzzing!
+seed_index: 93
+mutated_seed_index: 161
+current seed length: 55
+saving......
+----------------------------------------round: 158------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:100
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.14658081531524658
+final_output reward: 0
+total reward: 0.036645203828811646
+add mutated seed into prompt node list
+seed_index: 100
+mutated_seed_index: 162
+reward = 0.036645203828811646
+saving......
+----------------------------------------round: 159------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:84
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 160------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:90
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.24391859769821167
+final_output reward: 0
+total reward: 0.06097964942455292
+add mutated seed into prompt node list
+seed_index: 90
+mutated_seed_index: 163
+reward = 0.06097964942455292
+saving......
+----------------------------------------round: 161------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:88
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:55
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_161.jsonl
+----------------------------------------round: 162------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:136
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16509175300598145
+final_output reward: 0
+total reward: 0.04127293825149536
+add mutated seed into prompt node list
+seed_index: 136
+mutated_seed_index: 164
+reward = 0.04127293825149536
+saving......
+----------------------------------------round: 163------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:71
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 164------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:138
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.21189188957214355
+final_output reward: 0
+total reward: 0.05297297239303589
+add mutated seed into prompt node list
+seed_index: 138
+mutated_seed_index: 165
+reward = 0.05297297239303589
+saving......
+----------------------------------------round: 165------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:52
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1039387583732605
+final_output reward: 0
+total reward: 0.025984689593315125
+add mutated seed into prompt node list
+seed_index: 52
+mutated_seed_index: 166
+reward = 0.025984689593315125
+saving......
+----------------------------------------round: 166------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:135
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10684740543365479
+final_output reward: 0
+total reward: 0.026711851358413696
+add mutated seed into prompt node list
+seed_index: 135
+mutated_seed_index: 167
+reward = 0.026711851358413696
+saving......
+----------------------------------------round: 167------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:38
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 168------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:43
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 169------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:89
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 170------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:81
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 81 finish fuzzing!
+seed_index: 81
+mutated_seed_index: 168
+current seed length: 54
+saving......
+----------------------------------------round: 171------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:106
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:54
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_171.jsonl
+----------------------------------------round: 172------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:27
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 173------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:137
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 137 finish fuzzing!
+seed_index: 137
+mutated_seed_index: 169
+current seed length: 53
+saving......
+----------------------------------------round: 174------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 175------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 176------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:9
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 9 finish fuzzing!
+seed_index: 9
+mutated_seed_index: 170
+current seed length: 52
+saving......
+----------------------------------------round: 177------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:11
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.13847559690475464
+final_output reward: 0
+total reward: 0.03461889922618866
+add mutated seed into prompt node list
+seed_index: 11
+mutated_seed_index: 171
+reward = 0.03461889922618866
+saving......
+----------------------------------------round: 178------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 179------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:21
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 180------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:25
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 181------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:28
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:52
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_181.jsonl
+----------------------------------------round: 182------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:29
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 183------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:45
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 184------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:47
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 185------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:48
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 186------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:53
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 187------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:59
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 188------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:66
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 189------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:144
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 190------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:143
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 191------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:142
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+total pass@10:52
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_191.jsonl
+----------------------------------------round: 192------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:114
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 114 finish fuzzing!
+seed_index: 114
+mutated_seed_index: 172
+current seed length: 51
+saving......
+----------------------------------------round: 193------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:8
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10222244262695312
+final_output reward: 0
+total reward: 0.02555561065673828
+add mutated seed into prompt node list
+seed_index: 8
+mutated_seed_index: 173
+reward = 0.02555561065673828
+saving......
+----------------------------------------round: 194------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:115
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.2537498474121094
+final_output reward: 0
+total reward: 0.06343746185302734
+add mutated seed into prompt node list
+seed_index: 115
+mutated_seed_index: 174
+reward = 0.06343746185302734
+saving......
+----------------------------------------round: 195------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:130
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 130 finish fuzzing!
+seed_index: 130
+mutated_seed_index: 175
+current seed length: 50
+saving......
+----------------------------------------round: 196------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:122
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.16213083267211914
+final_output reward: 0
+total reward: 0.040532708168029785
+add mutated seed into prompt node list
+seed_index: 122
+mutated_seed_index: 176
+reward = 0.040532708168029785
+saving......
+----------------------------------------round: 197------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:156
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12041276693344116
+final_output reward: 0
+total reward: 0.03010319173336029
+add mutated seed into prompt node list
+seed_index: 156
+mutated_seed_index: 177
+reward = 0.03010319173336029
+saving......
+----------------------------------------round: 198------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:24
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 199------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:151
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.11291360855102539
+final_output reward: 0
+total reward: 0.028228402137756348
+add mutated seed into prompt node list
+seed_index: 151
+mutated_seed_index: 178
+reward = 0.028228402137756348
+saving......
+----------------------------------------round: 200------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:13
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 201------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:102
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.1509581208229065
+final_output reward: 0
+total reward: 0.037739530205726624
+add mutated seed into prompt node list
+seed_index: 102
+mutated_seed_index: 179
+reward = 0.037739530205726624
+saving......
+total pass@10:50
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-only_analyst_score_all_plan_cleaned_data_3/_node_201.jsonl
+----------------------------------------round: 202------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:86
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 86 finish fuzzing!
+seed_index: 86
+mutated_seed_index: 180
+current seed length: 49
+saving......
+----------------------------------------round: 203------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:163
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.12013202905654907
+final_output reward: 0
+total reward: 0.030033007264137268
+add mutated seed into prompt node list
+seed_index: 163
+mutated_seed_index: 181
+reward = 0.030033007264137268
+saving......
+----------------------------------------round: 204------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:157
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.21302741765975952
+final_output reward: 0
+total reward: 0.05325685441493988
+add mutated seed into prompt node list
+seed_index: 157
+mutated_seed_index: 182
+reward = 0.05325685441493988
+saving......
+----------------------------------------round: 205------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:116
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 206------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:158
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 207------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:165
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 165 finish fuzzing!
+seed_index: 165
+mutated_seed_index: 183
+current seed length: 48
+saving......
+----------------------------------------round: 208------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:160
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0
+final_output reward: 0
+total reward: 0.0
+reward = 0
+saving......
+----------------------------------------round: 209------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:162
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+analyst reward: 0.10865044593811035
+final_output reward: 0
+total reward: 0.027162611484527588
+add mutated seed into prompt node list
+seed_index: 162
+mutated_seed_index: 184
+reward = 0.027162611484527588
+saving......
+----------------------------------------round: 210------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:164
+----------mutating----------
+----------evaluating mutated seed----------

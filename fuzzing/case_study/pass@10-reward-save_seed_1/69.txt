@@ -1,0 +1,752 @@
+------------------------------
+69
+------------------------------
+original prompt
+------------------------------
+
+def search(lst):
+    '''
+    You are given a non-empty list of positive integers. Return the greatest integer that is greater than 
+    zero, and has a frequency greater than or equal to the value of the integer itself. 
+    The frequency of an integer is the number of times it appears in the list.
+    If no such a value exist, return -1.
+    Examples:
+        search([4, 1, 2, 2, 3, 1]) == 2
+        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
+        search([5, 5, 4, 4, 4]) == -1
+    '''
+
+------------------------------
+mutated prompt
+------------------------------
+def search(lst):
+    '''
+    Given a list of positive integers, return the greatest integer with a frequency 
+    greater than or equal to its value. If no such value exists, return -1.
+    Examples:
+        search([4, 1, 2, 2, 3, 1]) == 2
+        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
+        search([5, 5, 4, 4, 4]) == -1
+    '''
+------------------------------
+canonical solution
+------------------------------
+    frq = [0] * (max(lst) + 1)
+    for i in lst:
+        frq[i] += 1;
+
+    ans = -1
+    for i in range(1, len(frq)):
+        if frq[i] >= i:
+            ans = i
+    
+    return ans
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the result or -1 if no such integer exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and value >= key:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Filter out integers with frequency less than or equal to the integer value",
+      "Find the greatest integer among the filtered integers"
+    ],
+    "high-level steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list to update the frequency in the dictionary",
+      "Filter out integers with frequency less than or equal to the integer value",
+      "Find the greatest integer among the filtered integers and return it"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    filtered_integers = [key for key, value in freq_dict.items() if value >= key]
+    
+    if filtered_integers:
+        return max(filtered_integers)
+    else:
+        return -1
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the result or -1 if no such integer exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and value >= key:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer that meets the condition",
+      "Handle the case where no such integer exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer that meets the condition",
+      "Return the integer if found, otherwise return -1"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key > 0 and key <= value:
+            result = max(result, key)
+    
+    return result
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Filter out integers with frequency less than or equal to the integer value",
+      "Find the greatest integer among the filtered integers"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Filter out integers with frequency less than or equal to the integer value",
+      "Find the greatest integer among the filtered integers",
+      "Return the greatest integer or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    filtered_integers = [key for key, value in freq_dict.items() if value >= key]
+    
+    if filtered_integers:
+        return max(filtered_integers)
+    else:
+        return -1
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the greatest integer found, or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the greatest integer found, or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    max_freq_num = -1
+    max_freq = 0
+    for key, value in freq_dict.items():
+        if value >= key and value > max_freq:
+            max_freq_num = key
+            max_freq = value
+    
+    return max_freq_num
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the frequency of each integer in the list",
+      "Find the greatest integer with a frequency greater than or equal to its value",
+      "Handle the case where no such value exists"
+    ],
+    "steps": [
+      "Create a dictionary to store the frequency of each integer in the list",
+      "Iterate through the list and update the frequency in the dictionary",
+      "Iterate through the dictionary to find the greatest integer with a frequency greater than or equal to its value",
+      "Return the result or -1 if no such value exists"
+    ]
+  }
+}
+------------------------------
+def search(lst):
+    freq_dict = {}
+    
+    for num in lst:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    result = -1
+    for key, value in freq_dict.items():
+        if key == value and key > result:
+            result = key
+    
+    return result
+
+------------------------------
+scores
+[0.6879, 0.6879, 0.6879, 0.6879, 0.6879, 0.6879, 0.9291, 0.6879, 0.6879, 0.6879]
+[97, 97, 97, 97, 97, 97, 131, 97, 97, 97]

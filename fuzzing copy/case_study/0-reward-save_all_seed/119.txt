@@ -1,0 +1,1596 @@
+------------------------------
+119
+------------------------------
+original prompt
+------------------------------
+
+def match_parens(lst):
+    '''
+    You are given a list of two strings, both strings consist of open
+    parentheses '(' or close parentheses ')' only.
+    Your job is to check if it is possible to concatenate the two strings in
+    some order, that the resulting string will be good.
+    A string S is considered to be good if and only if all parentheses in S
+    are balanced. For example: the string '(())()' is good, while the string
+    '())' is not.
+    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.
+
+    Examples:
+    match_parens(['()(', ')']) == 'Yes'
+    match_parens([')', ')']) == 'No'
+    '''
+
+------------------------------
+first mutated prompt
+------------------------------
+def match_parens(lst):
+    '''
+    You are given a list of two strings, both strings consist of open
+    parentheses '(' or close parentheses ')' only.
+    Your job is to check if it is possible to concatenate the two strings in
+    some order, that the resulting string will be good.
+    A string S is considered to be good if and only if all parentheses in S
+    are balanced. For example: the string '(())()' is good, while the string
+    '())' is not.
+    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.
+    Ensure that the solution efficiently handles the constraints of the problem.
+
+    Examples:
+    match_parens(['()(', ')']) == 'Yes'
+    match_parens([')', ')']) == 'No'
+    '''
+
+------------------------------
+second mutated prompt
+------------------------------
+def match_parens(lst):
+    '''
+    You are given a list of two strings, both strings consist of open
+    parentheses '(' or close parentheses ')' only.
+    Your job is to check if it is possible to concatenate the two strings in
+    some order, that the resulting string will be good.
+    A string S is considered to be good if and only if all parentheses in S
+    are balanced. For example: the string '(())()' is good, while the string
+    '())' is not.
+    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.
+    Ensure that the solution efficiently handles the constraints of the problem.
+    Consider edge cases where one or both strings are empty.
+
+    Examples:
+    match_parens(['()(', ')']) == 'Yes'
+    match_parens([')', ')']) == 'No'
+    '''
+
+------------------------------
+canonical solution
+------------------------------
+    def check(s):
+        val = 0
+        for i in s:
+            if i == '(':
+                val = val + 1
+            else:
+                val = val - 1
+            if val < 0:
+                return False
+        return True if val == 0 else False
+
+    S1 = lst[0] + lst[1]
+    S2 = lst[1] + lst[0]
+    return 'Yes' if check(S1) or check(S2) else 'No'
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                if open_count > 0:
+                    open_count -= 1
+                else:
+                    close_count += 1
+    
+    if open_count == 0 and close_count == 0:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                close_count += 1
+    
+    if open_count == close_count:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                close_count += 1
+    
+    if open_count == close_count:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if the input list contains exactly two strings",
+    "step_2": "Check if both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def is_balanced(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+def match_parens(lst):
+    if len(lst) != 2:
+        return 'No'
+    
+    s1, s2 = lst[0], lst[1]
+    
+    if any(char not in '()' for char in s1 + s2):
+        return 'No'
+    
+    possible_orders = [s1 + s2, s2 + s1]
+    
+    for order in possible_orders:
+        if is_balanced(order):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Check if the input list contains exactly two strings",
+    "Step 2": "Check if both strings consist of only open or close parentheses",
+    "Step 3": "Concatenate the two strings in all possible orders",
+    "Step 4": "Check if the resulting string is a good string",
+    "Step 5": "Return 'Yes' if a good string is found, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    def is_good_string(s):
+        stack = []
+        for c in s:
+            if c == '(':
+                stack.append(c)
+            elif c == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for i in range(2):
+        for j in range(2):
+            new_str = lst[i] + lst[j]
+            if is_good_string(new_str):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                if open_count > 0:
+                    open_count -= 1
+                else:
+                    close_count += 1
+    
+    if open_count == 0 and close_count == 0:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                close_count += 1
+    
+    if open_count == close_count:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if the input list contains exactly two strings",
+    "step_2": "Check if both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, 'No' otherwise"
+  }
+}
+------------------------------
+def is_balanced(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for perm in [(lst[0] + lst[1]), (lst[1] + lst[0])]:
+        if is_balanced(perm):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                close_count += 1
+    
+    if open_count == close_count:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains exactly two strings",
+    "Check if both strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string"
+  ],
+  "high_level_plan": {
+    "Step 1": "Verify that the input list contains exactly two strings",
+    "Step 2": "Verify that both strings consist of only open or close parentheses",
+    "Step 3": "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Step 4": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    open_count = 0
+    close_count = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                open_count += 1
+            else:
+                if open_count > 0:
+                    open_count -= 1
+                else:
+                    close_count += 1
+    
+    if open_count == 0 and close_count == 0:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+****************************************************************************************************
+------------------------------
+first mutated solutions
+------------------------------
+first mutated solutions 0
+------------------------------
+{
+  "subproblems": [
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": {
+    "Step 1": "Count the number of open and close parentheses in each string",
+    "Step 2": "Check if the number of open and close parentheses in each string is equal",
+    "Step 3": "Concatenate the two strings in all possible orders",
+    "Step 4": "Check if the concatenated string has balanced parentheses",
+    "Step 5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    def can_concatenate(s1, s2):
+        return is_balanced(s1 + s2) or is_balanced(s2 + s1)
+
+    open_count_1 = lst[0].count('(')
+    close_count_1 = lst[0].count(')')
+    open_count_2 = lst[1].count('(')
+    close_count_2 = lst[1].count(')')
+
+    if open_count_1 != close_count_1 or open_count_2 != close_count_2:
+        return 'No'
+
+    if can_concatenate(lst[0], lst[1]):
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+first mutated solutions 1
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": {
+    "step_1": "Verify that the input list contains exactly two strings",
+    "step_2": "Verify that both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if len(lst) != 2:
+        return 'No'
+    
+    for order in [(lst[0], lst[1]), (lst[1], lst[0])]:
+        concat_str = order[0] + order[1]
+        if is_balanced(concat_str):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 2
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": [
+    "Verify the input list contains exactly two strings",
+    "Verify both strings consist of only open or close parentheses",
+    "Concatenate the two strings in all possible orders",
+    "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "Return 'Yes' if a good string is found, otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if len(lst) != 2:
+        return 'No'
+    
+    for i in range(2):
+        if any(char not in ['(', ')'] for char in lst[i]):
+            return 'No'
+    
+    for i in range(2):
+        for j in range(2):
+            if i != j:
+                if is_balanced(lst[i] + lst[j]):
+                    return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": {
+    "step_1": "Verify that the input list contains exactly two strings",
+    "step_2": "Verify that both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if len(lst) != 2:
+        return 'No'
+    
+    for order in [(lst[0], lst[1]), (lst[1], lst[0])]:
+        concat_str = order[0] + order[1]
+        if is_balanced(concat_str):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 4
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": [
+    "Verify the input list contains exactly two strings",
+    "Verify both strings consist of only open or close parentheses",
+    "Concatenate the two strings in all possible orders",
+    "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "Return 'Yes' if a good string is found, otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if len(lst) != 2:
+        return 'No'
+    
+    for order in [(lst[0], lst[1]), (lst[1], lst[0])]:
+        new_str = order[0] + order[1]
+        if is_balanced(new_str):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 5
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": {
+    "step_1": "Verify that the input list contains exactly two strings",
+    "step_2": "Verify that both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    # Verify that the input list contains exactly two strings
+    if len(lst) != 2 or not all(isinstance(s, str) for s in lst):
+        return 'No'
+    
+    # Verify that both strings consist of only open or close parentheses
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    # Concatenate the two strings in all possible orders
+    concat_options = [lst[0] + lst[1], lst[1] + lst[0]]
+    
+    # Check if the resulting string is good by verifying if all parentheses are balanced
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for option in concat_options:
+        if is_balanced(option):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": {
+    "step_1": "Verify that the input list contains exactly two strings",
+    "step_2": "Verify that both strings consist of only open or close parentheses",
+    "step_3": "Concatenate the two strings in all possible orders",
+    "step_4": "Check if the resulting string is good by verifying if all parentheses are balanced",
+    "step_5": "Return 'Yes' if a good string can be formed, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if len(lst) != 2:
+        return 'No'
+    
+    for i in range(2):
+        if any(char not in ['(', ')'] for char in lst[i]):
+            return 'No'
+    
+    for i in range(2):
+        for j in range(2):
+            if i != j:
+                if is_balanced(lst[i] + lst[j]):
+                    return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Iterate through each string in the list and count the number of open and close parentheses",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "Return 'Yes' if a balanced string is found, otherwise return 'No'"
+  ]
+}
+------------------------------
+def is_balanced(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+def match_parens(lst):
+    def backtrack(index):
+        if index == len(lst):
+            if is_balanced(''.join(order)):
+                return True
+            return False
+        
+        for i in range(len(lst)):
+            if not visited[i]:
+                visited[i] = True
+                order.append(lst[i])
+                if backtrack(index + 1):
+                    return True
+                order.pop()
+                visited[i] = False
+        
+        return False
+
+    visited = [False] * len(lst)
+    order = []
+    return 'Yes' if backtrack(0) else 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: Yes
+print(match_parens([')', ')']))     # Output: No
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 8
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list contains only two strings",
+    "Check if the strings consist of only open or close parentheses",
+    "Check if it is possible to concatenate the two strings in some order to form a good string",
+    "Check if all parentheses in the resulting string are balanced"
+  ],
+  "high_level_plan": [
+    "Verify the input list contains exactly two strings",
+    "Verify both strings consist of only open or close parentheses",
+    "Concatenate the two strings in all possible orders",
+    "Check if the resulting string is good by verifying if all parentheses are balanced"
+  ]
+}
+------------------------------
+def is_balanced(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+def match_parens(lst):
+    if len(lst) != 2:
+        return 'No'
+    
+    s1, s2 = lst[0], lst[1]
+    
+    if any(char not in '()' for char in s1 + s2):
+        return 'No'
+    
+    if is_balanced(s1 + s2) or is_balanced(s2 + s1):
+        return 'Yes'
+    else:
+        return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: Yes
+print(match_parens([')', ')']))     # Output: No
+
+------------------------------
+1.0
+------------------------------
+first mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input list contains only two strings",
+      "Check if the strings consist of only open or close parentheses",
+      "Check if it is possible to concatenate the two strings in some order to form a good string"
+    ],
+    "steps": [
+      "Verify that the input list contains exactly two strings",
+      "Verify that both strings consist of only open or close parentheses",
+      "Check if the total count of open and close parentheses in both strings is even",
+      "Iterate through the characters of both strings and keep track of the balance of parentheses",
+      "If at any point the balance becomes negative, return 'No'",
+      "If the balance is zero at the end of iteration, return 'Yes', otherwise return 'No'"
+    ]
+  }
+}
+------------------------------
+def match_parens(lst):
+    if len(lst) != 2:
+        return 'No'
+    
+    for s in lst:
+        if not all(c in ['(', ')'] for c in s):
+            return 'No'
+    
+    total_open = sum(s.count('(') for s in lst)
+    total_close = sum(s.count(')') for s in lst)
+    
+    if (total_open + total_close) % 2 != 0:
+        return 'No'
+    
+    balance = 0
+    for s in lst:
+        for c in s:
+            if c == '(':
+                balance += 1
+            else:
+                balance -= 1
+            if balance < 0:
+                return 'No'
+    
+    return 'Yes'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.75
+------------------------------
+scores
+[0.7717, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.75]
+[71, 92, 92, 92, 92, 92, 92, 92, 92, 69]
+****************************************************************************************************
+------------------------------
+second mutated solutions
+------------------------------
+second mutated solutions 0
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": {
+    "Step 1": "Check if the input strings are empty",
+    "Step 2": "Check if the number of open and close parentheses in each string is equal",
+    "Step 3": "Concatenate the two strings in all possible orders",
+    "Step 4": "Check if the parentheses are balanced in each concatenated string",
+    "Step 5": "Return 'Yes' if a balanced string is found, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if not lst[0] and not lst[1]:
+        return 'Yes'
+    
+    if lst[0].count('(') != lst[0].count(')') or lst[1].count('(') != lst[1].count(')'):
+        return 'No'
+    
+    for i in range(2):
+        if is_balanced(lst[i]):
+            return 'Yes'
+    
+    if is_balanced(lst[0] + lst[1]) or is_balanced(lst[1] + lst[0]):
+        return 'Yes'
+    
+    return 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Check if the input strings are valid (only containing '(' and ')' characters)",
+      "Determine if it is possible to concatenate the two strings in some order to form a good string",
+      "Handle edge cases where one or both strings are empty"
+    ],
+    "steps": [
+      "Validate the input strings to ensure they only contain '(' and ')' characters",
+      "Count the number of open and close parentheses in each string",
+      "Check if the total number of open and close parentheses is even",
+      "If the total number of open and close parentheses is even, check if it is possible to concatenate the strings to form a good string",
+      "Return 'Yes' if it is possible, 'No' otherwise"
+    ]
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_valid_string(s):
+        return all(c in ['(', ')'] for c in s)
+    
+    def count_parentheses(s):
+        open_count = s.count('(')
+        close_count = s.count(')')
+        return open_count, close_count
+    
+    def can_concatenate_strings(s1, s2):
+        open_count_s1, close_count_s1 = count_parentheses(s1)
+        open_count_s2, close_count_s2 = count_parentheses(s2)
+        
+        total_open = open_count_s1 + open_count_s2
+        total_close = close_count_s1 + close_count_s2
+        
+        if total_open % 2 != 0 or total_close % 2 != 0:
+            return False
+        
+        if open_count_s1 > close_count_s2:
+            return True
+        if close_count_s1 > open_count_s2:
+            return True
+        
+        return False
+    
+    if not all(is_valid_string(s) for s in lst):
+        return 'No'
+    
+    s1, s2 = lst
+    if can_concatenate_strings(s1, s2):
+        return 'Yes'
+    else:
+        return 'No'
+
+------------------------------
+0.6848
+------------------------------
+second mutated solutions 2
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Check if the input strings are empty",
+    "Count the number of open and close parentheses in each string",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "If any order results in a balanced string, return 'Yes', otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    if not lst[0] or not lst[1]:
+        return 'No'
+    
+    open_count_1 = lst[0].count('(')
+    close_count_1 = lst[0].count(')')
+    open_count_2 = lst[1].count('(')
+    close_count_2 = lst[1].count(')')
+    
+    if open_count_1 != close_count_1 or open_count_2 != close_count_2:
+        return 'No'
+    
+    concatenated = lst[0] + lst[1]
+    
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for i in range(len(concatenated)):
+        for j in range(i+1, len(concatenated)+1):
+            if is_balanced(concatenated[i:j]):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.75
+------------------------------
+second mutated solutions 3
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Check if the input strings are empty",
+    "Count the number of open and close parentheses in each string",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "If any order results in a balanced string, return 'Yes', otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if not lst[0] and not lst[1]:
+        return 'Yes'
+    
+    if lst[0].count('(') != lst[0].count(')') or lst[1].count('(') != lst[1].count(')'):
+        return 'No'
+    
+    for i in range(2):
+        for j in range(2):
+            if is_balanced(lst[i] + lst[j]):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 4
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Check if the input strings are empty",
+    "Count the number of open and close parentheses in each string",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "If any order results in a balanced string, return 'Yes', otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if not lst[0] and not lst[1]:
+        return 'Yes'
+    
+    if len(lst[0].replace('(', '')) != len(lst[0].replace(')', '')) or len(lst[1].replace('(', '')) != len(lst[1].replace(')', '')):
+        return 'No'
+    
+    for i in range(2):
+        for j in range(2):
+            if is_balanced(lst[i] + lst[j]):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 5
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Check if the input strings are empty",
+    "Count the number of open and close parentheses in each string",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "If any order results in a balanced string, return 'Yes', otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    if not lst[0] or not lst[1]:
+        return 'No'
+    
+    open_count_1 = lst[0].count('(')
+    close_count_1 = lst[0].count(')')
+    open_count_2 = lst[1].count('(')
+    close_count_2 = lst[1].count(')')
+    
+    if open_count_1 != close_count_1 or open_count_2 != close_count_2:
+        return 'No'
+    
+    concatenated = lst[0] + lst[1]
+    
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for i in range(len(concatenated)):
+        if is_balanced(concatenated[:i] + concatenated[i+1:]):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 6
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": [
+    "Check if the input strings are empty",
+    "Count the number of open and close parentheses in each string",
+    "If the counts are not equal, return 'No'",
+    "Concatenate the strings in all possible orders",
+    "Check if the resulting string has balanced parentheses",
+    "If any order results in a balanced string, return 'Yes', otherwise return 'No'"
+  ]
+}
+------------------------------
+def match_parens(lst):
+    if not lst[0] or not lst[1]:
+        return 'No'
+    
+    open_count_1 = lst[0].count('(')
+    close_count_1 = lst[0].count(')')
+    open_count_2 = lst[1].count('(')
+    close_count_2 = lst[1].count(')')
+    
+    if open_count_1 != close_count_1 or open_count_2 != close_count_2:
+        return 'No'
+    
+    concatenated = lst[0] + lst[1]
+    
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for i in range(len(concatenated)):
+        for j in range(i+1, len(concatenated)+1):
+            if is_balanced(concatenated[i:j]):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.75
+------------------------------
+second mutated solutions 7
+------------------------------
+{
+  "subproblems": [
+    "Check if the input strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": {
+    "Step 1": "Check if the input strings are empty",
+    "Step 2": "Check if the number of open and close parentheses in each string is equal",
+    "Step 3": "Concatenate the two strings in all possible orders",
+    "Step 4": "Check if the parentheses are balanced in each concatenated string",
+    "Step 5": "Return 'Yes' if a balanced string is found, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+
+    if not lst[0] and not lst[1]:
+        return 'Yes'
+    
+    if lst[0].count('(') != lst[0].count(')') or lst[1].count('(') != lst[1].count(')'):
+        return 'No'
+    
+    for i in range(2):
+        if is_balanced(lst[i]):
+            return 'Yes'
+    
+    if is_balanced(lst[0] + lst[1]) or is_balanced(lst[1] + lst[0]):
+        return 'Yes'
+    
+    return 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 8
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list is empty",
+    "Check if both strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in different orders"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if the input list is empty",
+    "step_2": "Check if both strings are empty",
+    "step_3": "Check if the number of open and close parentheses in each string is equal",
+    "step_4": "Generate all possible permutations of the two strings",
+    "step_5": "Check if the parentheses are balanced for each permutation",
+    "step_6": "Return 'Yes' if a balanced permutation is found, otherwise return 'No'"
+  }
+}
+------------------------------
+from itertools import permutations
+
+def is_balanced(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+def match_parens(lst):
+    if not lst:
+        return 'No'
+    
+    str1, str2 = lst[0], lst[1]
+    
+    if not str1 and not str2:
+        return 'Yes'
+    
+    if str1.count('(') != str1.count(')') or str2.count('(') != str2.count(')'):
+        return 'No'
+    
+    perms = permutations([str1, str2])
+    
+    for perm in perms:
+        concat_str = ''.join(perm)
+        if is_balanced(concat_str):
+            return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+second mutated solutions 9
+------------------------------
+{
+  "subproblems": [
+    "Check if the input list is empty",
+    "Check if both strings are empty",
+    "Check if the number of open and close parentheses in each string is equal",
+    "Check if the parentheses are balanced when concatenated in any order"
+  ],
+  "high_level_plan": {
+    "step_1": "Check if the input list is empty",
+    "step_2": "Check if both strings are empty",
+    "step_3": "Check if the number of open and close parentheses in each string is equal",
+    "step_4": "Concatenate the two strings in all possible orders",
+    "step_5": "Check if the parentheses are balanced in each concatenated string",
+    "step_6": "Return 'Yes' if a balanced string is found, otherwise return 'No'"
+  }
+}
+------------------------------
+def match_parens(lst):
+    if not lst:
+        return 'No'
+    
+    str1, str2 = lst[0], lst[1]
+    
+    if not str1 and not str2:
+        return 'No'
+    
+    if str1.count('(') != str1.count(')') or str2.count('(') != str2.count(')'):
+        return 'No'
+    
+    def is_balanced(s):
+        stack = []
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            elif char == ')':
+                if not stack:
+                    return False
+                stack.pop()
+        return len(stack) == 0
+    
+    for i in range(len(str1) + 1):
+        for j in range(len(str2) + 1):
+            new_str = str1[:i] + str2[:j] + str1[i:] + str2[j:]
+            if is_balanced(new_str):
+                return 'Yes'
+    
+    return 'No'
+
+# Test cases
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+
+------------------------------
+0.7717
+------------------------------
+scores
+[0.7717, 0.6848, 0.75, 0.7717, 0.7717, 0.7717, 0.75, 0.7717, 0.7717, 0.7717]
+[71, 63, 69, 71, 71, 71, 69, 71, 71, 71]

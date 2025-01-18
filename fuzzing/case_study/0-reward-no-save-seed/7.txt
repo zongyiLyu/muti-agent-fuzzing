@@ -1,0 +1,700 @@
+------------------------------
+7
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring
+    >>> filter_by_substring([], 'a')
+    []
+    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+    ['abc', 'bacd', 'array']
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+from typing import List
+
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring.
+    Ensure that the function handles both empty strings and empty substrings correctly.
+    >>> filter_by_substring([], 'a')
+    []
+    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+    ['abc', 'bacd', 'array']
+    """
+------------------------------
+canonical solution
+------------------------------
+    return [x for x in strings if substring in x]
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings: List[str], substring: str) -> List[str]",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_substring(strings, substring)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings: List[str], substring: str) -> List[str]",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings, substring)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "major_steps": [
+      "Define the function filter_by_substring",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings, substring)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings, substring)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high-level steps": [
+      "Define the function filter_by_substring(strings, substring)",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings: List[str], substring: str) -> List[str]",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function filter_by_substring that takes in a list of strings and a substring as input",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string",
+      "If the substring is present, add the string to the output list"
+    ],
+    "high_level_steps": [
+      "Define the function filter_by_substring(strings: List[str], substring: str) -> List[str]",
+      "Initialize an empty list to store the filtered strings",
+      "Iterate through each string in the input list",
+      "Check if the substring is present in the current string using the 'in' operator",
+      "If the substring is present, append the string to the output list",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring """
+    filtered_strings = []
+    for string in strings:
+        if substring in string:
+            filtered_strings.append(string)
+    return filtered_strings
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through each string in the input list",
+      "Check if the substring is in the current string",
+      "If the substring is found, add the string to the result list",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring.
+    Ensure that the function handles both empty strings and empty substrings correctly.
+    """
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings and filter out the ones that contain the substring",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring.
+    Ensure that the function handles both empty strings and empty substrings correctly.
+    """
+    if not strings or not substring:
+        return []
+    
+    return [s for s in strings if substring in s]
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring.
+    Ensure that the function handles both empty strings and empty substrings correctly.
+    """
+    result = []
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Filter out strings that do not contain the substring",
+      "Return the filtered list of strings"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """ Filter an input list of strings only for ones that contain given substring.
+    Ensure that the function handles both empty strings and empty substrings correctly.
+    """
+    if not strings or not substring:
+        return []
+    
+    return [s for s in strings if substring in s]
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Handle empty input list of strings",
+      "Handle empty substring",
+      "Filter strings that contain the given substring"
+    ],
+    "high-level steps": [
+      "Check if the input list of strings is empty",
+      "Check if the substring is empty",
+      "Iterate through the list of strings",
+      "Check if each string contains the given substring",
+      "Add the string to the result list if it contains the substring",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    result = []
+    
+    if not strings or not substring:
+        return result
+    
+    for string in strings:
+        if substring in string:
+            result.append(string)
+    
+    return result
+
+------------------------------
+scores
+[0.6792, 0.6792, 0.6792, 0.6792, 0.6792, 0.6792, 0.6792, 0.6792, 0.6792, 0.6792]
+[72, 72, 72, 72, 72, 72, 72, 72, 72, 72]

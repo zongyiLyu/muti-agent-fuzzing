@@ -1,0 +1,38 @@
+../output_fuzzing_one_per_time/pass@10/results-no_save_seed_cleaned_data_3/
+Namespace(alpha=0.25, append=False, calc_analyst=0, calc_final_result=1, calc_relative_reward=1, clean_data=0, dataset='humaneval', dataset_type='HumanEval', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/output_mutated/original/code_round_0_with_score.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo', mutate_method='random', num_generate=10, num_round=10000, only_consider_passed_cases=0, output_file_name='no_save_seed_cleaned_data', output_path='../output_fuzzing_one_per_time/pass@10/results-no_save_seed_cleaned_data_3/', parallel=0, recover=0, reward_ratio=1, save_all_seed=0, save_seed=0, set_threshold_analyst=1, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+164 164 164
+118
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+----------------------------------------round: 1------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+do not save any seed
+reward = 0
+saving......
+total pass@10:118
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-no_save_seed_cleaned_data_3/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-no_save_seed_cleaned_data_3/_node_1.jsonl
+----------------------------------------round: 2------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------

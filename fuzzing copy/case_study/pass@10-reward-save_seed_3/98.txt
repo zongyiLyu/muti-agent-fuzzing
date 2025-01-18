@@ -1,0 +1,638 @@
+------------------------------
+98
+------------------------------
+original prompt
+------------------------------
+
+def count_upper(s):
+    """
+    Given a string s, count the number of uppercase vowels in even indices.
+    
+    For example:
+    count_upper('aBCdEf') returns 1
+    count_upper('abcdefg') returns 0
+    count_upper('dBBE') returns 0
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def count_upper(s):
+    """
+    You are provided with a string s, and your task is to determine how many uppercase vowels are located at even indices.
+    
+    For example:
+    count_upper('aBCdEf') returns 1
+    count_upper('abcdefg') returns 0
+    count_upper('dBBE') returns 0
+    """
+------------------------------
+canonical solution
+------------------------------
+    count = 0
+    for i in range(0,len(s),2):
+        if s[i] in "AEIOU":
+            count += 1
+    return count
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "major_steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the counter as the result"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the counter as the result"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters",
+      "Return the count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    even_indices_chars = [s[i] for i in range(0, len(s), 2)]
+    count = sum(1 for char in even_indices_chars if char.upper() in 'AEIOU')
+    return count
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters",
+      "Return the count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i].upper() in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters",
+      "Return the count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i].upper() in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the final count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the counter as the result"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the final count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "major_steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted characters are uppercase vowels",
+      "Count the number of uppercase vowels found",
+      "Return the count of uppercase vowels"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i].isupper() and s[i] in vowels:
+            count += 1
+    return count
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Count the number of uppercase vowels in the extracted characters"
+    ],
+    "high-level steps": [
+      "Create a function count_upper that takes a string as input",
+      "Iterate through the even indices of the input string",
+      "Extract the characters at the even indices",
+      "Check if the extracted character is an uppercase vowel (A, E, I, O, U)",
+      "Increment a counter if an uppercase vowel is found",
+      "Return the counter as the result"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i in range(0, len(s), 2):
+        if s[i] in vowels:
+            count += 1
+    return count
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify uppercase vowels in the input string",
+      "Determine if the index of the uppercase vowels is even"
+    ],
+    "major_steps": [
+      "Create a function count_upper that takes a string as input",
+      "Initialize a counter variable to keep track of the number of uppercase vowels at even indices",
+      "Iterate through the characters in the input string",
+      "Check if the character is an uppercase vowel",
+      "Check if the index of the uppercase vowel is even",
+      "Increment the counter if both conditions are met",
+      "Return the final count of uppercase vowels at even indices"
+    ]
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper(s) that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {
+      "subproblems": [
+        "Set the counter variable to 0"
+      ]
+    },
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If both conditions are met, increment the counter variable by 1.": {
+      "subproblems": [
+        "Increment the counter variable by 1"
+      ]
+    },
+    "5. Return the final count of uppercase vowels at even indices.": {
+      "subproblems": [
+        "Return the counter variable"
+      ]
+    }
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = ['A', 'E', 'I', 'O', 'U']
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string and check if each character is an uppercase vowel at an even index.": {},
+    "4. If the condition is met, increment the counter variable.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string s.": {
+      "subproblems": [
+        "Check if the character is an uppercase vowel",
+        "Check if the index of the character is even"
+      ]
+    },
+    "4. If the character is an uppercase vowel and the index is even, increment the counter.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "1. Define a function count_upper that takes a string s as input.": {
+      "subproblems": [
+        "Identify uppercase vowels in the string",
+        "Check if the index of the uppercase vowel is even"
+      ]
+    },
+    "2. Initialize a counter variable to keep track of the number of uppercase vowels at even indices.": {},
+    "3. Iterate through the characters in the string and check if each character is an uppercase vowel at an even index.": {},
+    "4. If the condition is met, increment the counter variable.": {},
+    "5. Return the final count of uppercase vowels at even indices.": {}
+  }
+}
+------------------------------
+def count_upper(s):
+    vowels = set('AEIOU')
+    count = 0
+    for i, char in enumerate(s):
+        if char.upper() in vowels and i % 2 == 0:
+            count += 1
+    return count
+
+------------------------------
+scores
+[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6]
+[36, 36, 36, 36, 36, 36, 36, 36, 36, 36]

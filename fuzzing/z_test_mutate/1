@@ -1,0 +1,1 @@
+mutate_prompts=['add_1_sentence_at_end','rephrase','shorten','expand_one','condense_one','expand_one2two','condense_two2one','rephrase_one']

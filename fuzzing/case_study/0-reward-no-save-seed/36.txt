@@ -1,0 +1,701 @@
+------------------------------
+36
+------------------------------
+original prompt
+------------------------------
+
+
+def fizz_buzz(n: int):
+    """Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.
+    >>> fizz_buzz(50)
+    0
+    >>> fizz_buzz(78)
+    2
+    >>> fizz_buzz(79)
+    3
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def fizz_buzz(n: int):
+    """Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.
+    The function should efficiently handle large values of n.
+    >>> fizz_buzz(50)
+    0
+    >>> fizz_buzz(78)
+    2
+    >>> fizz_buzz(79)
+    3
+    """
+------------------------------
+canonical solution
+------------------------------
+    ns = []
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            ns.append(i)
+    s = ''.join(list(map(str, ns)))
+    ans = 0
+    for c in s:
+        ans += (c == '7')
+    return ans
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above functions to count the occurrences of digit 7 in integers divisible by 11 or 13",
+      "Return the total count of occurrences"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if is_divisible_by_11_or_13(i):
+            count += count_sevens(i)
+    return count
+
+# Test cases
+print(fizz_buzz(50))  # Output: 0
+print(fizz_buzz(78))  # Output: 2
+print(fizz_buzz(79))  # Output: 3
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Generate a list of integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Create a function to generate a list of integers less than n",
+      "Iterate through the list of integers and apply the above functions to each integer",
+      "Sum up the count of integers that meet the conditions"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def generate_integers_less_than_n(n):
+    return [i for i in range(n)]
+
+def fizz_buzz(n):
+    integers = generate_integers_less_than_n(n)
+    count = 0
+    for num in integers:
+        if is_divisible_by_11_or_13(num) and count_sevens(num) > 0:
+            count += 1
+    return count
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above functions to count occurrences and check divisibility",
+      "Return the total count of occurrences"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n):
+    count = 0
+    for i in range(n):
+        if is_divisible_by_11_or_13(i):
+            count += count_sevens(i)
+    return count
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if the integer is divisible by 11 or 13",
+      "Iterate through integers less than n"
+    ],
+    "major_steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if the integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above functions to each integer",
+      "Return the total count of integers that satisfy the conditions"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n):
+    count = 0
+    for i in range(1, n):
+        if is_divisible_by_11_or_13(i) and count_sevens(i) > 0:
+            count += 1
+    return count
+
+# Test cases
+print(fizz_buzz(50))  # Output: 0
+print(fizz_buzz(78))  # Output: 2
+print(fizz_buzz(79))  # Output: 3
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if the digit 7 appears in each of these integers"
+    ],
+    "major_steps": [
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "If divisible, check if the digit 7 appears in the integer",
+      "Increment a counter if the digit 7 appears",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    def has_seven(num):
+        return '7' in str(num)
+
+    count = 0
+    for i in range(1, n):
+        if i % 11 == 0 or i % 13 == 0:
+            if has_seven(i):
+                count += 1
+
+    return count
+
+# Test cases
+print(fizz_buzz(50))  # Output: 0
+print(fizz_buzz(78))  # Output: 2
+print(fizz_buzz(79))  # Output: 3
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if the digit 7 appears in each of these integers"
+    ],
+    "major_steps": [
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "If divisible, check if the digit 7 appears in the integer",
+      "Increment a counter if the digit 7 appears",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    def has_seven(num):
+        return '7' in str(num)
+
+    count = 0
+    for i in range(1, n):
+        if i % 11 == 0 or i % 13 == 0:
+            if has_seven(i):
+                count += 1
+
+    return count
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above functions to count the occurrences of digit 7 in integers divisible by 11 or 13",
+      "Return the total count of occurrences"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(1, n):
+        if is_divisible_by_11_or_13(i):
+            count += count_sevens(i)
+    return count
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Generate a list of integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Generate a list of integers less than n",
+      "Iterate through the list of integers and apply the above functions to each integer",
+      "Sum up the count of integers that meet the conditions"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n):
+    count = 0
+    for i in range(n):
+        if is_divisible_by_11_or_13(i):
+            count += count_sevens(i)
+    return count
+
+# Test cases
+print(fizz_buzz(50))  # Output: 0
+print(fizz_buzz(78))  # Output: 2
+print(fizz_buzz(79))  # Output: 3
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n"
+    ],
+    "high-level steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above functions to count occurrences and check divisibility",
+      "Return the total count of occurrences"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n):
+    total_count = 0
+    for i in range(n):
+        if is_divisible_by_11_or_13(i):
+            total_count += count_sevens(i)
+    return total_count
+
+# Test cases
+print(fizz_buzz(50))  # Output: 0
+print(fizz_buzz(78))  # Output: 2
+print(fizz_buzz(79))  # Output: 3
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if an integer is divisible by 11 or 13",
+      "Generate a list of integers less than n"
+    ],
+    "steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Create a function to generate a list of integers less than n",
+      "Iterate through the list of integers and apply the above functions to each integer",
+      "Sum up the count of digit 7 appearances for integers that are divisible by 11 or 13"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def generate_integers_less_than_n(n):
+    return [i for i in range(n)]
+
+def fizz_buzz(n):
+    integers = generate_integers_less_than_n(n)
+    count = sum(count_sevens(num) for num in integers if is_divisible_by_11_or_13(num))
+    return count
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that contain the digit 7"
+    ],
+    "major_steps": [
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "Increment the count if the conditions are met",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers containing the digit 7"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz that takes an integer n as input",
+      "Initialize a count variable to 0",
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "If both conditions are met, increment the count variable",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that contain the digit 7"
+    ],
+    "major_steps": [
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "Increment the count if the integer contains the digit 7",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that contain the digit 7"
+    ],
+    "major_steps": [
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "Increment the count if the conditions are met",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 and contain the digit 7",
+      "Count the number of integers less than n that are divisible by 13 and contain the digit 7",
+      "Sum the results of the previous two steps to get the total count"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz(n) that takes an integer n as input",
+      "Implement a helper function to check if a number is divisible by a given divisor",
+      "Implement a helper function to check if a number contains the digit 7",
+      "Use the helper functions to count the numbers meeting the criteria for divisibility and containing the digit 7",
+      "Return the total count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    def is_divisible_by(number, divisor):
+        return number % divisor == 0
+
+    def contains_digit_seven(number):
+        return '7' in str(number)
+
+    count = 0
+    for i in range(1, n):
+        if (is_divisible_by(i, 11) or is_divisible_by(i, 13)) and contains_digit_seven(i):
+            count += 1
+
+    return count
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that contain the digit 7"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz that takes an integer n as input",
+      "Initialize a count variable to 0",
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "If both conditions are met, increment the count variable",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers containing the digit 7"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz that takes an integer n as input",
+      "Initialize a count variable to 0",
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "If both conditions are met, increment the count variable",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of times the digit 7 appears in a given integer",
+      "Check if the integer is divisible by 11 or 13",
+      "Iterate through integers less than n and apply the above two steps"
+    ],
+    "major_steps": [
+      "Create a function to count the number of times the digit 7 appears in a given integer",
+      "Create a function to check if an integer is divisible by 11 or 13",
+      "Create a function to iterate through integers less than n and apply the above two functions",
+      "Return the total count of integers that satisfy the conditions"
+    ]
+  }
+}
+------------------------------
+def count_sevens(num):
+    return str(num).count('7')
+
+def is_divisible_by_11_or_13(num):
+    return num % 11 == 0 or num % 13 == 0
+
+def fizz_buzz(n):
+    count = 0
+    for i in range(1, n):
+        if is_divisible_by_11_or_13(i) and count_sevens(i) > 0:
+            count += 1
+    return count
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that meet both conditions"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz that takes an integer n as input",
+      "Initialize a count variable to 0",
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "If both conditions are met, increment the count variable",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Count the number of integers less than n that are divisible by 11 or 13",
+      "Check if each integer contains the digit 7",
+      "Sum up the count of integers that contain the digit 7"
+    ],
+    "major_steps": [
+      "Create a function fizz_buzz that takes an integer n as input",
+      "Initialize a count variable to 0",
+      "Iterate through integers less than n",
+      "Check if the integer is divisible by 11 or 13",
+      "Check if the integer contains the digit 7",
+      "If both conditions are met, increment the count variable",
+      "Return the final count"
+    ]
+  }
+}
+------------------------------
+def fizz_buzz(n: int):
+    count = 0
+    for i in range(n):
+        if i % 11 == 0 or i % 13 == 0:
+            if '7' in str(i):
+                count += 1
+    return count
+
+------------------------------
+scores
+[0.1724, 0.1724, 0.1724, 0.1724, 0.1724, 0.1724, 0.1724, 0.1724, 0.1724, 0.1724]
+[15, 15, 15, 15, 15, 15, 15, 15, 15, 15]

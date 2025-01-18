@@ -1,0 +1,814 @@
+------------------------------
+161
+------------------------------
+original prompt
+------------------------------
+
+def solve(s):
+    """You are given a string s.
+    if s[i] is a letter, reverse its case from lower to upper or vise versa, 
+    otherwise keep it as it is.
+    If the string contains no letters, reverse the string.
+    The function should return the resulted string.
+    Examples
+    solve("1234") = "4321"
+    solve("ab") = "AB"
+    solve("#a@C") = "#A@c"
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def solve(s):
+    """For a given string s, change the case of each alphabetic character. 
+    If the string contains no alphabetic characters, simply reverse the string.
+    Return the modified string.
+    You should handle both uppercase and lowercase alphabetic characters appropriately.
+    Examples
+    solve("1234") = "4321"
+    solve("ab") = "AB"
+    solve("#a@C") = "#A@c"
+    """
+------------------------------
+canonical solution
+------------------------------
+    flg = 0
+    idx = 0
+    new_str = list(s)
+    for i in s:
+        if i.isalpha():
+            new_str[idx] = i.swapcase()
+            flg = 1
+        idx += 1
+    s = ""
+    for i in new_str:
+        s += i
+    if flg == 0:
+        return s[len(s)::-1]
+    return s
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If there are no letters in the string, reverse the entire string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    letters = [c for c in s if c.isalpha()]
+    if not letters:
+        return s[::-1]
+    return ''.join(c.lower() if c.isupper() else c.upper() for c in s)
+
+# Test cases
+print(solve("1234"))  # Output: "4321"
+print(solve("ab"))    # Output: "AB"
+print(solve("#a@C"))  # Output: "#A@c"
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    letters = [c for c in s if c.isalpha()]
+    if not letters:
+        return s[::-1]
+    return ''.join(c.lower() if c.isupper() else c.upper() for c in s)
+
+# Test cases
+print(solve("1234"))  # Output: "4321"
+print(solve("ab"))    # Output: "AB"
+print(solve("#a@C"))  # Output: "#A@c"
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters in the string",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "If it is a letter, reverse its case",
+      "If it is not a letter, keep it as it is",
+      "If the string contains no letters, reverse the entire string",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Identify if each character in the string is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters"
+    ],
+    "major_steps": [
+      "Iterate through each character in the string",
+      "Check if the character is a letter or not",
+      "Reverse the case of letters if applicable",
+      "Reverse the entire string if it contains no letters",
+      "Return the resulted string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    result = ''
+    has_letter = False
+    for char in s:
+        if char.isalpha():
+            has_letter = True
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char
+    if not has_letter:
+        result = result[::-1]
+    return result
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.isupper():
+                modified_string += char.lower()
+            else:
+                modified_string += char.upper()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.isupper():
+                modified_string += char.lower()
+            else:
+                modified_string += char.upper()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify alphabetic characters in the input string",
+      "Change the case of alphabetic characters",
+      "Reverse the string if no alphabetic characters are present"
+    ],
+    "high-level steps": [
+      "Iterate through each character in the input string",
+      "Check if the character is alphabetic",
+      "If alphabetic, change the case of the character",
+      "If no alphabetic characters are found, reverse the string",
+      "Return the modified string"
+    ]
+  }
+}
+------------------------------
+def solve(s):
+    modified_string = ''
+    has_alphabetic = False
+    
+    for char in s:
+        if char.isalpha():
+            has_alphabetic = True
+            if char.islower():
+                modified_string += char.upper()
+            else:
+                modified_string += char.lower()
+        else:
+            modified_string = s[::-1]
+            break
+    
+    if has_alphabetic:
+        return modified_string
+    else:
+        return modified_string
+
+------------------------------
+scores
+[0.5547, 0.5547, 0.5547, 0.5547, 0.5547, 0.5547, 0.5547, 0.5547, 0.5547, 0.5547]
+[71, 71, 71, 71, 71, 71, 71, 71, 71, 71]

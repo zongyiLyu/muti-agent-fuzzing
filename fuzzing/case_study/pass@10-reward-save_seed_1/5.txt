@@ -1,0 +1,661 @@
+------------------------------
+5
+------------------------------
+original prompt
+------------------------------
+from typing import List
+
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+    >>> intersperse([], 4)
+    []
+    >>> intersperse([1, 2, 3], 4)
+    [1, 4, 2, 4, 3]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+Insert 'delimeter' between each pair of consecutive elements in `numbers`.
+------------------------------
+canonical solution
+------------------------------
+    if not numbers:
+        return []
+
+    result = []
+
+    for n in numbers[:-1]:
+        result.append(n)
+        result.append(delimeter)
+
+    result.append(numbers[-1])
+
+    return result
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the result",
+      "Iterate through the input list and append each element to the result list",
+      "If the current element is not the last element, append the delimiter to the result list",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i != len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list and append each element to the modified list followed by the delimiter",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i < len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the result",
+      "Iterate through the input list and append each element to the result list",
+      "If the current element is not the last element, append the delimiter to the result list",
+      "Return the result list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i != len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list and append each element to the modified list",
+      "If the current element is not the last element, append the delimiter to the modified list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i != len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list and append each element to the modified list followed by the delimiter",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i < len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "major_steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list and append each element to the modified list followed by the delimiter",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i < len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list using a loop",
+      "For each element in the input list, append it to the modified list",
+      "If the current element is not the last element, append the delimiter to the modified list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i != len(numbers) - 1:
+            result.append(delimiter)
+    return result
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list and append each element to the modified list",
+      "If the current element is not the last element, append the delimiter to the modified list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    modified_list = []
+    for i in range(len(numbers)):
+        modified_list.append(numbers[i])
+        if i != len(numbers) - 1:
+            modified_list.append(delimiter)
+    return modified_list
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Insert the delimiter integer between every two consecutive elements of the input list",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list of numbers",
+      "For each pair of consecutive elements, append the first element, then the delimiter, then the second element to the modified list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    result = []
+    for i in range(len(numbers) - 1):
+        result.extend([numbers[i], delimiter])
+    if numbers:
+        result.append(numbers[-1])
+    return result
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Define the function intersperse that takes a list of integers and a delimiter integer as input",
+      "Iterate through the input list and insert the delimiter between every two consecutive elements",
+      "Return the modified list"
+    ],
+    "high-level steps": [
+      "Define the function intersperse(numbers: List[int], delimiter: int) -> List[int]",
+      "Initialize an empty list to store the modified list",
+      "Iterate through the input list 'numbers'",
+      "For each element in 'numbers', append it to the modified list",
+      "If the current element is not the last element, append the delimiter to the modified list",
+      "Return the modified list"
+    ]
+  }
+}
+------------------------------
+from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    modified_list = []
+    for i in range(len(numbers)):
+        modified_list.append(numbers[i])
+        if i != len(numbers) - 1:
+            modified_list.append(delimiter)
+    return modified_list
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "major_steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Determine the delimeter to be inserted between each pair of consecutive elements",
+      "Iterate through the list of numbers and insert the delimeter between each pair of consecutive elements"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimeter as input",
+      "Iterate through the list of numbers and insert the delimeter between each pair of consecutive elements",
+      "Return the modified list of numbers with the delimeter inserted"
+    ]
+  }
+}
+------------------------------
+def insert_delimeter(numbers, delimeter):
+    result = []
+    for i in range(len(numbers)):
+        result.append(numbers[i])
+        if i < len(numbers) - 1:
+            result.append(delimeter)
+    return result
+
+numbers = [1, 2, 3, 4, 5]
+delimeter = '-'
+result = insert_delimeter(numbers, delimeter)
+print(result)
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Receive the list of numbers as input",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the list of numbers to be processed",
+      "Iterate through the list to identify consecutive pairs of numbers",
+      "Insert the specified delimiter between each pair of consecutive numbers"
+    ],
+    "steps": [
+      "Define a function that takes a list of numbers and a delimiter as input",
+      "Iterate through the list of numbers using a loop",
+      "For each pair of consecutive numbers, insert the delimiter between them",
+      "Return the modified list of numbers"
+    ]
+  }
+}
+------------------------------
+def insert_delimiter(numbers, delimiter):
+    modified_numbers = []
+    for i in range(len(numbers) - 1):
+        modified_numbers.append(numbers[i])
+        modified_numbers.append(delimiter)
+    modified_numbers.append(numbers[-1])
+    return modified_numbers
+
+numbers = [1, 2, 3, 4, 5]
+delimiter = '-'
+result = insert_delimiter(numbers, delimiter)
+print(result)
+
+------------------------------
+scores
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

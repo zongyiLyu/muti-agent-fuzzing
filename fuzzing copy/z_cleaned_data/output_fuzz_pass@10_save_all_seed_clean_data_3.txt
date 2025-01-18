@@ -1,0 +1,2866 @@
+../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data_2/
+Namespace(alpha=0.25, append=False, calc_analyst=0, calc_final_result=1, calc_relative_reward=1, clean_data=1, dataset='humaneval', dataset_type='HumanEval', do_fuzz=True, fail_list=[], input_path='/data/zlyuaj/muti-agent/fuzzing/output_mutated/original/code_round_0_with_score.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo-0301', mutate_method='random', num_generate=10, num_round=10000, only_consider_passed_cases=0, output_file_name='save_all_seed_clean_data', output_path='../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data_2/', recover=0, reward_ratio=1, save_all_seed=1, save_seed=1, set_threshold_analyst=1, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+164 164 164
+67
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 1------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data_2/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data_2/_node_1.jsonl
+----------------------------------------round: 2------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 3------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:3
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 4------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:4
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 5------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:5
+----------mutating----------
+----------evaluating mutated seed---------------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 6------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:6
+----------mutating----------
+----------evaluating mutated seed-------------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 7------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:7
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 8------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:8
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 9------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:9
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 10------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:10
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 11------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:11
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:67
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_11.jsonl
+----------------------------------------round: 12------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:12
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 13------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:13
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 14------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:14
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 15------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:15
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 16------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:16
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 16 finish fuzzing!
+seed_index: 16
+mutated_seed_index: 83
+current seed length: 66
+saving......
+----------------------------------------round: 17------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:17
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 17 finish fuzzing!
+seed_index: 17
+mutated_seed_index: 84
+current seed length: 65
+saving......
+----------------------------------------round: 18------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 19------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:19
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 20------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:20
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 21------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:21
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:65
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_21.jsonl
+----------------------------------------round: 22------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:22
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 22 finish fuzzing!
+seed_index: 22
+mutated_seed_index: 89
+current seed length: 64
+saving......
+----------------------------------------round: 23------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:23
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 24------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:24
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 25------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:25
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 26------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:26
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 27------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:27
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 28------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:28
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 29------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:29
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 30------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:30
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 31------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:31
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:64
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_31.jsonl
+----------------------------------------round: 32------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:32
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 33------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:33
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 34------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:34
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 35------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:35
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 36------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:36
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 37------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:37
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 38------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:38
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 39------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:39
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 40------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:40
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 40 finish fuzzing!
+seed_index: 40
+mutated_seed_index: 107
+current seed length: 63
+saving......
+----------------------------------------round: 41------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:41
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:63
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_41.jsonl
+----------------------------------------round: 42------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:42
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 42 finish fuzzing!
+seed_index: 42
+mutated_seed_index: 109
+current seed length: 62
+saving......
+----------------------------------------round: 43------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:43
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 44------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:44
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 44 finish fuzzing!
+seed_index: 44
+mutated_seed_index: 111
+current seed length: 61
+saving......
+----------------------------------------round: 45------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:45
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 46------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:46
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 46 finish fuzzing!
+seed_index: 46
+mutated_seed_index: 113
+current seed length: 60
+saving......
+----------------------------------------round: 47------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:47
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 48------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:48
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 49------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:49
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 50------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:50
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 50 finish fuzzing!
+seed_index: 50
+mutated_seed_index: 117
+current seed length: 59
+saving......
+----------------------------------------round: 51------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:51
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 51 finish fuzzing!
+seed_index: 51
+mutated_seed_index: 118
+current seed length: 58
+saving......
+total pass@10:58
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_51.jsonl
+----------------------------------------round: 52------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:52
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 53------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:53
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 54------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:54
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 55------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:55
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 56------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:56
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 57------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:57
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 58------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:58
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 59------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:59
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 60------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:60
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 61------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:61
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 61 finish fuzzing!
+seed_index: 61
+mutated_seed_index: 128
+current seed length: 57
+saving......
+total pass@10:57
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_61.jsonl
+----------------------------------------round: 62------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:62
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 63------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:63
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 64------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:64
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 65------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:65
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 65 finish fuzzing!
+seed_index: 65
+mutated_seed_index: 132
+current seed length: 56
+saving......
+----------------------------------------round: 66------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:66
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 67------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:67
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 68------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:68
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 69------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:69
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 70------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:70
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 71------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:71
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 71 finish fuzzing!
+seed_index: 71
+mutated_seed_index: 138
+current seed length: 55
+saving......
+total pass@10:55
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_71.jsonl
+----------------------------------------round: 72------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:72
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 72 finish fuzzing!
+seed_index: 72
+mutated_seed_index: 139
+current seed length: 54
+saving......
+----------------------------------------round: 73------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:73
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 74------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:7
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 75------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:75
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 76------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:76
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 77------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:77
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 78------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:78
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 79------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:12
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 12 finish fuzzing!
+seed_index: 12
+mutated_seed_index: 146
+current seed length: 53
+saving......
+----------------------------------------round: 80------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:80
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 81------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:14
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:53
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_81.jsonl
+----------------------------------------round: 82------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:82
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 83------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:85
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 84------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:19
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 85------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:87
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 86------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:88
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 87------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:90
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 88------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:91
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 89------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:25
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 90------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:93
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 91------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:94
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:53
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_91.jsonl
+----------------------------------------round: 92------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:95
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 93------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:96
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 94------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:97
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 95------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:98
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 96------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:99
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 97------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:100
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 98------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:101
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 99------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:102
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 100------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:103
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 101------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:104
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:53
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_101.jsonl
+----------------------------------------round: 102------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:105
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 103------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:106
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 106 finish fuzzing!
+seed_index: 106
+mutated_seed_index: 170
+current seed length: 52
+saving......
+----------------------------------------round: 104------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:108
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 105------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:110
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 106------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:112
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 107------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:114
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 108------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:115
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 115 finish fuzzing!
+seed_index: 115
+mutated_seed_index: 175
+current seed length: 51
+saving......
+----------------------------------------round: 109------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:116
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 110------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:119
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 111------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:53
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:51
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_111.jsonl
+----------------------------------------round: 112------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:121
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 113------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:122
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 114------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:123
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 115------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:124
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 116------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:125
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 117------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:126
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 118------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:60
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 119------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:129
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 120------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:130
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 121------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:131
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:51
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_121.jsonl
+----------------------------------------round: 122------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:133
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 123------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:134
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 124------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:68
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 125------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:136
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 126------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:137
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 127------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:140
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 128------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:74
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 129------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:8
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 130------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:143
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 131------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:144
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:51
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_131.jsonl
+----------------------------------------round: 132------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:145
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 133------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:147
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 134------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:81
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 135------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:15
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 136------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:18
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 137------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:86
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 138------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:152
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 139------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:153
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 140------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:154
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 154 finish fuzzing!
+seed_index: 154
+mutated_seed_index: 207
+current seed length: 50
+saving......
+----------------------------------------round: 141------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:155
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:50
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_141.jsonl
+----------------------------------------round: 142------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:92
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 143------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:157
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 144------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:158
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 158 finish fuzzing!
+seed_index: 158
+mutated_seed_index: 211
+current seed length: 49
+saving......
+----------------------------------------round: 145------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:28
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 146------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:160
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 147------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:161
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 148------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:31
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 149------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:163
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 150------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:164
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 151------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:165
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:49
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_151.jsonl
+----------------------------------------round: 152------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:166
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 153------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:167
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 154------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:104
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 155------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:169
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 156------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:171
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 157------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:172
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 158------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:173
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 159------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:174
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 174 finish fuzzing!
+seed_index: 174
+mutated_seed_index: 226
+current seed length: 48
+saving......
+----------------------------------------round: 160------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:176
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 161------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:177
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:48
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_161.jsonl
+----------------------------------------round: 162------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:120
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 163------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:121
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 164------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:180
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 165------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:181
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 166------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:182
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 167------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:183
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 168------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:184
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 169------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:127
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 170------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:186
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 171------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:187
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:48
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_171.jsonl
+----------------------------------------round: 172------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:188
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 173------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:189
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 174------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:190
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 175------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:135
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 176------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:192
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 177------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:193
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 178------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:194
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 179------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:141
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 180------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:196
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 181------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:197
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 197 finish fuzzing!
+seed_index: 197
+mutated_seed_index: 248
+current seed length: 47
+saving......
+total pass@10:47
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_181.jsonl
+----------------------------------------round: 182------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:198
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 183------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:199
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 184------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:200
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 185------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:14
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 186------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:202
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 187------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:203
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 188------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:151
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 189------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:205
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 190------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:206
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 191------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:208
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:47
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_191.jsonl
+----------------------------------------round: 192------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:156
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 193------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:210
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 194------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:212
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 195------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:29
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 196------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:214
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 197------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:31
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 198------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:32
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 199------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:33
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 200------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed ----------updating----------
+save all seed without reward!
+add mutated seed into pr----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 201------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+curren----------updating----------
+save all seed without reward!
+add mutated seed into prompt no----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:47
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_201.jsonl
+----------------------------------------round: 202------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:103
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 203------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:37
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 204------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:222
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 205------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:223
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 206------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:224
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 207------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:112
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 208------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:116
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 209------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:228
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 210------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:178
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 211------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:179
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:47
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_211.jsonl
+----------------------------------------round: 212------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:122
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 213------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:232
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 214------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:124
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+seed 124 finish fuzzing!
+seed_index: 124
+mutated_seed_index: 281
+current seed length: 46
+saving......
+----------------------------------------round: 215------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:234
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 216------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:235
+----------mutatin----------updating----------
+save all seed without rewar----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 217------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:185
+----------mutatin----------updating----------
+save all seed without rewar----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 218------------------------------
+----------selecting seed----------
+path & finish
+[False]
+current seed index:62
+----------mutating-----------------updating----------
+seed 107 finish fuz----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 219------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:238
+----------mutating----------
+---------------updating----------
+save all s----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 220------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:239
+----------mutating-------------------updating----------
+save all seed wit----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 221------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False]
+current seed index:240
+----------mutating-------------------updating----------
+save all seed wit----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+total pass@10:46
+------------------------------
+saving result into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_final_result.jsonl
+------------------------------
+saving node into: ../output_fuzzing_one_per_time/pass@10/results-save_all_seed_clean_data/_node_221.jsonl
+----------------------------------------round: 222------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False, False]
+current seed index:241
+------------updating----------
+save all seed without reward!
+add mutated ----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 223------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:191
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 224------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False, False, False]
+current see----------updating----------
+save all seed without reward!
+add mutated seed into prom----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 225------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:70
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 226------------------------------
+----------selecting seed----------
+path & finish
+[False, False]
+current seed index:73
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+save all seed without reward!
+add mutated seed into prompt node list
+reward = 0
+saving......
+----------------------------------------round: 227------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:195
+----------mutating----------
+----------evaluating mutated seed----------
+mpt node list
+reward = 0
+saving......
+----------------------------------------round: 228------------------------------
+----------selecting seed----------
+path & finish
+[False, False, False]
+current seed index:185
+----------mutating----------
+----------evaluating mutated seed----------

@@ -1,0 +1,118 @@
+2
+----------------------------------------round: 0------------------------------
+True
+------------------------------Begin Mutating: expand_1------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/0.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 1------------------------------
+True
+------------------------------Begin Mutating: rephrase------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/1.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 2------------------------------
+True
+------------------------------Begin Mutating: shorten------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/2.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 3------------------------------
+True
+------------------------------Begin Mutating: expand_1------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/3.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 4------------------------------
+True
+------------------------------Begin Mutating: rephrase------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/4.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 5------------------------------
+True
+------------------------------Begin Mutating: shorten------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/5.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 6------------------------------
+True
+------------------------------Begin Mutating: expand_1------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/6.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 7------------------------------
+True
+------------------------------Begin Mutating: rephrase------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/7.jsonl
+[1.0] [1.0, 1.0] 1.0
+----------------------------------------round: 8------------------------------
+True
+------------------------------Begin Mutating: shorten------------------------------
+mutating: 0
+mutating: 1
+handling task: 0
+handling task: 1
+2
+pass@1 - ET:
+./output_mutated/test/
+['.', 'output_mutated', 'test', '']
+./output_result/test/8.jsonl
+[1.0] [1.0, 1.0] 1.0

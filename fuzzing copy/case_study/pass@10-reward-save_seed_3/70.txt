@@ -1,0 +1,813 @@
+------------------------------
+70
+------------------------------
+original prompt
+------------------------------
+
+def strange_sort_list(lst):
+    '''
+    Given list of integers, return list in strange order.
+    Strange sorting, is when you start with the minimum value,
+    then maximum of the remaining integers, then minimum and so on.
+
+    Examples:
+    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
+    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
+    strange_sort_list([]) == []
+    '''
+
+------------------------------
+mutated prompt
+------------------------------
+def strange_sort_list(lst):
+    '''
+    Given a list of integers, return it in strange order.
+    Start with the minimum value, then the maximum of the remaining integers, then minimum, and so on.
+
+    Examples:
+    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
+    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
+    strange_sort_list([]) == []
+    '''
+------------------------------
+canonical solution
+------------------------------
+    res, switch = [], True
+    while lst:
+        res.append(min(lst) if switch else max(lst))
+        lst.remove(res[-1])
+        switch = not switch
+    return res
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process until all integers are sorted in strange order"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted in strange order",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process of finding minimum and maximum values until all integers are sorted"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process until all integers are sorted in strange order"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty:",
+      "Find the minimum value in the input list and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value in the remaining integers and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted in strange order",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process of finding minimum and maximum values until all integers are sorted"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process until all integers are sorted in strange order"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty:",
+      "Find the minimum value in the input list and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value in the remaining integers and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted in strange order",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process of finding minimum and maximum values until all integers are sorted"
+    ],
+    "high-level steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process of finding minimum and maximum values until all integers are sorted"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process of finding minimum and maximum values until all integers are sorted"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty, find the minimum value and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process until all integers are sorted in strange order"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty:",
+      "Find the minimum value in the input list and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value in the remaining integers and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted in strange order",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum value in the list",
+      "Identify the maximum value in the remaining integers",
+      "Repeat the process until all integers are sorted in strange order"
+    ],
+    "steps": [
+      "Create a function strange_sort_list(lst) that takes a list of integers as input",
+      "Initialize an empty list to store the sorted integers",
+      "While the input list is not empty:",
+      "Find the minimum value in the input list and append it to the sorted list",
+      "Remove the minimum value from the input list",
+      "If the input list is not empty, find the maximum value in the remaining integers and append it to the sorted list",
+      "Remove the maximum value from the input list",
+      "Repeat the process until all integers are sorted in strange order",
+      "Return the sorted list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    sorted_list = []
+    while lst:
+        min_val = min(lst)
+        sorted_list.append(min_val)
+        lst.remove(min_val)
+        if lst:
+            max_val = max(lst)
+            sorted_list.append(max_val)
+            lst.remove(max_val)
+    return sorted_list
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    sorted_lst = sorted(lst)
+    
+    odd_indexes = sorted_lst[::2]
+    even_indexes = sorted_lst[1::2]
+    
+    result = []
+    for i in range(len(odd_indexes)):
+        result.append(odd_indexes[i])
+        if i < len(even_indexes):
+            result.append(even_indexes[i])
+    
+    return result
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the input list",
+      "Sort the remaining integers in the list in ascending order",
+      "Alternate between adding the minimum and maximum values to the output list"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the input list",
+      "Sort the remaining integers in the list in ascending order",
+      "Initialize an empty output list",
+      "Iterate through the sorted list and alternate between adding the minimum and maximum values to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+
+    min_val = min(lst)
+    max_val = max(lst)
+    remaining = sorted(lst[1:-1])
+
+    output = [min_val]
+    for i, num in enumerate(remaining):
+        if i % 2 == 0:
+            output.append(max_val)
+        else:
+            output.append(min_val)
+
+    if len(lst) % 2 == 0:
+        output.append(max_val)
+
+    return output
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    lst.remove(min_val)
+    lst.remove(max_val)
+    
+    lst.sort()
+    
+    odd_indexes = lst[::2]
+    even_indexes = lst[1::2]
+    
+    result = [min_val]
+    for i in range(len(lst)//2):
+        result.append(max(odd_indexes[i], even_indexes[i]))
+        result.append(min(odd_indexes[i], even_indexes[i]))
+    
+    if len(lst) % 2 == 1:
+        result.append(max(odd_indexes[-1], even_indexes[-1]))
+    
+    return result
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    sorted_lst = sorted(lst)
+    min_val = sorted_lst[0]
+    max_val = sorted_lst[-1]
+    
+    odd_indexes = [lst[i] for i in range(len(lst)) if i % 2 != 0]
+    even_indexes = [lst[i] for i in range(len(lst)) if i % 2 == 0]
+    
+    result = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            result.append(min_val)
+        else:
+            result.append(max_val)
+    
+    return result
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    sorted_lst = sorted(lst)
+    
+    odd_indexes = sorted_lst[::2]
+    even_indexes = sorted_lst[1::2]
+    
+    result = []
+    for i in range(len(odd_indexes)):
+        result.append(odd_indexes[i])
+        if i < len(even_indexes):
+            result.append(even_indexes[i])
+    
+    return result
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the strange order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    sorted_lst = sorted(lst)
+    
+    odd_indexes = sorted_lst[::2]
+    even_indexes = sorted_lst[1::2]
+    
+    result = []
+    for i in range(len(odd_indexes)):
+        result.append(odd_indexes[i])
+        if i < len(even_indexes):
+            result.append(even_indexes[i])
+    
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    sorted_lst = sorted(lst)
+    min_val = sorted_lst[0]
+    max_val = sorted_lst[-1]
+    
+    odd_indexes = [lst[i] for i in range(len(lst)) if i % 2 != 0]
+    even_indexes = [lst[i] for i in range(len(lst)) if i % 2 == 0]
+    
+    result = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            result.append(min_val)
+        else:
+            result.append(max_val)
+    
+    return result
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    sorted_lst = sorted(lst)
+    min_val = sorted_lst[0]
+    max_val = sorted_lst[-1]
+    
+    odd_indexes = [lst[i] for i in range(len(lst)) if i % 2 != 0]
+    even_indexes = [lst[i] for i in range(len(lst)) if i % 2 == 0]
+    
+    result = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            result.append(min_val)
+        else:
+            result.append(max_val)
+    
+    return result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    lst.remove(min_val)
+    lst.remove(max_val)
+    
+    lst.sort()
+    
+    odd_indexes = lst[::2]
+    even_indexes = lst[1::2]
+    
+    result = [min_val]
+    for i in range(len(lst) // 2):
+        result.append(max_val)
+        result.append(odd_indexes[i])
+        result.append(even_indexes[i])
+    
+    if len(lst) % 2 == 1:
+        result.append(max_val)
+    
+    return result
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Identify the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ],
+    "high-level steps": [
+      "Find the minimum and maximum values in the list",
+      "Sort the list in ascending order",
+      "Create two separate lists for odd and even indexes",
+      "Merge the two lists in the desired order"
+    ]
+  }
+}
+------------------------------
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    sorted_lst = sorted(lst)
+    min_val = sorted_lst[0]
+    max_val = sorted_lst[-1]
+    
+    odd_indexes = [lst[i] for i in range(len(lst)) if i % 2 != 0]
+    even_indexes = [lst[i] for i in range(len(lst)) if i % 2 == 0]
+    
+    result = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            result.append(min_val)
+        else:
+            result.append(max_val)
+    
+    return result
+
+------------------------------
+scores
+[0.028, 0.0467, 0.0093, 0.0467, 0.028, 0.028, 0.0467, 0.0467, 0.2991, 0.0467]
+[3, 5, 1, 5, 3, 3, 5, 5, 32, 5]

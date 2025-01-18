@@ -1,0 +1,638 @@
+------------------------------
+113
+------------------------------
+original prompt
+------------------------------
+
+def odd_count(lst):
+    """Given a list of strings, where each string consists of only digits, return a list.
+    Each element i of the output should be "the number of odd elements in the
+    string i of the input." where all the i's should be replaced by the number
+    of odd digits in the i'th string of the input.
+
+    >>> odd_count(['1234567'])
+    ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+    >>> odd_count(['3',"11111111"])
+    ["the number of odd elements 1n the str1ng 1 of the 1nput.",
+     "the number of odd elements 8n the str8ng 8 of the 8nput."]
+    """
+
+------------------------------
+mutated prompt
+------------------------------
+def odd_count(lst):
+    """Given a list of strings with digits, return a list.
+    Each element should be "the number of odd elements in the
+    string i of the input." where i is replaced by the count
+    of odd digits in the i'th string of the input.
+
+    >>> odd_count(['1234567'])
+    ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+    >>> odd_count(['3',"11111111"])
+    ["the number of odd elements 1n the str1ng 1 of the 1nput.",
+     "the number of odd elements 8n the str8ng 8 of the 8nput."]
+    """
+------------------------------
+canonical solution
+------------------------------
+    res = []
+    for arr in lst:
+        n = sum(int(d)%2==1 for d in arr)
+        res.append("the number of odd elements " + str(n) + "n the str"+ str(n) +"ng "+ str(n) +" of the "+ str(n) +"nput.")
+    return res
+
+------------------------------
+original solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and construct the output string",
+      "Append the constructed output string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.")
+
+    return output
+
+# Test cases
+print(odd_count(['1234567']))  # ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+print(odd_count(['3', '11111111']))  # ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+
+------------------------------
+original solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. High-level plan": [
+      "Create a function called odd_count that takes a list of strings as input",
+      "Initialize an empty list to store the results",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and append the result to the results list",
+      "Replace the 'i's in the output string with the corresponding count of odd digits",
+      "Return the list of modified strings"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.")
+
+    return result
+
+------------------------------
+original solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and construct the output string",
+      "Append the constructed output string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.")
+
+    return output
+
+# Test cases
+print(odd_count(['1234567']))  # ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+print(odd_count(['3', '11111111']))  # ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+
+------------------------------
+original solutions 3
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string",
+      "Replace 'i' with the number of odd digits in the output string"
+    ],
+    "high_level_steps": [
+      "Create a function called odd_count that takes a list of strings as input",
+      "Initialize an empty list to store the output strings",
+      "Iterate through each string in the input list",
+      "Count the number of odd digits in the current string",
+      "Replace 'i' with the count of odd digits in the current string",
+      "Append the modified string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        modified_string = string.replace('i', str(odd_count))
+        output.append("the number of odd elements {}n the str{}ng {} of the {}nput.".format(odd_count, odd_count, odd_count, odd_count))
+
+    return output
+
+# Test cases
+print(odd_count(['1234567']))
+print(odd_count(['3', '11111111']))
+
+------------------------------
+original solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and construct the output string",
+      "Append the constructed output string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_digit_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_digit_count}n the str{odd_digit_count}ng {odd_digit_count} of the {odd_digit_count}nput.")
+
+    return output
+
+# Test cases
+print(odd_count(['1234567']))
+print(odd_count(['3', '11111111']))
+
+------------------------------
+original solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and construct the output string",
+      "Append the constructed output string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.")
+
+    return output
+
+------------------------------
+original solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and append the result to the output list",
+      "Replace 'i' with the number of odd digits in the corresponding string",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    output = []
+    for string in lst:
+        odd_count = sum(1 for digit in string if int(digit) % 2 != 0)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.")
+    return output
+
+------------------------------
+original solutions 7
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string",
+      "Replace 'i' with the count of odd digits in the output string"
+    ],
+    "steps": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output strings",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits",
+      "Replace 'i' with the count of odd digits in the output string",
+      "Append the modified string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        modified_string = string.replace('i', str(odd_count))
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {modified_string} of the {odd_count}nput.")
+
+    return output
+
+------------------------------
+original solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Decompose the requirement": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string"
+    ],
+    "2. Major steps of the program": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits and construct the output string",
+      "Append the constructed string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_digit_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_digit_count}n the str{odd_digit_count}ng {odd_digit_count} of the {odd_digit_count}nput.")
+
+    return output
+
+------------------------------
+original solutions 9
+------------------------------
+{
+  "plan": {
+    "subproblems": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string",
+      "Replace 'i' with the count of odd digits in the output string"
+    ],
+    "steps": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Initialize an empty list to store the output strings",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits",
+      "Replace 'i' with the count of odd digits in the output string",
+      "Append the modified string to the output list",
+      "Return the output list"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for string in lst:
+        odd_count = count_odd_digits(string)
+        modified_string = string.replace('i', str(odd_count))
+        output.append("the number of odd elements {}n the str{}ng {} of the {}nput.".format(odd_count, odd_count, odd_count, odd_count))
+
+    return output
+
+# Test cases
+print(odd_count(['1234567']))
+print(odd_count(['3', '11111111']))
+
+****************************************************************************************************
+------------------------------
+mutated solutions
+------------------------------
+mutated solutions 0
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the list of strings with digits from the input.",
+    "2. Iterate through each string": "Loop through each string in the list.",
+    "3. Count odd digits": "Count the number of odd digits in each string.",
+    "4. Generate output": "Create a new list with the formatted output for each string.",
+    "5. Return output": "Return the final list of formatted outputs."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {i+1} of the {i+1}nput.")
+
+    return output
+
+------------------------------
+mutated solutions 1
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze input": "Loop through the list of strings and count the number of odd digits in each string.",
+    "2. Generate output": "Create a new list with the count of odd digits in each string formatted as specified in the requirement.",
+    "3. Return output": "Return the new list as the output of the function."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{i+1}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+------------------------------
+mutated solutions 2
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the list of strings with digits from the input.",
+    "2. Iterate through each string": "Loop through each string in the list.",
+    "3. Count odd digits": "Count the number of odd digits in each string.",
+    "4. Generate output": "Create a new list with the formatted output for each string.",
+    "5. Return output": "Return the final list of formatted outputs."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for i, string in enumerate(lst):
+        odd_digits_count = count_odd_digits(string)
+        formatted_output = f"the number of odd elements {odd_digits_count}n the str{odd_digits_count}ng {i+1} of the {i+1}nput."
+        output.append(formatted_output)
+
+    return output
+
+------------------------------
+mutated solutions 3
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze input": "Loop through the list of strings and count the number of odd digits in each string.",
+    "2. Generate output": "Create a new list with the count of odd digits in each string formatted as specified in the requirement.",
+    "3. Return output": "Return the new list as the output of the function."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{i+1}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+# Test cases
+print(odd_count(['1234567']))  # ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+print(odd_count(['3', '11111111']))  # ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+
+------------------------------
+mutated solutions 4
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze input": "Loop through the list of strings and count the number of odd digits in each string.",
+    "2. Generate output": "Create a new list with the count of odd digits in each string formatted as specified in the requirement.",
+    "3. Return output": "Return the new list as the output of the function."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{i+1}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+# Test cases
+print(odd_count(['1234567']))  # ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+print(odd_count(['3', '11111111']))  # ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+
+------------------------------
+mutated solutions 5
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze input": "Loop through the list of strings and count the number of odd digits in each string.",
+    "2. Generate output": "Create a new list with the count of odd digits in each string formatted as specified in the requirement.",
+    "3. Return output": "Return the new list as the output of the function."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+------------------------------
+mutated solutions 6
+------------------------------
+{
+  "high_level_plan": {
+    "1. Analyze input": "Loop through the list of strings and count the number of odd digits in each string.",
+    "2. Generate output": "Create a new list with the count of odd digits in each string formatted as specified in the requirement.",
+    "3. Return output": "Return the new list as the output of the function."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+------------------------------
+mutated solutions 7
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string",
+      "Generate a new string with the count of odd digits for each input string"
+    ],
+    "major_steps": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits",
+      "Generate a new string with the count of odd digits for each input string",
+      "Return the list of new strings"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{i+1}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+------------------------------
+mutated solutions 8
+------------------------------
+{
+  "high_level_plan": {
+    "1. Parse input": "Extract the list of strings with digits from the input.",
+    "2. Iterate through each string": "Loop through each string in the list.",
+    "3. Count odd digits": "Count the number of odd digits in each string.",
+    "4. Generate output": "Create a new list with the formatted output for each string.",
+    "5. Return output": "Return the final list of formatted outputs."
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    output = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        output.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {i+1} of the {i+1}nput.")
+
+    return output
+
+------------------------------
+mutated solutions 9
+------------------------------
+{
+  "high_level_plan": {
+    "subproblems": [
+      "Extract each string from the input list",
+      "Count the number of odd digits in each string",
+      "Generate a new string with the count of odd digits for each input string"
+    ],
+    "major_steps": [
+      "Create a function odd_count(lst) that takes a list of strings as input",
+      "Iterate through each string in the input list",
+      "For each string, count the number of odd digits",
+      "Generate a new string with the count of odd digits for each input string",
+      "Return the list of new strings"
+    ]
+  }
+}
+------------------------------
+def odd_count(lst):
+    def count_odd_digits(s):
+        return sum(1 for digit in s if int(digit) % 2 != 0)
+
+    result = []
+    for i, string in enumerate(lst):
+        odd_count = count_odd_digits(string)
+        result.append(f"the number of odd elements {odd_count}n the str{odd_count}ng {i+1} of the {i+1}nput.")
+
+    return result
+
+------------------------------
+scores
+[0.1163, 0.1163, 0.1163, 0.1163, 0.1163, 0.1163, 0.1163, 0.1163, 0.1163, 0.1163]
+[15, 15, 15, 15, 15, 15, 15, 15, 15, 15]

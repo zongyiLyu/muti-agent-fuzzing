@@ -1,0 +1,89 @@
+./output_fuzzing_one_per_time/test/results-2024-11-30-17-46-11/
+Namespace(append=False, dataset='humaneval', do_fuzz=True, fail_list=[], input_path='data/HumanEval_test_case_ET_simple.jsonl', lang='python', majority=1, max_round=2, max_tokens=512, model='gpt-3.5-turbo-0301', mutate_method='random', num_generate=10, num_round=5, output_path='./output_fuzzing_one_per_time/test/results-2024-11-30-17-46-11/', recover=0, reward_ratio=1, save_seed=False, signature=True, temperature=0.0, timeout=10, top_p=0.95, verbose=False)
+10 10 10
+----------------------------------------round: 0------------------------------
+----------selecting seed----------
+current seed index:0
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+reward before fuzzing
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+last_choice_index:0
+reward: 0
+reward after fuzzing
+[0.0, 0, 0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+----------------------------------------round: 1------------------------------
+----------selecting seed----------
+current seed index:1
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+reward before fuzzing
+[0.0, 0, 0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+last_choice_index:1
+reward: 0
+reward after fuzzing
+[0.0, 0.0, 0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+worst_scores
+[1, 1, 1, 1, 1, 1, 1, 1, 1]
+total pass@10:9
+worst_passes
+[1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000]
+1.0
+9000
+----------------------------------------round: 2------------------------------
+----------selecting seed----------
+current seed index:2
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+reward before fuzzing
+[0.0, 0.0, 0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+last_choice_index:2
+reward: 0
+reward after fuzzing
+[0.0, 0.0, 0.0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+----------------------------------------round: 3------------------------------
+----------selecting seed----------
+current seed index:3
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+reward before fuzzing
+[0.0, 0.0, 0.0, 0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+last_choice_index:3
+reward: 0
+reward after fuzzing
+[0.0, 0.0, 0.0, 0.0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+----------------------------------------round: 4------------------------------
+----------selecting seed----------
+current seed index:4
+----------mutating----------
+----------evaluating mutated seed----------
+----------updating----------
+reward before fuzzing
+[0.0, 0.0, 0.0, 0.0, 0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+last_choice_index:4
+reward: 0
+reward after fuzzing
+[0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 0, 0]
+[False, False, False, False, False, False, False, False, False]
+fuzzing finished!
+total prompt nodes number:9
+worst_scores
+[1, 1, 1, 1, 1, 1, 1, 1, 1]
+total pass@10:9
+worst_passes
+[1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000]
+1.0
+9000
